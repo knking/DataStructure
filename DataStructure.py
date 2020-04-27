@@ -81,5 +81,50 @@ j=len(arr1)
 m=3
 print(kthGreatest(arr1,j,m))
 
+#7)Given an number	n. Find	the number of occurrences of n in the array.
 
+num=array.array('i',[4,3,3,3,3,3,3,3,3,4,3,4,5,6,3,2,4,5,6,7,1,2,1,2,12])
+number=int(input("Enter number for occurrences : "))
+if number in num:
+    n=num.count(number)
+    print(n)
+else:
+    print("Number is not present")
+
+#8) Given an array which consists of only 0,1 an 2. Sort the array without using sorting algorithm
+
+def SortWithoutSorting(arr):
+    l1=[]
+    l2=[]
+    l3=[]
+    for i in range(len(arr)):
+        if arr[i]<1:
+            l1.append(arr[i])
+        elif arr[i]==1:
+            l2.append(arr[i])
+        else:
+            l3.append(arr[i])
+    return (l1+l2+l3)
+arr=array.array('i',[0,1,0,1,2,2,0,1])
+print(SortWithoutSorting(arr))
+
+#9) Find the range of array.Range means the difference between the maximum and minimum element in the array
+
+arr=array.array('i',[10,23,12,3,4,5,16,34])
+maximum=max(arr)
+minimum=min(arr)
+range=maximum-minimum
+print("Range of array :",range)
+
+#10) Move all negavtive element to one side of the array
+
+arr=array.array('i',[-2,-3,-10,-5,2,3,4,-6,1,3,-4])
+l1=[]
+l2=[]
+for i in range(len(arr)):
+    if arr[i]<0:
+        l1.append(arr[i])
+    else:
+        l2.append(arr[i])
+print(l1+l2)
 
