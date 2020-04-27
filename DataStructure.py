@@ -16,14 +16,14 @@ print(arr1)
 # Take	input n elements for the array
 # Output ->	true/false
 
-# num=int(input("Enter number to search : " ))
-# size=int(input("Enter the size of array"))
-# arr2=array.array('i',[])
-# print("Enter array")
-# for i in range(size):
-#     num1=int(input())
-#     arr2.append(num1)
-# print(num in arr2)
+num=int(input("Enter number to search : " ))
+size=int(input("Enter the size of array"))
+arr2=array.array('i',[])
+print("Enter array")
+for i in range(size):
+    num1=int(input())
+    arr2.append(num1)
+print(num in arr2)
 
 
 #3)	Find the minimum and maximum element in	an array.
