@@ -38,38 +38,38 @@ arr5.reverse()
 print(arr5)
 print(arr5[::-1])
 
-# Write a program to sort a Array
+# 5)Write a program to sort a Array
 
-# def quicksort(A,l,r):
-#     if r-l<=1:
-#         return 0
-#     yellow=l+1
-#     for green in range(l+1,r):
-#         if A[green]<=A[l]:
-#             (A[yellow],A[green])=(A[green],A[yellow])
-#             yellow=yellow+1
-#     (A[l],A[yellow-1])=(A[yellow-1],A[l])
-#
-#     quicksort(A,l,yellow-1)
-#     quicksort(A,yellow,r)
+def quicksort(A,l,r):
+    if r-l<=1:
+        return 0
+    yellow=l+1
+    for green in range(l+1,r):
+        if A[green]<=A[l]:
+            (A[yellow],A[green])=(A[green],A[yellow])
+            yellow=yellow+1
+    (A[l],A[yellow-1])=(A[yellow-1],A[l])
 
-#l=list(range(5,0,-1))
-#print(l)
-# arry_for_sort=array.array('i',[4,3,6,5,7,13,12])
-# quicksort(arry_for_sort,0,len(arry_for_sort))
-# for i in arry_for_sort:
-#     print(i, end=" ")
+    quicksort(A,l,yellow-1)
+    quicksort(A,yellow,r)
 
-# find kth smallest and kth greater element in array
+l=list(range(5,0,-1))
+print(l)
+arry_for_sort=array.array('i',[4,3,6,5,7,13,12])
+quicksort(arry_for_sort,0,len(arry_for_sort))
+for i in arry_for_sort:
+    print(i, end=" ")
 
-# def kthSmall(arr1,k,n):
-#     sorted(arr1)
-#     return arr1[k-1]
-#
-# arr1=array.array('i',[23,43,56,76,53])
-# n=len(arr1)
-# k=3
-# print(kthSmall(arr1,n,k))
+# 6)find kth smallest and kth greater element in array
+
+def kthSmall(arr1,k,n):
+    sorted(arr1)
+    return arr1[k-1]
+
+arr1=array.array('i',[23,43,56,76,53])
+n=len(arr1)
+k=3
+print(kthSmall(arr1,n,k))
 
 
 def kthGreatest(arr2,j,m):
