@@ -28,15 +28,15 @@ print(num in arr2)
 
 #3)	Find the minimum and maximum element in	an array.
 
-# arr4=array.array('i',[54,3,23,45,65,62])
-# print(max(arr4))
-# print(min(arr4))
+arr4=array.array('i',[54,3,23,45,65,62])
+print(max(arr4))
+print(min(arr4))
 
-# 4) write a program to reverse a array
-# arr5=array.array('i',[1,2,3,4,5,6])
-# arr5.reverse()
-# print(arr5)
-#print(arr5[::-1])
+#4) write a program to reverse a array
+arr5=array.array('i',[1,2,3,4,5,6])
+arr5.reverse()
+print(arr5)
+print(arr5[::-1])
 
 # Write a program to sort a Array
 
