@@ -1,4 +1,5 @@
 #print("Welcome in array Section ")
+
 import array
 
 # 1	Create an Array of size 10 of integers.Take input from the user for these 10 elements
