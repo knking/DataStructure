@@ -211,56 +211,56 @@ print(link.display())
 
 # 4) Create a method to provide a N'th Node from a linked list
 
-# class Node:
-#     def __init__(self,data):
-#         self.data=data
-#         self.next=None
-#
-# class Linked:
-#     def __init__(self):
-#         self.head=None
-#
-#     def element(self,position):
-#         pos=0
-#         temp=self.head
-#         while temp:
-#
-#             if position==pos:
-#                 return temp.data
-#
-#             temp=temp.next
-#             pos+=1
-#
-#         else:
-#             print("Not present in list")
-#
-#
-#
-#     def append(self,data):
-#         new=Node(data)
-#         if self.head==None:
-#             self.head=new
-#         else:
-#             temp=self.head
-#             while temp.next !=None:
-#                 temp=temp.next
-#             temp.next=new
-#
-#     def printLst(self):
-#         temp=self.head
-#         while temp:
-#             print(temp.data)
-#             temp=temp.next
-#
-# link=Linked()
-# link.append(10)
-# link.append(20)
-# link.append(30)
-# link.append(40)
-# link.append(50)
-# l=link.element(1)
-# print(l)
-# #print(link.printLst())
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class Linked:
+    def __init__(self):
+        self.head=None
+
+    def element(self,position):
+        pos=0
+        temp=self.head
+        while temp:
+
+            if position==pos:
+                return temp.data
+
+            temp=temp.next
+            pos+=1
+
+        else:
+            print("Not present in list")
+
+
+
+    def append(self,data):
+        new=Node(data)
+        if self.head==None:
+            self.head=new
+        else:
+            temp=self.head
+            while temp.next !=None:
+                temp=temp.next
+            temp.next=new
+
+    def printLst(self):
+        temp=self.head
+        while temp:
+            print(temp.data)
+            temp=temp.next
+
+link=Linked()
+link.append(10)
+link.append(20)
+link.append(30)
+link.append(40)
+link.append(50)
+l=link.element(1)
+print(l)
+#print(link.printLst())
 
 
 # 5)Create  a method to count the number of specific value in the linked least
