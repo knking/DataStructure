@@ -265,127 +265,127 @@ print(l)
 
 # 5)Create  a method to count the number of specific value in the linked least
 
-# class node:
-#     def __init__(self,data):
-#         self.data=data
-#         self.next=None
-#
-# class linkedlist:
-#     def __init__(self):
-#         self.head=None
-#
-#     def append(self,data):
-#         newNode=node(data)
-#
-#         if self.head==None:
-#
-#             self.head=newNode
-#
-#         else:
-#
-#             t=self.head
-#             while t.next != None:
-#                 t=t.next
-#             t.next=newNode
-#
-#     def countSpecific(self,num):
-#         var=self.head
-#         count=0
-#         while var:
-#             if var.data==num:
-#                 count+=1
-#             var=var.next
-#
-#         return count
-#
-#
-#
-#     def dis(self):
-#         t=self.head
-#         while t:
-#             print(t.data)
-#             t=t.next
-#
-# l=linkedlist()
-# l.append(10)
-# l.append(30)
-# l.append(50)
-# l.append(70)
-# l.append(90)
-# l.append(50)
-# l.append(90)
-# l.append(10)
-#
-# #l.dis()
-#
-# print("Specific Number in linked List : ",l.countSpecific(90))
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class linkedlist:
+    def __init__(self):
+        self.head=None
+
+    def append(self,data):
+        newNode=node(data)
+
+        if self.head==None:
+
+            self.head=newNode
+
+        else:
+
+            t=self.head
+            while t.next != None:
+                t=t.next
+            t.next=newNode
+
+    def countSpecific(self,num):
+        var=self.head
+        count=0
+        while var:
+            if var.data==num:
+                count+=1
+            var=var.next
+
+        return count
+
+
+
+    def dis(self):
+        t=self.head
+        while t:
+            print(t.data)
+            t=t.next
+
+l=linkedlist()
+l.append(10)
+l.append(30)
+l.append(50)
+l.append(70)
+l.append(90)
+l.append(50)
+l.append(90)
+l.append(10)
+
+#l.dis()
+
+print("Specific Number in linked List : ",l.countSpecific(90))
 
 
 
 # 6) Create a linked list and find a minimum and maximum number
 
 
-# class Node:
-#     def __init__(self,value):
-#         self.value=value
-#         self.next=None
-#
-# class linked:
-#     def __init__(self):
-#         self.head=None
-#
-#     def appendData(self,value):
-#         newNode=Node(value)
-#
-#         if self.head==None:
-#             self.head=newNode
-#
-#         else:
-#             temp=self.head
-#             while temp.next!=None:
-#                 temp=temp.next
-#             temp.next=newNode
-#
-#     # def maximum(self):
-#     #     temp=self.head
-#     #     lst=[]
-#     #     while temp:
-#     #         lst.append(temp.value)
-#     #         temp=temp.next
-#     #     k=sorted(lst)
-#     #     print(k[-1])
-#
-#     def maximum(self):
-#         max=-30
-#         temp=self.head
-#         while temp:
-#             if max < temp.value:
-#                 max=temp.value
-#             temp=temp.next
-#         return max
-#
-#     def minimum(self):
-#         temp=self.head
-#         min=54637
-#         while temp:
-#             if min > temp.value:
-#                 min=temp.value
-#             temp=temp.next
-#         return min
+class Node:
+    def __init__(self,value):
+        self.value=value
+        self.next=None
+
+class linked:
+    def __init__(self):
+        self.head=None
+
+    def appendData(self,value):
+        newNode=Node(value)
+
+        if self.head==None:
+            self.head=newNode
+
+        else:
+            temp=self.head
+            while temp.next!=None:
+                temp=temp.next
+            temp.next=newNode
+
+    # def maximum(self):
+    #     temp=self.head
+    #     lst=[]
+    #     while temp:
+    #         lst.append(temp.value)
+    #         temp=temp.next
+    #     k=sorted(lst)
+    #     print(k[-1])
+
+    def maximum(self):
+        max=-30
+        temp=self.head
+        while temp:
+            if max < temp.value:
+                max=temp.value
+            temp=temp.next
+        return max
+
+    def minimum(self):
+        temp=self.head
+        min=54637
+        while temp:
+            if min > temp.value:
+                min=temp.value
+            temp=temp.next
+        return min
 
 
-#
-#     def display(self):
-#         t=self.head
-#         while t:
-#             print(t.value)
-#             t=t.next
-# l=linked()
-# l.appendData(20)
-# l.appendData(30)
-# l.appendData(40)
-# l.appendData(50)
-# l.appendData(60)
-# #l.display()
-# print(l.maximum())
-# print(l.minimum())
+
+    def display(self):
+        t=self.head
+        while t:
+            print(t.value)
+            t=t.next
+l=linked()
+l.appendData(20)
+l.appendData(30)
+l.appendData(40)
+l.appendData(50)
+l.appendData(60)
+#l.display()
+print(l.maximum())
+print(l.minimum())
