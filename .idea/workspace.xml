@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/likedList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4608">
-              <caret line="497" column="7" lean-forward="true" selection-start-line="497" selection-start-column="7" selection-end-line="497" selection-end-column="7" />
+            <state relative-caret-position="253">
+              <caret line="978" column="22" selection-start-line="978" selection-start-column="22" selection-end-line="978" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -46,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="487" />
     <option name="y" value="168" />
     <option name="width" value="1038" />
@@ -78,7 +78,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BasicOfPython/solution.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -225,19 +225,19 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24904943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24904943" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9207858" weight="0.5410498" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91951835" weight="0.4010767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.07921419" side_tool="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.08048162" side_tool="true" weight="0.2718708" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -283,13 +283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataStructure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -310,10 +303,18 @@
         <state relative-caret-position="-525" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/img8.png" />
     <entry file="file://$PROJECT_DIR$/likedList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4608">
-          <caret line="497" column="7" lean-forward="true" selection-start-line="497" selection-start-column="7" selection-end-line="497" selection-end-column="7" />
+        <state relative-caret-position="253">
+          <caret line="978" column="22" selection-start-line="978" selection-start-column="22" selection-end-line="978" selection-end-column="22" />
         </state>
       </provider>
     </entry>

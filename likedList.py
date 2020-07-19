@@ -456,51 +456,506 @@
 
 # 9) Create a doubly linked list and convert it into a double circular linked list
 
-class node:
-    def __init__(self,data):
-        self.data=data
-        self.prev=None
-        self.next=None
+# class node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.prev=None
+#         self.next=None
+#
+# class dlink:
+#     def __init__(self):
+#         self.head=None
+#
+#     def append(self,data):
+#         new=node(data)
+#         if self.head ==None:
+#             self.head=new
+#             new.next=self.head
+#             self.head=new.prev
+#         else:
+#             temp=self.head
+#             while temp.next !=None:
+#                 temp=temp.next
+#             temp.next=new
+#             new.prev=temp
+#             new.next=self.head
+#             self.head=n
+#
+#
+#     def dis(self):
+#         temp=self.head
+#         while temp:
+#             print(temp.data)
+#             temp=temp.next
+#
+# d=dlink()
+# d.append(10)
+# d.append(20)
+# d.append(30)
+# d.append(40)
+# d.append(50)
+#
+# d.dis()
 
-class dlink:
-    def __init__(self):
-        self.head=None
+#
+# # ---------------------------Linled List Medium level---------
+#
+# # 10) Nth node from end of linked list
+#
+# class node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+#
+# class linked:
+#     def __init__(self):
+#         self.head=None
+#
+#     def append(self,data):
+#         new=node(data)
+#         if self.head==None:
+#             self.head=new
+#
+#         else:
+#             temp=self.head
+#             while temp.next != None:
+#                 temp=temp.next
+#             temp.next=new
+#
+#     def nth_Node_from_end(self,key):
+#         count=0
+#         temp=self.head
+#         while temp.next !=None:
+#             temp=temp.next
+#             count +=1
+#
+#         if  key > count :
+#             print("Location is greter than linked list")
+#
+#         else:
+#             temp = self.head
+#             for i in range(0, count - key):
+#                 temp = temp.next
+#             print(temp.data)
+#
+# l=linked()
+# l.append(10)
+# l.append(20)
+# l.append(30)
+# l.append(40)
+# l.nth_Node_from_end(3)
+#
+#
+# # 11) check the if the linked list is palindrom or not for STRING
+#
+# class node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+#
+# class slink:
+#     def __init__(self):
+#         self.head=None
+#
+#     def appendElement(self,data):
+#         new=node(data)
+#         if self.head== None:
+#             self.head=new
+#         else:
+#             temp=self.head
+#             while temp.next != None:
+#                 temp=temp.next
+#             temp.next=new
+#
+#
+#     def palindromCheck(self,string):
+#         return (string==string[::-1])
+#
+#     def isPalindrom(self):
+#         var=self.head
+#         lst=[]
+#         while var:
+#             lst.append(var.data)
+#             var=var.next
+#         string="".join(lst)
+#         return self.palindromCheck(string)
+#
+# l=slink()
+# l.appendElement("a")
+# l.appendElement("b")
+# l.appendElement("c")
+# l.appendElement("b")
+# l.appendElement("a")
+# l.appendElement("c")
+# print("true" if l.isPalindrom() else "false")
+#
+#
+# # 11) Check linked list is palindrom or not For integer without using list or stack
+#
+#
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+#
+#
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+#         self.last_node = None
+#
+#     def append(self, data):
+#         if self.last_node is None:
+#             self.head = Node(data)
+#             self.last_node = self.head
+#         else:
+#             self.last_node.next = Node(data)
+#             self.last_node = self.last_node.next
+#
+#     def get_prev_node(self, ref_node):
+#         current = self.head
+#         while (current and current.next != ref_node):
+#             current = current.next
+#         return current
+#
+#
+# def is_palindrome(llist):
+#     start = llist.head
+#     end = llist.last_node
+#     while (start != end and end.next != start):
+#         if start.data != end.data:
+#             return False
+#         start = start.next
+#         end = llist.get_prev_node(end)
+#     return True
+#
+#
+# a_llist = LinkedList()
+#
+# data_list = input('Please enter the elements in the linked list: ').split()
+# for data in data_list:
+#     a_llist.append(int(data))
+#
+# if is_palindrome(a_llist):
+#     print('The linked list is palindromic.')
+# else:
+#     print('The linked list is not palindromic.')
+#
+#
+#
+# # 11) Check linked list is palindrom or not for Integer using List
+#
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+#
+# class LinkedList:
+#     def __init__(self):
+#         self.first = None
+#
+#     def insert(self, data):
+#         newNode = Node(data)
+#         if self.first is None:
+#             self.first = newNode
+#         else:
+#             temp = self.first
+#             while temp.next is not None:
+#                 temp = temp.next
+#             temp.next = newNode
+#
+#     def display(self):
+#         print("\nLinked List: ", end='')
+#         temp = self.first
+#         while temp is not None:
+#             print(temp.data, end='->')
+#             temp = temp.next
+#
+#     def check_palindrome(self):
+#         stack = []
+#         temp = self.first
+#         while temp is not None:
+#             stack.append(temp.data)
+#             temp = temp.next
+#
+#         temp = self.first
+#         while temp is not None:
+#             popped = stack.pop()
+#             if temp.data == popped:
+#                 temp = temp.next
+#             else:
+#                 return False
+#         return True
+#
+# l=LinkedList()
+# element =input("Enter element").split()
+#
+# for data in element:
+#     l.insert(data)
+#
+# l.display()
+#
+# if l.check_palindrome():
+#     print("Linked list  is Panlidrom")
+#
+# else:
+#     print("Linked list is not palindrom")
 
-    def append(self,data):
-        new=node(data)
-        if self.head ==None:
-            self.head=new
-            new.next=self.head
-            self.head=new.prev
-        else:
-            temp=self.head
-            while temp.next !=None:
-                temp=temp.next
-            temp.next=new
-            new.prev=temp
-            new.next=self.head
-            self.head=n
+
+# 12) Create a program which reverse a linked list
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+#
+# class LinkedList:
+#     def __init__(self):
+#         self.first = None
+#
+#     def insert(self, data):
+#         newNode = Node(data)
+#         if self.first is None:
+#             self.first = newNode
+#         else:
+#             temp = self.first
+#             while temp.next is not None:
+#                 temp = temp.next
+#             temp.next = newNode
+#
+#     def reverse(self):
+#         prev = None
+#         current=self.first
+#
+#         while current:
+#             next=current.next
+#             current.next=prev
+#             prev=current
+#             current=next
+#         self.first=prev
+#
+#     def display(self):
+#         t=self.first
+#         while t:
+#             print(t.data)
+#             t=t.next
+#
+#
+# l=LinkedList()
+# l.insert(10)
+# l.insert(20)
+# l.insert(30)
+# l.insert(40)
+# # print("Before reverse \n")
+# # l.display()
+# print("After reverse \n")
+# l.reverse()
+# l.display()
 
 
-    def dis(self):
-        temp=self.head
-        while temp:
-            print(temp.data)
-            temp=temp.next
+# 13) Reverse a linked list in a group of given size
 
-d=dlink()
-d.append(10)
-d.append(20)
-d.append(30)
-d.append(40)
-d.append(50)
+# class Node:
+#
+#     # Constructor to initialize the node object
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+#
+#
+# class LinkedList:
+#
+#     # Function to initialize head
+#     def __init__(self):
+#         self.head = None
+#
+#     def reverse(self, head, k):
+#         current = head
+#         next = None
+#         prev = None
+#         count = 0
+#
+#         # Reverse first k nodes of the linked list
+#         while (current is not None and count < k):
+#             next = current.next
+#             current.next = prev
+#             prev = current
+#             current = next
+#             count += 1
+#
+#         # next is now a pointer to (k+1)th node
+#         # recursively call for the list starting
+#         # from current. And make rest of the list as
+#         # next of first node
+#         if next is not None:
+#             head.next = self.reverse(next, k)
+#
+#
+#
+#             # prev is new head of the input list
+#
+#         #print(prev.data," previous")
+#         return prev
+#
+#         # Function to insert a new node at the beginning
+#
+#     def push(self, new_data):
+#         new_node = Node(new_data)
+#         new_node.next = self.head
+#         self.head = new_node
+#
+#         # Utility function to print the linked LinkedList
+#
+#     def printList(self):
+#         temp = self.head
+#         while (temp):
+#             print(temp.data)
+#             temp = temp.next
+#
+#
+# # Driver program
+# llist = LinkedList()
+# llist.push(9)
+# llist.push(8)
+# llist.push(7)
+# llist.push(6)
+# llist.push(5)
+# llist.push(4)
+# llist.push(3)
+# llist.push(2)
+# llist.push(1)
+#
+#
+# print(llist.printList())
+#
+#
+# llist.head = llist.reverse(llist.head, 3)
+# print(llist.printList())
 
-d.dis()
+
+# 14) Write a program to check loop in inked list
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+#
+#
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+#         self.last_node = None
+#
+#     def append(self, data):
+#         if self.last_node is None:
+#             self.head = Node(data)
+#             self.last_node = self.head
+#         else:
+#             self.last_node.next = Node(data)
+#             self.last_node = self.last_node.next
+#
+#     def find_loop(self):
+#
+#         fast_ptr=self.head
+#         slow_ptr=self.head
+#
+#         while fast_ptr and slow_ptr and fast_ptr.next:
+#             slow_ptr=slow_ptr.next
+#             fast_ptr=fast_ptr.next.next
+#             if fast_ptr==slow_ptr:
+#                 print("Loop found")
+#                 return
+
+#     def view(self):
+#         temp=self.head
+#         while temp:
+#             print(temp.data)
+#             temp=temp.next
+#
+#
+# a_llist = LinkedList()
+#
+# data_list = input('Please enter the elements in the linked list: ').split()
+# for data in data_list:
+#     a_llist.append(int(data))
+#
+# a_llist.view()
+#
+# a_llist.head.next.next.next.next = a_llist.head
+# a_llist.find_loop()
+
+# 15) Write a program to find the length of loop in linked list
+
+# class node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+#
+# class linked:
+#     def __init__(self):
+#         self.head=None
+#
+#     def append(self,data):
+#         new=node(data)
+#         if self.head==None:
+#             self.head=new
+#         else:
+#             temp=self.head
+#             while temp.next !=None:
+#                 temp=temp.next
+#             temp.next=new
+#
+#     def makeLoop(self,n):
+#         loopNode=self.head
+#         for i in range(1,n):
+#             loopNode=loopNode.next
+#
+#         end=self.head
+#
+#         while end.next:
+#             end=end.next
+#         end.next=loopNode
+#
+#     def detectLoop(self):
+#         if self.head is None:
+#             return  0
+#         slow=self.head
+#         fast=self.head
+#         while slow and fast and fast.next:
+#             slow=slow.next
+#             fast=fast.next.next
+#             if slow==fast:
+#                 count=1
+#                 slow=slow.next
+#                 while slow !=fast:
+#                     slow=slow.next
+#                     count +=1
+#                 return count
+#         return 0
+#
+# mylnk=linked()
+# mylnk.append(3)
+# mylnk.append(6)
+# mylnk.append(30)
+# mylnk.append(32)
+# mylnk.append(2)
+# mylnk.append(5)
+# mylnk.append(22)
+# mylnk.append(9)
+#
+# mylnk.makeLoop(6)
+#
+# loopLength=mylnk.detectLoop()
+#
+# print(loopLength)
+#
+# if mylnk.head is None:
+#     print("Linked list is empty")
+# else:
+#     print(str(loopLength))
 
 
-# ---------------------------Linled List Medium level---------
-
-# 10) Nth node from end of linked list
+# 16) write a program to delete a linked list
 
 class node:
     def __init__(self,data):
@@ -515,189 +970,42 @@ class linked:
         new=node(data)
         if self.head==None:
             self.head=new
-
         else:
             temp=self.head
-            while temp.next != None:
+            while temp.next !=None:
                 temp=temp.next
             temp.next=new
-
-    def nth_Node_from_end(self,key):
-        count=0
-        temp=self.head
-        while temp.next !=None:
-            temp=temp.next
-            count +=1
-
-        if  key > count :
-            print("Location is greter than linked list")
-
-        else:
-            temp = self.head
-            for i in range(0, count - key):
-                temp = temp.next
-            print(temp.data)
-
-l=linked()
-l.append(10)
-l.append(20)
-l.append(30)
-l.append(40)
-l.nth_Node_from_end(3)
-
-
-# 11) check the if the linked list is palindrom or not for STRING
-
-class node:
-    def __init__(self,data):
-        self.data=data
-        self.next=None
-
-class slink:
-    def __init__(self):
-        self.head=None
-
-    def appendElement(self,data):
-        new=node(data)
-        if self.head== None:
-            self.head=new
-        else:
-            temp=self.head
-            while temp.next != None:
-                temp=temp.next
-            temp.next=new
-
-
-    def palindromCheck(self,string):
-        return (string==string[::-1])
-
-    def isPalindrom(self):
-        var=self.head
-        lst=[]
-        while var:
-            lst.append(var.data)
-            var=var.next
-        string="".join(lst)
-        return self.palindromCheck(string)
-
-l=slink()
-l.appendElement("a")
-l.appendElement("b")
-l.appendElement("c")
-l.appendElement("b")
-l.appendElement("a")
-l.appendElement("c")
-print("true" if l.isPalindrom() else "false")
-
-
-# 11) Check linked list is palindrom or not For integer without using list or stack
-
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-
-class LinkedList:
-    def __init__(self):
-        self.head = None
-        self.last_node = None
-
-    def append(self, data):
-        if self.last_node is None:
-            self.head = Node(data)
-            self.last_node = self.head
-        else:
-            self.last_node.next = Node(data)
-            self.last_node = self.last_node.next
-
-    def get_prev_node(self, ref_node):
-        current = self.head
-        while (current and current.next != ref_node):
-            current = current.next
-        return current
-
-
-def is_palindrome(llist):
-    start = llist.head
-    end = llist.last_node
-    while (start != end and end.next != start):
-        if start.data != end.data:
-            return False
-        start = start.next
-        end = llist.get_prev_node(end)
-    return True
-
-
-a_llist = LinkedList()
-
-data_list = input('Please enter the elements in the linked list: ').split()
-for data in data_list:
-    a_llist.append(int(data))
-
-if is_palindrome(a_llist):
-    print('The linked list is palindromic.')
-else:
-    print('The linked list is not palindromic.')
-
-
-
-# 11) Check linked list is palindrom or not for Integer using List
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-class LinkedList:
-    def __init__(self):
-        self.first = None
-
-    def insert(self, data):
-        newNode = Node(data)
-        if self.first is None:
-            self.first = newNode
-        else:
-            temp = self.first
-            while temp.next is not None:
-                temp = temp.next
-            temp.next = newNode
 
     def display(self):
-        print("\nLinked List: ", end='')
-        temp = self.first
-        while temp is not None:
-            print(temp.data, end='->')
-            temp = temp.next
+        temp=self.head
+        while temp:
+            print(temp.data)
+            temp=temp.next
 
-    def check_palindrome(self):
-        stack = []
-        temp = self.first
-        while temp is not None:
-            stack.append(temp.data)
-            temp = temp.next
+    def deleteLinkedList(self):
+        temp=self.head
 
-        temp = self.first
-        while temp is not None:
-            popped = stack.pop()
-            if temp.data == popped:
-                temp = temp.next
-            else:
-                return False
-        return True
+        # while temp:
+        #     self.head = temp.next
+        #     temp = None
+        #     temp = self.head
+        while temp:
+            prev=temp.next
+            del temp.data
+            temp=prev
 
-l=LinkedList()
-element =input("Enter element").split()
+mylnk=linked()
+mylnk.append(3)
+mylnk.append(6)
+mylnk.append(30)
+mylnk.append(32)
+mylnk.append(2)
+mylnk.append(5)
+mylnk.append(22)
+mylnk.append(9)
 
-for data in element:
-    l.insert(data)
-
-l.display()
-
-if l.check_palindrome():
-    print("Linked list  is Panlidrom")
-
-else:
-    print("Linked list is not palindrom")
-
+mylnk.display()
+print("After deletion ")
+mylnk.deleteLinkedList()
+mylnk.display()
+print("Node deleted")
