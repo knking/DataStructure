@@ -170,43 +170,43 @@ from itertools import permutations
 
 print ([''.join(p) for p in permutations('ABC')])
 
-#14) Flood fill
-# def flood_fill(a,r,c,toFill,prevFill):
-#     rows=len(a)
-#     cols=len(a[0])
-#     if (r < 0 or r>=rows) or (c < 0 or c>=cols):
-#         return
-#     if a[r][c] !=prevFill:
-#         return
-#     a[r][c]=toFill
-#     flood_fill(a,r-1,c,toFill,prevFill)
-#     flood_fill(a, r, c-1, toFill, prevFill)
-#     flood_fill(a, r+1, c, toFill, prevFill)
-#     flood_fill(a, r, c+1, toFill, prevFill)
-# a=[[1, 1, 1, 1, 1, 1, 1, 1],
-#           [1, 1, 1, 1, 1, 1, 0, 0],
-#           [1, 0, 0, 1, 1, 0, 1, 1],
-#           [1, 2, 2, 2, 2, 0, 1, 0],
-#           [1, 1, 1, 2, 2, 0, 1, 0],
-#           [1, 1, 1, 2, 2, 2, 2, 0],
-#           [1, 1, 1, 1, 1, 2, 1, 1],
-#           [1, 1, 1, 1, 1, 2, 2, 1]]
-# flood_fill(a,3,3,5,2)
-# for i in range(8):
-#     for j in range(8):
-#         print(a[i][j],end="")
-#     print()
+14) Flood fill
+def flood_fill(a,r,c,toFill,prevFill):
+    rows=len(a)
+    cols=len(a[0])
+    if (r < 0 or r>=rows) or (c < 0 or c>=cols):
+        return
+    if a[r][c] !=prevFill:
+        return
+    a[r][c]=toFill
+    flood_fill(a,r-1,c,toFill,prevFill)
+    flood_fill(a, r, c-1, toFill, prevFill)
+    flood_fill(a, r+1, c, toFill, prevFill)
+    flood_fill(a, r, c+1, toFill, prevFill)
+a=[[1, 1, 1, 1, 1, 1, 1, 1],
+          [1, 1, 1, 1, 1, 1, 0, 0],
+          [1, 0, 0, 1, 1, 0, 1, 1],
+          [1, 2, 2, 2, 2, 0, 1, 0],
+          [1, 1, 1, 2, 2, 0, 1, 0],
+          [1, 1, 1, 2, 2, 2, 2, 0],
+          [1, 1, 1, 1, 1, 2, 1, 1],
+          [1, 1, 1, 1, 1, 2, 2, 1]]
+flood_fill(a,3,3,5,2)
+for i in range(8):
+    for j in range(8):
+        print(a[i][j],end="")
+    print()
 
-##15) Game theory!(coin problem)
+#15) Game theory!(coin problem)
 
-# def coin_max(lst,left,right):
-#     if left+1==right:
-#         return max(lst[left],lst[right])
-#     return max(lst[left]+min(coin_max(lst,left+2,right),coin_max(lst,left+1,right-1)),
-#                lst[right]+min(coin_max(lst,left+1,right-1),coin_max(lst,left,right-2)))
-# lst=[1,5,7,3,2,4]
-# print(coin_max(lst,0,len(lst)-1))
-#
+def coin_max(lst,left,right):
+    if left+1==right:
+        return max(lst[left],lst[right])
+    return max(lst[left]+min(coin_max(lst,left+2,right),coin_max(lst,left+1,right-1)),
+               lst[right]+min(coin_max(lst,left+1,right-1),coin_max(lst,left,right-2)))
+lst=[1,5,7,3,2,4]
+print(coin_max(lst,0,len(lst)-1))
+
 
 def half(lst):
     temp=0
