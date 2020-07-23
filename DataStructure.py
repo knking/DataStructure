@@ -533,17 +533,17 @@ import array
 # lst1=[7,1,5,3,6,4]
 # buy_sell(lst1)
 
-##20) buy and sell stock(buy and cell maximum time)
+#20) buy and sell stock(buy and cell maximum time)
 
-# def buy_sell(lst):
-#     ans=0
-#     for i in range(1,len(lst)):
-#         if lst[i-1] < lst[i]:
-#             ans+=lst[i]-lst[i-1]
-#
-#     print(ans)
-# lst1=[7,1,5,3,6,4]
-# buy_sell(lst1)
+def buy_sell(lst):
+    ans=0
+    for i in range(1,len(lst)):
+        if lst[i-1] < lst[i]:
+            ans+=lst[i]-lst[i-1]
+
+    print(ans)
+lst1=[7,1,5,3,6,4]
+buy_sell(lst1)
 
 ##21) rotate a marix or roate a image
 
