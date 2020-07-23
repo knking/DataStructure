@@ -390,52 +390,189 @@ import array
 #                 A[0][i] = 0
 #
 #         return A
+
 #
+# class Solution:
+#     # @param A : list of list of integers
+#     # @return the same list modified
+#     def setZeroes(self, A):
+#         rowz = 0
+#         colz = [0] * len(A[0])
+#         # for i in range(len(A[0])):
+#         #     colz += "0"
+#         # print(len(A),len(A[0]))
+#         for i in range(len(A)):
+#             p = 0
+#             rowz = 0
+#             for j in range(len(A[0])):
+#                 # print(i,j,colz)
+#                 # print(i,j)
+#                 if A[i][j] == 0:
+#                     if p == 0:
+#                         rowz = 1
+#                         p = 1
+#                     if colz[j] != 1:
+#                         colz[j] = 1
+#                         if i != 0:
+#                             k = i - 1
+#                             while k >= 0:
+#                                 A[k][j] = 0
+#                                 k -= 1
 #
-class Solution:
-    # @param A : list of list of integers
-    # @return the same list modified
-    def setZeroes(self, A):
-        rowz = 0
-        colz = [0] * len(A[0])
-        # for i in range(len(A[0])):
-        #     colz += "0"
-        # print(len(A),len(A[0]))
-        for i in range(len(A)):
-            p = 0
-            rowz = 0
-            for j in range(len(A[0])):
-                # print(i,j,colz)
-                # print(i,j)
-                if A[i][j] == 0:
-                    if p == 0:
-                        rowz = 1
-                        p = 1
-                    if colz[j] != 1:
-                        colz[j] = 1
-                        if i != 0:
-                            k = i - 1
-                            while k >= 0:
-                                A[k][j] = 0
-                                k -= 1
+#                 if colz[j] == 1:
+#                     A[i][j] = 0
+#
+#                 # print(A)
+#
+#             if rowz == 1:
+#                 A[i] = [0] * len(A[0])
+#
+#                 # if colz[j]==1 or rowz == 1:
+#                 #     A[i][j] = 0
+#                 #     if colz[j]==1 and A[i-1][j] !=0:
+#                 #         k = i-1
+#                 #         while k>=0:
+#                 #             A[k][j] = 0
+#                 #             k-=1
+#             # print(A[i][j])
+#
+#         return A
 
-                if colz[j] == 1:
-                    A[i][j] = 0
+##set matrix zeros (Naive approcha)
+# def setZeros(lst):
+#     row_set=set()
+#     col_set=set()
+# #check the wether element is zros or not
+#     for i in range(len(lst)):
+#         for j in range(len(lst[i])):
+#             if lst[i][j]==0:
+#                 row_set.add(i)
+#                 col_set.add(j)
+# #check row and colomn which contain zeors, then make all element zero
+#     for row in range(len(lst)):
+#         for col in range(len(lst[row])):
+#             if row in row_set or col in col_set:
+#                 lst[row][col]=0
+#     return lst
+# lst1=[[0,4,1,0],
+#       [3,2,1,5],
+#       [4,0,7,2]]
+#
+# print(setZeros(lst1))
 
-                # print(A)
 
-            if rowz == 1:
-                A[i] = [0] * len(A[0])
+# def set_matrix(lst):
+#     n=len(lst)
+#     m=len(lst[0])
+#     hasFirstrow=False
+#     hasFirstCol=False
+#     for i in range(n):
+#         if lst[i][0]==0:
+#             hasFirstrow=True
+#             break
+#     for i in range(m):
+#         if lst[0][i]==0:
+#             hasFirstCol=True
+#             break
+#
+#     for i in range(1,n):
+#         for j in range(1,m):
+#             if lst[i][j]==0:
+#                 lst[i][0]=0
+#                 lst[0][j]=0
+#     for i in range(1, n):
+#         for j in range(1,m):
+#             if lst[i][0]==0 or lst[0][j]==0:
+#                 lst[i][j]=0
+#
+#     if hasFirstrow:
+#         for i in range(m):
+#             lst[0][i]=0
+#
+#     if hasFirstCol:
+#         for j in range(n):
+#             lst[j][0] =0
+#     return lst
+#
+# lst2=[[1,1,1],
+#       [1,0,1],
+#       [1,1,1]]
+#
+# print(set_matrix(lst1))
 
-                # if colz[j]==1 or rowz == 1:
-                #     A[i][j] = 0
-                #     if colz[j]==1 and A[i-1][j] !=0:
-                #         k = i-1
-                #         while k>=0:
-                #             A[k][j] = 0
-                #             k-=1
-            # print(A[i][j])
+#18) pascal triangle
+#
+# n=int(input("Enter number : "))
+# lst1=[]
+# for i in range(n):
+#     temp_list=[]
+#     for j in range(i+1):
+#         if j==0 or j==i:
+#             temp_list.append(1)
+#         else:
+#             temp_list.append(lst1[i-1][j-1]+lst1[i-1][j])
+#     lst1.append(temp_list)
+#
+# for i in range(n):
+#     for j in range(n-i-1):
+#         print(format(" ","<2") ,end="")
+#     for j in range(i+1):
+#         print(format(lst1[i][j],"<3"),end=" ")
+#     print()
+##19) Buy and sell stock
 
-        return A
+# def buy_sell(lst):
+#     mini=lst[0]
+#     ans=0
+#     for i in range(len(lst)):
+#         if lst[i] < mini:
+#             mini=lst[i]
+#         else:
+#             ans=max(ans,(lst[i]-mini))
+#     print(ans)
+# lst1=[7,1,5,3,6,4]
+# buy_sell(lst1)
+
+##20) buy and sell stock(buy and cell maximum time)
+
+# def buy_sell(lst):
+#     ans=0
+#     for i in range(1,len(lst)):
+#         if lst[i-1] < lst[i]:
+#             ans+=lst[i]-lst[i-1]
+#
+#     print(ans)
+# lst1=[7,1,5,3,6,4]
+# buy_sell(lst1)
+
+##21) rotate a marix or roate a image
+
+lst=[[5,1,9,11],
+    [2,4,8,10],
+    [13,3,6,7],
+     [15,14,12,16]]
+n=len(lst)
+m=len(lst[0])
+
+for row in range(n):
+    for col in range(row,m):
+        lst[row][col],lst[col][row]=lst[col][row],lst[row][col]
+#print(lst)
+
+# for i in range(n):
+#     lst[i].reverse()
+
+# for i in range(n):
+#     s = 0
+#     e = m - 1
+#
+#     while (s < e):
+#         lst[i][s], lst[i][e] = lst[i][e], lst[i][s]
+#         s+=1
+#         e-=1
+print(lst)
+
+
+
 
 
