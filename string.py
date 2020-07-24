@@ -92,8 +92,24 @@
 # string = "112"
 #
 # print(myAtoiRecursive(string, 0))
-s="420"
-temp=0
-for i in s:
-    temp=int(i)+temp*10
-print(temp)
+# s="420"
+# temp=0
+# for i in s:
+#     temp=int(i)+temp*10
+# print(temp)
+
+#)9.Write  a program  to reverse each word	in	the	given string.
+# def rev(s):
+#     w=s.split(" ")
+#     nw=[i[::]for i in w]
+#     ns=" ".join(nw)
+#     return ns
+# s1="king"
+# print(rev(s1))
+##10) program to check if a string is palindrome or not
+
+string=input(("Enter a string:"))
+if(string==string[::-1]):
+      print("The string is a palindrome")
+else:
+      print("Not a palindrome")
