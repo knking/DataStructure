@@ -35,9 +35,9 @@
 # s="h i i,  h o w, are, yo u"
 # print(remove(s))
 
-#4.)Find Duplicate characters in a string.
+##4.)Find Duplicate characters in a string.
 
-n="geeksforgeeeks"
+#n="geeksforgeeeks"
 # lst={}
 # for i in n:
 #     if i in lst:
@@ -50,9 +50,50 @@ n="geeksforgeeeks"
 #         print(key,end="")
 # print()
 
-from collections import Counter
+# from collections import Counter
+#
+# def find_duplicates(n):
+#     elements = Counter(n)
+#     return ([k for k,v in elements.items() if v>1])
+# print(find_duplicates(n))
 
-def find_duplicates(n):
-    elements = Counter(n)
-    return ([k for k,v in elements.items() if v>1])
-print(find_duplicates(n))
+#)5. Write a program to reverse the string in place.
+
+# def reverse_string(s):
+#     return s[::-1]
+# s1="king"
+# print(reverse_string(s1))
+
+# using join and reverse
+# s="anhsirk"
+# print(" ".join(reversed(s)))
+
+# def rev(s):
+#     if len(s)==0:
+#         return s
+#     else:
+#         rev(s[1:])+s[0]
+#
+# s="anhsirk"
+# print(rev(s))
+
+##6) String to integer and integer to string
+# def myAtoiRecursive(string, num):
+#     # base case, we've hit the end of the string,
+#     # we just return the last value
+#     if len(string) == 1:
+#         return int(string) + (num * 10)
+#         # add the next string item into our num value
+#     num = int(string[0:1]) + (num * 10)
+#     # recurse through the rest of the string
+#     # and add each letter to num
+#     return myAtoiRecursive(string[1:], num)
+# # Driver Code
+# string = "112"
+#
+# print(myAtoiRecursive(string, 0))
+s="420"
+temp=0
+for i in s:
+    temp=int(i)+temp*10
+print(temp)
