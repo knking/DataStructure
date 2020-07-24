@@ -23,5 +23,9 @@
 # res={i : n.count(i) for i in set(n)}
 # print(res)
 
-#3)
+#3)3. Write	a program to remove	all	whitespaces	in a given string.
 
+def remove(s):
+    return s.replace(" ","")
+s="kris hna    k"
+print(remove(s))
