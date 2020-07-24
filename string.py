@@ -37,7 +37,7 @@
 
 #4.)Find Duplicate characters in a string.
 
-# n="geeksforgeeeks"
+n="geeksforgeeeks"
 # lst={}
 # for i in n:
 #     if i in lst:
@@ -49,3 +49,10 @@
 #     if value >1:
 #         print(key,end="")
 # print()
+
+from collections import Counter
+
+def find_duplicates(n):
+    elements = Counter(n)
+    return ([k for k,v in elements.items() if v>1])
+print(find_duplicates(n))
