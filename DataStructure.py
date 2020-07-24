@@ -535,28 +535,28 @@ import array
 
 #20) buy and sell stock(buy and cell maximum time)
 
-def buy_sell(lst):
-    ans=0
-    for i in range(1,len(lst)):
-        if lst[i-1] < lst[i]:
-            ans+=lst[i]-lst[i-1]
-
-    print(ans)
-lst1=[7,1,5,3,6,4]
-buy_sell(lst1)
+# def buy_sell(lst):
+#     ans=0
+#     for i in range(1,len(lst)):
+#         if lst[i-1] < lst[i]:
+#             ans+=lst[i]-lst[i-1]
+#
+#     print(ans)
+# lst1=[7,1,5,3,6,4]
+# buy_sell(lst1)
 
 ##21) rotate a marix or roate a image
 
-lst=[[5,1,9,11],
-    [2,4,8,10],
-    [13,3,6,7],
-     [15,14,12,16]]
-n=len(lst)
-m=len(lst[0])
-
-for row in range(n):
-    for col in range(row,m):
-        lst[row][col],lst[col][row]=lst[col][row],lst[row][col]
+# lst=[[5,1,9,11],
+#     [2,4,8,10],
+#     [13,3,6,7],
+#      [15,14,12,16]]
+# n=len(lst)
+# m=len(lst[0])
+#
+# for row in range(n):
+#     for col in range(row,m):
+#         lst[row][col],lst[col][row]=lst[col][row],lst[row][col]
 #print(lst)
 
 # for i in range(n):
@@ -570,7 +570,42 @@ for row in range(n):
 #         lst[i][s], lst[i][e] = lst[i][e], lst[i][s]
 #         s+=1
 #         e-=1
-print(lst)
+#print(lst)
+
+#22) print spiral matrix
+def spiralMatrix(lst):
+    # if not lst:
+    #     return lst
+    rowbegin=0
+    rowend=len(lst)
+    colbegin=0
+    colend=len(lst[0])
+    spiral=[]
+
+    while rowend > rowbegin and colend >colbegin:
+        for i in range(colbegin,colend):
+            spiral.append(lst[rowbegin][i])
+        for j in range(rowbegin+1,rowend-1):
+            spiral.append(lst[j][colend-1])
+        if rowend!=rowbegin+1:
+            for i in range(colend-1,colbegin-1,-1):
+                spiral.append(lst[rowend-1][i])
+        if colbegin!=colend-1:
+            for j in range(rowend-2,rowbegin,-1):
+                spiral.append(lst[j][colbegin])
+        rowbegin+=1
+        rowend-=1
+        rowbegin+=1
+        rowend-=1
+    return spiral
+
+lst1=[[1,2,3],
+     [4,5,6],
+     [7,8,9]]
+print(spiralMatrix(lst1))
+
+
+
 
 
 
