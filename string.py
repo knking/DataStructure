@@ -25,7 +25,27 @@
 
 #3)3. Write	a program to remove	all	whitespaces	in a given string.
 
-def remove(s):
-    return s.replace(" ","")
-s="kris hna    k"
-print(remove(s))
+# def remove(s):
+#     return s.replace(" ","")
+# s="kris hna    k"
+# print(remove(s))
+
+# def remove(s):
+#     return "".join(s.split())
+# s="h i i,  h o w, are, yo u"
+# print(remove(s))
+
+#4.)Find Duplicate characters in a string.
+
+# n="geeksforgeeeks"
+# lst={}
+# for i in n:
+#     if i in lst:
+#         lst[i]+=1
+#     else:
+#         lst[i]=1
+#
+# for key,value in lst.items():
+#     if value >1:
+#         print(key,end="")
+# print()
