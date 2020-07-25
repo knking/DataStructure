@@ -107,40 +107,65 @@
 # s1="king krishna"
 # print(rev(s1))
 
-def reverserWords(string):
-      st = list()
-      for i in range(len(string)):
-            if string[i] != " ":
-                  st.append(string[i])
-            else:
-                  while len(st) > 0:
-                        print(st[-1], end="")
-                        st.pop()
-                  print(end=" ")
-
-      while len(st) > 0:
-            print(st[-1], end="")
-            st.pop()
-
-string="geeks for"
-reverserWords(string)
+# def reverserWords(string):
+#       st = list()
+#       for i in range(len(string)):
+#             if string[i] != " ":
+#                   st.append(string[i])
+#             else:
+#                   while len(st) > 0:
+#                         print(st[-1], end="")
+#                         st.pop()
+#                   print(end=" ")
+#
+#       while len(st) > 0:
+#             print(st[-1], end="")
+#             st.pop()
+#
+# string="geeks for"
+# reverserWords(string)
 
 ##10) program to check if a string is palindrome or not
 
-string=input(("Enter a string:"))
-if(string==string[::-1]):
-      print("The string is a palindrome")
-else:
-      print("Not a palindrome")
+# string=input(("Enter a string:"))
+# if(string==string[::-1]):
+#       print("The string is a palindrome")
+# else:
+#       print("Not a palindrome")
+#
+# num=int(input("Enter a number:"))
+# temp=num
+# rev=0
+# while(num>0):
+#     dig=num%10
+#     rev=rev*10+dig
+#     num=num//10
+# if(temp==rev):
+#     print("The number is palindrome!")
+# else:
+#     print("Not a palindrome!")
 
-num=int(input("Enter a number:"))
-temp=num
-rev=0
-while(num>0):
-    dig=num%10
-    rev=rev*10+dig
-    num=num//10
-if(temp==rev):
-    print("The number is palindrome!")
+#11.Write a Code to check whether one string is a rotation	of another
+
+def check_rotation(s1,s2):
+     size1=len(s1)
+     size2=len(s2)
+     if size1!=size2:
+           return 0
+     temp=s1+s2
+     if temp.count(s2)>0:
+           return 1
+     else:
+           return 0
+s1="abcd"
+s2="acda"
+if check_rotation(s1,s1):
+      print("String are rotation of each other")
 else:
-    print("Not a palindrome!")
+      print("Strig are not rotation of each other")
+
+
+#12)Write a program to	remove	Duplicate characters from the String
+s="geeksforgeeks"
+s=" ".join(set(s))
+print(s.replace(" ",""))
