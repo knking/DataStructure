@@ -182,37 +182,37 @@
 
 ##13) Interleaving of two given strings with no common characters
 
-# def isInterleaving(a,b,c):
-#     i=0
-#     j=0
-#     k=0
-#     while k !=len(c)-1:
-#         if i< len(a) and a[i]==c[k]:
-#             i+=1
-#         elif j < len(b) and b[j]==c[k]:
-#             j+=1
-#         else:
-#             return 0
-#         k+=1
-#     if a[i-1] or b[j-1]:
-#         return 0
-#     return 1
-# a="ab"
-# b="cd"
-# c="abcd"
-# if isInterleaving(a,b,c)==1:
-#     print("Interleaving")
-# else:
-#     print("Not interleaving")
+def isInterleaving(a,b,c):
+    i=0
+    j=0
+    k=0
+    while k !=len(c)-1:
+        if i< len(a) and a[i]==c[k]:
+            i+=1
+        elif j < len(b) and b[j]==c[k]:
+            j+=1
+        else:
+            return 0
+        k+=1
+    if a[i-1] or b[j-1]:
+        return 0
+    return 1
+a="ab"
+b="cd"
+c="abcd"
+if isInterleaving(a,b,c)==1:
+    print("Interleaving")
+else:
+    print("Not interleaving")
 
-# interiving of strinng
-# s1='aaabb'
-# s2='cd'
-# s=list(s2)
-#
-# for i,c in enumerate(s1):
-#     s.insert(i*2,c)
-# print(''.join(s))
+##)interiving of strinng
+s1='aaabb'
+s2='cd'
+s=list(s2)
+
+for i,c in enumerate(s1):
+    s.insert(i*2,c)
+print(''.join(s))
 
 
 
