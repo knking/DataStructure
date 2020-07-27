@@ -301,9 +301,9 @@
 
 
 
-##17) Reverse whole string from a sentence
+#17) Reverse whole string from a sentence
 
-# sentence = sentence = "dread it run from it destiny still arrives"
-# print(' '.join(sentence.split()[::-1]))
+sentence = sentence = "dread it run from it destiny still arrives"
+print(' '.join(sentence.split()[::-1]))
 
 
