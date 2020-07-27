@@ -182,54 +182,105 @@
 
 ##13) Interleaving of two given strings with no common characters
 
-def isInterleaving(a,b,c):
-    i=0
-    j=0
-    k=0
-    while k !=len(c)-1:
-        if i< len(a) and a[i]==c[k]:
-            i+=1
-        elif j < len(b) and b[j]==c[k]:
-            j+=1
-        else:
-            return 0
-        k+=1
-    if a[i-1] or b[j-1]:
-        return 0
-    return 1
-a="ab"
-b="cd"
-c="abcd"
-if isInterleaving(a,b,c)==1:
-    print("Interleaving")
-else:
-    print("Not interleaving")
+# def isInterleaving(a,b,c):
+#     i=0
+#     j=0
+#     k=0
+#     while k !=len(c)-1:
+#         if i< len(a) and a[i]==c[k]:
+#             i+=1
+#         elif j < len(b) and b[j]==c[k]:
+#             j+=1
+#         else:
+#             return 0
+#         k+=1
+#     if a[i-1] or b[j-1]:
+#         return 0
+#     return 1
+# a="ab"
+# b="cd"
+# c="abcd"
+# if isInterleaving(a,b,c)==1:
+#     print("Interleaving")
+# else:
+#     print("Not interleaving")
+#
+# ##)interiving of strinng
+# s1='aaabb'
+# s2='cd'
+# s=list(s2)
+#
+# for i,c in enumerate(s1):
+#     s.insert(i*2,c)
+# print(''.join(s))
+#
+#
+#00) Check palindrom or not
 
-##)interiving of strinng
-s1='aaabb'
-s2='cd'
-s=list(s2)
+#def pal(a,s,e):
+#     while s <=e:
+#         if a[s]==a[e]:
+#             s+=1
+#             e-=1
+#             return True
+#         else:
+#             return False
+# a='aabbaa'
+# s=0
+# e=len(a)-1
+# print(pal(a,s,e))
 
-for i,c in enumerate(s1):
-    s.insert(i*2,c)
-print(''.join(s))
+##)Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+#"A man, a plan, a canal: Panama" is a palindrome.
 
 
+#) Given the array of strings A,
+# you need to find the longest string S which is the prefix of ALL the strings in the array.
+#
+# Longest common prefix for a pair of strings S1 and S2 is the longest string S which is the prefix of both S1
+# and S2.
+#
+# For Example, longest common prefix of "abcdefgh" and "abcefgh" is "abc".
+#
+# The count-and-say sequence is the sequence of integers beginning as follows:
 
-def pal(a,s,e):
-    while s <=e:
-        if a[s]==a[e]:
-            s+=1
-            e-=1
-            return True
-        else:
-            return False
-a='aabbaa'
-s=0
-e=len(a)-1
 
-print(pal(a,s,e))
+#15) Longest palindromic sub string(Brute force apporach)
 
+def longestPalindrome( s):
+    """
+    :type s: str
+    :rtype: str
+    """
+
+    def isPalindrome(s):
+        left = 0
+        right = len(s) - 1
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
+
+    if len(s) == 1:
+        return s
+
+    if len(s) < 1:
+        return ""
+
+    maxSubstring = s[0]
+    for i in range(len(s)):
+        currentSubstring = s[i]
+        for j in range(i + 1, len(s)):
+            currentSubstring += s[j]
+            if (isPalindrome(currentSubstring) and
+                    len(currentSubstring) > len(maxSubstring)):
+                maxSubstring = currentSubstring
+
+    return maxSubstring
+str='ashdkabajjseiw'
+print(longestPalindrome(str))
 
 
 
