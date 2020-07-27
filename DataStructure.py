@@ -572,37 +572,37 @@ import array
 #         e-=1
 #print(lst)
 
-#22) print spiral matrix
-def spiralMatrix(lst):
-    # if not lst:
-    #     return lst
-    rowbegin=0
-    rowend=len(lst)
-    colbegin=0
-    colend=len(lst[0])
-    spiral=[]
-
-    while rowend > rowbegin and colend >colbegin:
-        for i in range(colbegin,colend):
-            spiral.append(lst[rowbegin][i])
-        for j in range(rowbegin+1,rowend-1):
-            spiral.append(lst[j][colend-1])
-        if rowend!=rowbegin+1:
-            for i in range(colend-1,colbegin-1,-1):
-                spiral.append(lst[rowend-1][i])
-        if colbegin!=colend-1:
-            for j in range(rowend-2,rowbegin,-1):
-                spiral.append(lst[j][colbegin])
-        rowbegin+=1
-        rowend-=1
-        rowbegin+=1
-        rowend-=1
-    return spiral
-
-lst1=[[1,2,3],
-     [4,5,6],
-     [7,8,9]]
-print(spiralMatrix(lst1))
+# #22) print spiral matrix
+# def spiralMatrix(lst):
+#     # if not lst:
+#     #     return lst
+#     rowbegin=0
+#     rowend=len(lst)
+#     colbegin=0
+#     colend=len(lst[0])
+#     spiral=[]
+#
+#     while rowend > rowbegin and colend >colbegin:
+#         for i in range(colbegin,colend):
+#             spiral.append(lst[rowbegin][i])
+#         for j in range(rowbegin+1,rowend-1):
+#             spiral.append(lst[j][colend-1])
+#         if rowend!=rowbegin+1:
+#             for i in range(colend-1,colbegin-1,-1):
+#                 spiral.append(lst[rowend-1][i])
+#         if colbegin!=colend-1:
+#             for j in range(rowend-2,rowbegin,-1):
+#                 spiral.append(lst[j][colbegin])
+#         rowbegin+=1
+#         rowend-=1
+#         rowbegin+=1
+#         rowend-=1
+#     return spiral
+#
+# lst1=[[1,2,3],
+#      [4,5,6],
+#      [7,8,9]]
+# print(spiralMatrix(lst1))
 
 
 

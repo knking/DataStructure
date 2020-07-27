@@ -236,52 +236,74 @@
 
 #) Given the array of strings A,
 # you need to find the longest string S which is the prefix of ALL the strings in the array.
-#
 # Longest common prefix for a pair of strings S1 and S2 is the longest string S which is the prefix of both S1
 # and S2.
-#
 # For Example, longest common prefix of "abcdefgh" and "abcefgh" is "abc".
-#
+
+
+
+
 # The count-and-say sequence is the sequence of integers beginning as follows:
 
 
 #15) Longest palindromic sub string(Brute force apporach)
 
-def longestPalindrome( s):
-    """
-    :type s: str
-    :rtype: str
-    """
+# def longestPalindrome( s):
+#     """
+#     :type s: str
+#     :rtype: str
+#     """
+#
+#     def isPalindrome(s):
+#         left = 0
+#         right = len(s) - 1
+#         while left < right:
+#             if s[left] != s[right]:
+#                 return False
+#             left += 1
+#             right -= 1
+#         return True
+#
+#     if len(s) == 1:
+#         return s
+#
+#     if len(s) < 1:
+#         return ""
+#
+#     maxSubstring = s[0]
+#     for i in range(len(s)):
+#         currentSubstring = s[i]
+#         for j in range(i + 1, len(s)):
+#             currentSubstring += s[j]
+#             if (isPalindrome(currentSubstring) and
+#                     len(currentSubstring) > len(maxSubstring)):
+#                 maxSubstring = currentSubstring
+#
+#     return maxSubstring
+# str='ashdkabajjseiw'
+# print(longestPalindrome(str))
+#
 
-    def isPalindrome(s):
-        left = 0
-        right = len(s) - 1
-        while left < right:
-            if s[left] != s[right]:
-                return False
-            left += 1
-            right -= 1
-        return True
+##16) Reverse each word in a string
 
-    if len(s) == 1:
-        return s
+# def reverse(str):
+#     reversedString=''
+#     for i in str:
+#         reversedString=i+reversedString
+#     print("Reversed string is : ",reversedString)
+#
+# str=input("Enter string : ")
+# print("Entered string : ",str)
+# reverse(str)
 
-    if len(s) < 1:
-        return ""
-
-    maxSubstring = s[0]
-    for i in range(len(s)):
-        currentSubstring = s[i]
-        for j in range(i + 1, len(s)):
-            currentSubstring += s[j]
-            if (isPalindrome(currentSubstring) and
-                    len(currentSubstring) > len(maxSubstring)):
-                maxSubstring = currentSubstring
-
-    return maxSubstring
-str='ashdkabajjseiw'
-print(longestPalindrome(str))
+# s='google how are you'
+# print(''.join(s[::-1]))
 
 
+
+##17) Reverse whole string from a sentence
+
+# sentence = sentence = "dread it run from it destiny still arrives"
+# print(' '.join(sentence.split()[::-1]))
 
 
