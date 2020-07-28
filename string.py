@@ -247,7 +247,6 @@
 
 
 #15) Longest palindromic sub string(Brute force apporach)
-
 # def longestPalindrome( s):
 #     """
 #     :type s: str
@@ -302,8 +301,31 @@
 
 
 #17) Reverse whole string from a sentence
+# sentence = sentence = "dread it run from it destiny still arrives"
+# print(' '.join(sentence.split()[::-1]))
 
-sentence = sentence = "dread it run from it destiny still arrives"
-print(' '.join(sentence.split()[::-1]))
+##18) longest comman frefix
+
+# def longestCommanprefix(str):
+#     if len(str)==0:
+#         return ""
+#     minlen=len(str[0])
+#     for i in range(len(str)):
+#         minlen=min(len(str[i]),minlen)
+#     lcp=''
+#     i=0
+#     while i < minlen:
+#         char=str[0][i]
+#         for j in range(1,len(str)):
+#             if str[j][i]!=char:
+#                 return lcp
+#
+#         lcp=lcp+char
+#         i=i+1
+#     return lcp
+# str=["geeksforgeeks", "geeks","geek", "geezer"]
+# print(longestCommanprefix(str))
+
+
 
 
