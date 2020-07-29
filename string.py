@@ -309,9 +309,11 @@
 # def longestCommanprefix(str):
 #     if len(str)==0:
 #         return ""
+# assume the first string of list is minimun and then find the minimum length string
 #     minlen=len(str[0])
 #     for i in range(len(str)):
 #         minlen=min(len(str[i]),minlen)
+# take a empty string, then fix first string from a list a compare this with all the string and move the cursor
 #     lcp=''
 #     i=0
 #     while i < minlen:
@@ -327,5 +329,30 @@
 # print(longestCommanprefix(str))
 
 
+#19) Roman number to integer
+
+def romantointeger(string):
+    dic={
+        'M': 1000,
+        'D': 500,
+        'C': 100,
+        'L': 50,
+        'X': 10,
+        'V': 5,
+        'I': 1
+        }
+    total=0
+    prev=0
+    curent=0
+    for i in range(len(string)):
+        curent=dic[string[i]]
+        if curent > prev:
+            total=total+curent -2 * prev
+        else:
+            total+=curent
+        prev=curent
+    return total
+str='MCMIV'
+print(romantointeger(str))
 
 
