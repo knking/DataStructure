@@ -329,30 +329,82 @@
 # print(longestCommanprefix(str))
 
 
-#19) Roman number to integer
+##19) Roman number to integer
 
-def romantointeger(string):
-    dic={
-        'M': 1000,
-        'D': 500,
-        'C': 100,
-        'L': 50,
-        'X': 10,
-        'V': 5,
-        'I': 1
-        }
-    total=0
-    prev=0
-    curent=0
-    for i in range(len(string)):
-        curent=dic[string[i]]
-        if curent > prev:
-            total=total+curent -2 * prev
+# def romantointeger(string):
+#     dic={
+#         'M': 1000,
+#         'D': 500,
+#         'C': 100,
+#         'L': 50,
+#         'X': 10,
+#         'V': 5,
+#         'I': 1
+#         }
+#     total=0
+#     prev=0
+#     curent=0
+#     for i in range(len(string)):
+#         curent=dic[string[i]]
+#         if curent > prev:
+#             total=total+curent -2 * prev
+#         else:
+#             total+=curent
+#         prev=curent
+#     return total
+# str='MCMIV'
+# print(romantointeger(str))
+#
+
+##)Alternative approach
+
+def value(r):
+    if (r == 'I'):
+        return 1
+    if (r == 'V'):
+        return 5
+    if (r == 'X'):
+        return 10
+    if (r == 'L'):
+        return 50
+    if (r == 'C'):
+        return 100
+    if (r == 'D'):
+        return 500
+    if (r == 'M'):
+        return 1000
+    return -1
+
+
+def romanToDecimal(str):
+    res = 0
+    i = 0
+
+    while (i < len(str)):
+
+        # Getting value of symbol s[i]
+        s1 = value(str[i])
+
+        if (i + 1 < len(str)):
+
+            # Getting value of symbol s[i + 1]
+            s2 = value(str[i + 1])
+
+            # Comparing both values
+            if (s1 >= s2):
+
+                # Value of current symbol is greater
+                # or equal to the next symbol
+                res = res + s1
+                i = i + 1
+            else:
+
+                # Value of current symbol is greater
+                # or equal to the next symbol
+                res = res + s2 - s1
+                i = i + 2
         else:
-            total+=curent
-        prev=curent
-    return total
-str='MCMIV'
-print(romantointeger(str))
+            res = res + s1
+            i = i + 1
 
-
+    return res
