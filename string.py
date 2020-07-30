@@ -411,24 +411,24 @@
 
 ##20)minimum character need to be inserted in the begning to make it palindromic
 
-def minInsert(string,i,j): #i is start pointer and j is end pointer
-    if i >= j:
-        return 0
-
-    if string[i]==string[j]:  #check character for match if all character match then retun
-        return minInsert(string,i+1,j-1)  ##call funcion again and again with increment in i and decrement in j
-    else:
-        decision1=1+minInsert(string,i+1,j)
-        decision2=1+minInsert(string,i,j-1)
-        return min(decision1,decision2)
-
-    return
+# def minInsert(string,i,j): #i is start pointer and j is end pointer
+#     if i >= j:
+#         return 0
+#
+#     if string[i]==string[j]:  #check character for match if all character match then retun
+#         return minInsert(string,i+1,j-1)  ##call funcion again and again with increment in i and decrement in j
+#     else:
+#         decision1=1+minInsert(string,i+1,j)
+#         decision2=1+minInsert(string,i,j-1)
+#         return min(decision1,decision2)
+#
+#     return
 
 ##21) Check fo anagrms
 
 #basic method using sorted function(1st method)
-s1="cab"
-s2="abc"
+# s1="cab"
+# s2="abc"
 # if sorted(s1)==sorted(s2):
 #     print("Anagramas")
 # else:
@@ -476,24 +476,86 @@ s2="abc"
 # print(anagram_list)
 
 #method 2
+#
+# def checkAnagrams(lst):
+#     dic={}
+#
+#     for word in lst:
+#         sortedword="".join(sorted(word))
+#
+#         if sortedword not in dic:
+#             dic[sortedword]=[word]
+#
+#         else:
+#             dic[sortedword].append(word)
+#
+#     result=[]
+#     for item in dic.values():
+#         result.append(item)
+#
+#     return result
+# l=["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
+# print(checkAnagrams(l))
+#
 
-def checkAnagrams(lst):
-    dic={}
+##23) count and say
 
-    for word in lst:
-        sortedword="".join(sorted(word))
+# def countSay(s):
+#     if len(s)==1:
+#         return "1"
 
-        if sortedword not in dic:
-            dic[sortedword]=[word]
 
-        else:
-            dic[sortedword].append(word)
+##24) Comapre versions of number
 
-    result=[]
-    for item in dic.values():
-        result.append(item)
+def compareVersion(version1,version2):
+    version1=[int(v) for v in version1.split(".") ]
+    version2=[int(v) for v in version2.split(".") ]
 
-    return result
-l=["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
-print(checkAnagrams(l))
+    for i in range(max(len(version1),len(version2))):
+        v1=version1[i] if i < len(version1) else 0
+        v2=version2[i] if i < len(version2) else 0
+
+        if v1 > v2:
+            return 1
+        elif v2 > v1:
+            return -1
+    return 0
+a="1.01"
+b="1.001"
+print(compareVersion(a,b))
+
+##another method
+
+# Method to compare two versions.
+# Return 1 if v2 is smaller,
+# -1 if v1 is smaller,,
+# 0 if equal
+def versionCompare(v1, v2):
+    # This will split both the versions by '.'
+    arr1 = v1.split(".")
+    arr2 = v2.split(".")
+    n = len(arr1)
+    m = len(arr2)
+
+    # converts to integer from string
+    arr1 = [int(i) for i in arr1]
+    arr2 = [int(i) for i in arr2]
+
+    # compares which list is bigger and fills
+    # smaller list with zero (for unequal delimeters)
+    if n > m:
+        for i in range(m, n):
+            arr2.append(0)
+    elif m > n:
+        for i in range(n, m):
+            arr1.append(0)
+
+            # returns 1 if version 1 is bigger and -1 if
+    # version 2 is bigger and 0 if equal
+    for i in range(len(arr1)):
+        if arr1[i] > arr2[i]:
+            return 1
+        elif arr2[i] > arr1[i]:
+            return -1
+    return 0
 
