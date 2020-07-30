@@ -436,22 +436,22 @@ s2="abc"
 
 ##using loops(2nd method)
 #
-# lst=[False] * len(s2)
-# if len(s1)==len(s2):
-#     for i in range(len(s1)):
-#         c=s1[i]
-#         check=False
-#         for j in range(len(s2)):
-#             if s2[j]==c and not lst[j]:
-#                 lst[j]=True
-#                 check=True
-#                 break
-#         if not check:
-#             break
-# if check:
-#     print("anagrams")
-# else:
-#     print("not aanagrams")
+lst=[False] * len(s2)
+if len(s1)==len(s2):
+    for i in range(len(s1)):
+        c=s1[i]
+        check=False
+        for j in range(len(s2)):
+            if s2[j]==c and not lst[j]:
+                lst[j]=True
+                check=True
+                break
+        if not check:
+            break
+if check:
+    print("anagrams")
+else:
+    print("not aanagrams")
 
 
 
