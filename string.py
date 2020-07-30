@@ -358,53 +358,102 @@
 
 ##)Alternative approach
 
-def value(r):
-    if (r == 'I'):
-        return 1
-    if (r == 'V'):
-        return 5
-    if (r == 'X'):
-        return 10
-    if (r == 'L'):
-        return 50
-    if (r == 'C'):
-        return 100
-    if (r == 'D'):
-        return 500
-    if (r == 'M'):
-        return 1000
-    return -1
+# def value(r):
+#     if (r == 'I'):
+#         return 1
+#     if (r == 'V'):
+#         return 5
+#     if (r == 'X'):
+#         return 10
+#     if (r == 'L'):
+#         return 50
+#     if (r == 'C'):
+#         return 100
+#     if (r == 'D'):
+#         return 500
+#     if (r == 'M'):
+#         return 1000
+#     return -1
+#
+#
+# def romanToDecimal(str):
+#     res = 0
+#     i = 0
+#
+#     while (i < len(str)):
+#
+#         # Getting value of symbol s[i]
+#         s1 = value(str[i])
+#
+#         if (i + 1 < len(str)):
+#
+#             # Getting value of symbol s[i + 1]
+#             s2 = value(str[i + 1])
+#
+#             # Comparing both values
+#             if (s1 >= s2):
+#
+#                 # Value of current symbol is greater
+#                 # or equal to the next symbol
+#                 res = res + s1
+#                 i = i + 1
+#             else:
+#
+#                 # Value of current symbol is greater
+#                 # or equal to the next symbol
+#                 res = res + s2 - s1
+#                 i = i + 2
+#         else:
+#             res = res + s1
+#             i = i + 1
+#
+#     return res
+
+##20)minimum character need to be inserted in the begning to make it palindromic
+
+def minInsert(string,i,j): #i is start pointer and j is end pointer
+    if i >= j:
+        return 0
+
+    if string[i]==string[j]:  #check character for match if all character match then retun
+        return minInsert(string,i+1,j-1)  ##call funcion again and again with increment in i and decrement in j
+    else:
+        decision1=1+minInsert(string,i+1,j)
+        decision2=1+minInsert(string,i,j-1)
+        return min(decision1,decision2)
+
+    return
+
+##21) Check fo anagrms
+
+#basic method using sorted function(1st method)
+s1="aac"
+s2="abc"
+# if sorted(s1)==sorted(s2):
+#     print("Anagramas")
+# else:
+#     print("Not anagrams")
+
+##using loops(2nd method)
+#
+# lst=[False] * len(s2)
+# if len(s1)==len(s2):
+#     for i in range(len(s1)):
+#         c=s1[i]
+#         check=False
+#         for j in range(len(s2)):
+#             if s2[j]==c and not lst[j]:
+#                 lst[j]=True
+#                 check=True
+#                 break
+#         if not check:
+#             break
+# if check:
+#     print("anagrams")
+# else:
+#     print("not aanagrams")
 
 
-def romanToDecimal(str):
-    res = 0
-    i = 0
 
-    while (i < len(str)):
 
-        # Getting value of symbol s[i]
-        s1 = value(str[i])
 
-        if (i + 1 < len(str)):
-
-            # Getting value of symbol s[i + 1]
-            s2 = value(str[i + 1])
-
-            # Comparing both values
-            if (s1 >= s2):
-
-                # Value of current symbol is greater
-                # or equal to the next symbol
-                res = res + s1
-                i = i + 1
-            else:
-
-                # Value of current symbol is greater
-                # or equal to the next symbol
-                res = res + s2 - s1
-                i = i + 2
-        else:
-            res = res + s1
-            i = i + 1
-
-    return res
