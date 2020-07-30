@@ -427,7 +427,7 @@ def minInsert(string,i,j): #i is start pointer and j is end pointer
 ##21) Check fo anagrms
 
 #basic method using sorted function(1st method)
-s1="aac"
+s1="cab"
 s2="abc"
 # if sorted(s1)==sorted(s2):
 #     print("Anagramas")
@@ -436,24 +436,64 @@ s2="abc"
 
 ##using loops(2nd method)
 #
-lst=[False] * len(s2)
-if len(s1)==len(s2):
-    for i in range(len(s1)):
-        c=s1[i]
-        check=False
-        for j in range(len(s2)):
-            if s2[j]==c and not lst[j]:
-                lst[j]=True
-                check=True
-                break
-        if not check:
-            break
-if check:
-    print("anagrams")
-else:
-    print("not aanagrams")
+# lst=[False] * len(s2)
+# if len(s1)==len(s2):
+#     for i in range(len(s1)):
+#         c=s1[i]
+#         check=False
+#         for j in range(len(s2)):
+#             if s2[j]==c and not lst[j]:
+#                 lst[j]=True
+#                 check=True
+#                 break
+#         if not check:
+#             break
+# if check:
+#     print("anagrams")
+# else:
+#     print("not aanagrams")
 
+##another mathod
 
+# from collections import Counter
+# s=Counter(s1)
+# s3=Counter(s2)
+# if s==s3:
+#     print("anagrams")
+# else:
+#     print("not anagrams")
 
+##22) Group anagrams
+#method 1
+# word_list = ["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
+#
+# # initialize a list
+# anagram_list = []
+# for word_1 in word_list:
+#     for word_2 in word_list:
+#         if word_1 != word_2 and (sorted(word_1)==sorted(word_2)):
+#             anagram_list.append(word_1)
+# print(anagram_list)
 
+#method 2
+
+def checkAnagrams(lst):
+    dic={}
+
+    for word in lst:
+        sortedword="".join(sorted(word))
+
+        if sortedword not in dic:
+            dic[sortedword]=[word]
+
+        else:
+            dic[sortedword].append(word)
+
+    result=[]
+    for item in dic.values():
+        result.append(item)
+
+    return result
+l=["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
+print(checkAnagrams(l))
 
