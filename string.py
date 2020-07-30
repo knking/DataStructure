@@ -507,22 +507,22 @@
 
 ##24) Comapre versions of number
 
-def compareVersion(version1,version2):
-    version1=[int(v) for v in version1.split(".") ]
-    version2=[int(v) for v in version2.split(".") ]
-
-    for i in range(max(len(version1),len(version2))):
-        v1=version1[i] if i < len(version1) else 0
-        v2=version2[i] if i < len(version2) else 0
-
-        if v1 > v2:
-            return 1
-        elif v2 > v1:
-            return -1
-    return 0
-a="1.01"
-b="1.001"
-print(compareVersion(a,b))
+# def compareVersion(version1,version2):
+#     version1=[int(v) for v in version1.split(".") ]
+#     version2=[int(v) for v in version2.split(".") ]
+#
+#     for i in range(max(len(version1),len(version2))):
+#         v1=version1[i] if i < len(version1) else 0
+#         v2=version2[i] if i < len(version2) else 0
+#
+#         if v1 > v2:
+#             return 1
+#         elif v2 > v1:
+#             return -1
+#     return 0
+# a="1.01"
+# b="1.001"
+# print(compareVersion(a,b))
 
 ##another method
 
@@ -530,32 +530,46 @@ print(compareVersion(a,b))
 # Return 1 if v2 is smaller,
 # -1 if v1 is smaller,,
 # 0 if equal
-def versionCompare(v1, v2):
-    # This will split both the versions by '.'
-    arr1 = v1.split(".")
-    arr2 = v2.split(".")
-    n = len(arr1)
-    m = len(arr2)
+# def versionCompare(v1, v2):
+#     # This will split both the versions by '.'
+#     arr1 = v1.split(".")
+#     arr2 = v2.split(".")
+#     n = len(arr1)
+#     m = len(arr2)
+#
+#     # converts to integer from string
+#     arr1 = [int(i) for i in arr1]
+#     arr2 = [int(i) for i in arr2]
+#
+#     # compares which list is bigger and fills
+#     # smaller list with zero (for unequal delimeters)
+#     if n > m:
+#         for i in range(m, n):
+#             arr2.append(0)
+#     elif m > n:
+#         for i in range(n, m):
+#             arr1.append(0)
+#
+#             # returns 1 if version 1 is bigger and -1 if
+#     # version 2 is bigger and 0 if equal
+#     for i in range(len(arr1)):
+#         if arr1[i] > arr2[i]:
+#             return 1
+#         elif arr2[i] > arr1[i]:
+#             return -1
+#     return 0
 
-    # converts to integer from string
-    arr1 = [int(i) for i in arr1]
-    arr2 = [int(i) for i in arr2]
+##24) strStr() imlementation
 
-    # compares which list is bigger and fills
-    # smaller list with zero (for unequal delimeters)
-    if n > m:
-        for i in range(m, n):
-            arr2.append(0)
-    elif m > n:
-        for i in range(n, m):
-            arr1.append(0)
+def strstr(haystack,needle):
+    if not needle:
+        return 0
+    for i in range(len(haystack)):
+        if haystack[i:i+len(needle)]==needle:
+            return i
 
-            # returns 1 if version 1 is bigger and -1 if
-    # version 2 is bigger and 0 if equal
-    for i in range(len(arr1)):
-        if arr1[i] > arr2[i]:
-            return 1
-        elif arr2[i] > arr1[i]:
-            return -1
-    return 0
+    return -1
+s="hellow"
+s1="ll"
+print(strstr(s,s1))
 
