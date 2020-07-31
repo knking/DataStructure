@@ -561,15 +561,57 @@
 
 ##24) strStr() imlementation
 
-def strstr(haystack,needle):
-    if not needle:
-        return 0
-    for i in range(len(haystack)):
-        if haystack[i:i+len(needle)]==needle:
-            return i
+# def strstr(haystack,needle):
+#     if not needle:
+#         return 0
+#     for i in range(len(haystack)):
+#         if haystack[i:i+len(needle)]==needle:
+#             return i
+#
+#     return -1
+# s="hellow"
+# s1="ll"
+# print(strstr(s,s1))
 
-    return -1
-s="hellow"
-s1="ll"
-print(strstr(s,s1))
+##24)          ------------------Rabin karp algorithm--------------
+#brute force approach
 
+# def matchstring(str,patern):
+#     if not patern:
+#         return 0
+#     for i in range(len(str)-len(patern)+1):
+#         stri=i
+#         paterni=0
+#         while stri< len(str) and paterni < len(patern) and str[stri]==patern[paterni]:
+#             stri+=1
+#             paterni+=1
+#         if paterni==len(patern):
+#             return i
+#     return -1
+# s="hellow"
+# s1="ll"
+# print(matchstring(s,s1))
+#
+
+# value=0
+# m=3
+# p=s="123456"
+# for i in range(0,m):
+#     value=value*10
+#     value=value+int(p[i])
+# print(value)
+
+# def search(pat,txt):
+#     m=len(pat)
+#     n=len(txt)
+#     for i in range(n-m+1):
+#         j=0
+#         while j < m:
+#             if txt[i+j]!=pat[j]:
+#                 break
+#             j+=1
+#         if j==m:
+#             print("index",i)
+# txt = "AABAACAADAABAAABAA"
+# pat = "AABA"
+# search(pat, txt)

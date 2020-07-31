@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/string.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="569" lean-forward="true" selection-start-line="569" selection-end-line="569" />
+            <state relative-caret-position="517">
+              <caret line="616" column="18" selection-start-line="616" selection-start-column="18" selection-end-line="616" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -58,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/likedList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24450">
-              <caret line="978" column="22" selection-start-line="978" selection-start-column="22" selection-end-line="978" selection-end-column="22" />
+            <state relative-caret-position="25275">
+              <caret line="1011" selection-start-line="1011" selection-end-line="1011" />
             </state>
           </provider>
         </entry>
@@ -86,11 +86,11 @@
         <option value="$PROJECT_DIR$/../Python data Structure and algorithm/ProgramingAndDataStructureUsingPython.py" />
         <option value="$PROJECT_DIR$/Sorting.py" />
         <option value="$PROJECT_DIR$/stack.py" />
-        <option value="$PROJECT_DIR$/likedList.py" />
         <option value="$PROJECT_DIR$/Math.py" />
         <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
         <option value="$PROJECT_DIR$/Recursion and Backtraking.py" />
         <option value="$PROJECT_DIR$/DataStructure.py" />
+        <option value="$PROJECT_DIR$/likedList.py" />
         <option value="$PROJECT_DIR$/string.py" />
       </list>
     </option>
@@ -250,8 +250,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.string" />
-        <item itemvalue="Python.DataStructure" />
         <item itemvalue="Python.likedList" />
+        <item itemvalue="Python.DataStructure" />
         <item itemvalue="Python.stack" />
         <item itemvalue="Python.Sorting" />
       </list>
@@ -271,10 +271,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15779468" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09949303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,15 +380,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/likedList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24450">
-          <caret line="978" column="22" selection-start-line="978" selection-start-column="22" selection-end-line="978" selection-end-column="22" />
+        <state relative-caret-position="25275">
+          <caret line="1011" selection-start-line="1011" selection-end-line="1011" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/string.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="569" lean-forward="true" selection-start-line="569" selection-end-line="569" />
+        <state relative-caret-position="517">
+          <caret line="616" column="18" selection-start-line="616" selection-start-column="18" selection-end-line="616" selection-end-column="18" />
         </state>
       </provider>
     </entry>

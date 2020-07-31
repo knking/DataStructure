@@ -955,57 +955,57 @@
 #     print(str(loopLength))
 
 
-# 16) write a program to delete a linked list
-
-class node:
-    def __init__(self,data):
-        self.data=data
-        self.next=None
-
-class linked:
-    def __init__(self):
-        self.head=None
-
-    def append(self,data):
-        new=node(data)
-        if self.head==None:
-            self.head=new
-        else:
-            temp=self.head
-            while temp.next !=None:
-                temp=temp.next
-            temp.next=new
-
-    def display(self):
-        temp=self.head
-        while temp:
-            print(temp.data)
-            temp=temp.next
-
-    def deleteLinkedList(self):
-        temp=self.head
-
-        # while temp:
-        #     self.head = temp.next
-        #     temp = None
-        #     temp = self.head
-        while temp:
-            prev=temp.next
-            del temp.data
-            temp=prev
-
-mylnk=linked()
-mylnk.append(3)
-mylnk.append(6)
-mylnk.append(30)
-mylnk.append(32)
-mylnk.append(2)
-mylnk.append(5)
-mylnk.append(22)
-mylnk.append(9)
-
-mylnk.display()
-print("After deletion ")
-mylnk.deleteLinkedList()
-mylnk.display()
-print("Node deleted")
+# # 16) write a program to delete a linked list
+#
+# class node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+#
+# class linked:
+#     def __init__(self):
+#         self.head=None
+#
+#     def append(self,data):
+#         new=node(data)
+#         if self.head==None:
+#             self.head=new
+#         else:
+#             temp=self.head
+#             while temp.next !=None:
+#                 temp=temp.next
+#             temp.next=new
+#
+#     def display(self):
+#         temp=self.head
+#         while temp:
+#             print(temp.data)
+#             temp=temp.next
+#
+#     def deleteLinkedList(self):
+#         temp=self.head
+#
+#         # while temp:
+#         #     self.head = temp.next
+#         #     temp = None
+#         #     temp = self.head
+#         while temp:
+#             prev=temp.next
+#             del temp.data
+#             temp=prev
+#
+# mylnk=linked()
+# mylnk.append(3)
+# mylnk.append(6)
+# mylnk.append(30)
+# mylnk.append(32)
+# mylnk.append(2)
+# mylnk.append(5)
+# mylnk.append(22)
+# mylnk.append(9)
+#
+# mylnk.display()
+# print("After deletion ")
+# mylnk.deleteLinkedList()
+# mylnk.display()
+# print("Node deleted")
