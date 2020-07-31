@@ -615,3 +615,5 @@
 # txt = "AABAACAADAABAAABAA"
 # pat = "AABA"
 # search(pat, txt)
+
+#rabin karp algorithm
