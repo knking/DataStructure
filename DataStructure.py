@@ -276,39 +276,24 @@ import array
 # A=[1,2,3,4,5,2,3,4,5,6]
 # print(repeatedNumber(A))
 
-# def repeatedNumber(A):
-#     n = len(A)
-#     seen = [False] * n
-#     for x in A:
-#         if seen[x] == True:
-#             return x
-#         else:
-#             seen[x] = True
-#     return -1
-# A=[1,2,3,4,5,2,3,4,5,6]
-# print(repeatedNumber(A))
+##Find repeate and missing nuber
+#(using hasing)
 
-# def duplicate(myist):
-#     fptr=0
-#     sptr=0
-#     print("fpta- ",fptr,"sptr- ",sptr)
-#     while True:
-#         fptr=myist[myist[fptr]]
-#         sptr=myist[sptr]
-#         print("fptr- ",fptr,"sptr- ",sptr)
-#         if fptr==sptr:
-#             print("meets at ",fptr)
-#             break
-#     fptr=0
-#     while True:
-#         fptr=myist[fptr]
-#         sptr=myist[sptr]
-#         print("fptr-",fptr, " sptr- ",sptr)
-#         if fptr==sptr:
-#             print("dupicates- ",fptr)
-#             break
-# myist=[1,2,3,4,5,6,6,5,4]
-# duplicate(myist)
+# lst=[1,2,4,5,5,6]
+# lst1=[0]*len(lst)
+# for i in range(len(lst)):
+#     s=lst[i]
+#     lst1[s-1]=lst1[s-1]+1
+#
+# for i in range(len(lst1)):
+#     if lst1[i]> 1:
+#         print(" Reapete number is :",i+1)
+#     elif lst1[i]==0:
+#         print("Missing number :",i+1)
+
+
+
+
 
 # def dupicate(lst):
 #     for i in range(len(lst)):
@@ -603,6 +588,8 @@ import array
 #      [4,5,6],
 #      [7,8,9]]
 # print(spiralMatrix(lst1))
+
+
 
 
 

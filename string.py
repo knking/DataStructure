@@ -617,3 +617,93 @@
 # search(pat, txt)
 
 #rabin karp algorithm
+
+# d=256
+# def search(pat, txt, q):
+#     M = len(pat)
+#     N = len(txt)
+#     i = 0
+#     j = 0
+#     p = 0  # hash value for pattern
+#     t = 0  # hash value for txt
+#     h = 1
+#
+#     # The value of h would be "pow(d, M-1)%q"
+#     for i in range(M - 1):
+#         h = (h * d) % q
+#
+#         # Calculate the hash value of pattern and first window
+#     # of text
+#     for i in range(M):
+#         p = (d * p + ord(pat[i])) % q
+#         t = (d * t + ord(txt[i])) % q
+#
+#         # Slide the pattern over text one by one
+#     for i in range(N - M + 1):
+#         # Check the hash values of current window of text and
+#         # pattern if the hash values match then only check
+#         # for characters on by one
+#         if p == t:
+#             # Check for characters one by one
+#             for j in range(M):
+#                 if txt[i + j] != pat[j]:
+#                     break
+#
+#             j += 1
+#             # if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
+#             if j == M:
+#
+#                 print("Pattern found at index " + str(i))
+#
+#                 # Calculate hash value for next window of text: Remove
+#         # leading digit, add trailing digit
+#         if i < N - M:
+#             t = (d * (t - ord(txt[i]) * h) + ord(txt[i + M])) % q
+#
+#             # We might get negative values of t, converting it to
+#             # positive
+#             if t < 0:
+#                 t = t + q
+#
+#             # Driver program to test the above function
+#
+#
+# txt = "GEEKS FOR GEEKS"
+# pat = "GEEK"
+# q = 101  # A prime number
+# search(pat, txt, q)
+
+##25) Count and say problem
+# def countAndSay(n):
+#     num = '1'
+#     for _ in range(n - 1):
+#         new_num = ''
+#         left, right = 0, 0
+#         while right < len(num):
+#             if num[right] != num[left]:
+#                 new_num += str(right - left) + num[left]
+#                 left = right
+#             right += 1
+#         new_num += str(right - left) + num[left]
+#         num = new_num
+#     return num
+# print(countAndSay(5))
+
+def countSay(s):
+    result=''
+    i=0
+    while i < len(s):
+        count=1
+        while i+1 < len(s) and s[i]==s[i+1]:
+            count+=1
+            i+=1
+        result+=(str(count)+ s[i])
+        i+=1
+    return result
+s='1'
+n=5
+for i in range(n):
+    s=countSay(s)
+    print(s)
+
+
