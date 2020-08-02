@@ -689,21 +689,25 @@
 #     return num
 # print(countAndSay(5))
 
-def countSay(s):
-    result=''
-    i=0
-    while i < len(s):
-        count=1
-        while i+1 < len(s) and s[i]==s[i+1]:
-            count+=1
-            i+=1
-        result+=(str(count)+ s[i])
-        i+=1
-    return result
-s='1'
-n=5
-for i in range(n):
-    s=countSay(s)
-    print(s)
+# def countSay(s):
+#     result=''
+#     i=0
+#     while i < len(s):
+#         count=1
+#         while i+1 < len(s) and s[i]==s[i+1]:
+#             count+=1
+#             i+=1
+#         result+=(str(count)+ s[i])
+#         i+=1
+#     return result
+# s='1'
+# n=5
+# for i in range(n):
+#     s=countSay(s)
+#     print(s)
+
+
+##26) Kmp algorithm
+
 
 
