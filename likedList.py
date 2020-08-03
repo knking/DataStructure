@@ -1011,170 +1011,91 @@
 # print("Node deleted")
 
 
-# class node:
-#     def __init__(self,data):
-#         self.data=data
-#         self.next=None
-#
-# class linkedList:
-#     def __init__(self):
-#         self.start=None
-#     def get_length(self):
-#         count =0
-#         temp=self.start
-#         while temp != None:
-#             count+=1
-#             temp=temp.next
-#         return count
-#
-#     def add_at_begning(self,value):
-#         start_node=node(value)
-#         self.start=start_node
-#
-#     def add_at_end(self,value):
-#         newEnd=node(value)
-#         if self.start==None:
-#             self.start=newEnd
-#
-#         temp=self.start
-#         while temp.next!=None:
-#             temp=temp.next
-#         temp.next=newEnd
-#
-#     def insert_at(self,index,data):
-#         if index < 0 or index > self.get_length():
-#             raise Exception("Invialid index")
-#         if index==0:
-#             self.add_at_begning(data)
-#
-#         count=0
-#         temp=self.start
-#
-#         while temp!=None:
-#             if count==index-1:
-#                 new=node(data)
-#                 temp.next=new
-#                 break
-#             temp=temp.next
-#             count+=1
-#     def display(self):
-#         temp=self.start
-#         while temp:
-#             print(temp.data," --> ",end="")
-#             temp=temp.next
-# l=linkedList()
-# l.add_at_begning(10)
-# l.add_at_end(20)
-# l.add_at_end(30)
-# l.add_at_end(40)
-# print(l.get_length())
-#
-# l.add_at_end(100)
-#
-# #l.add_at_begning(0)
-# l.insert_at(2,300)
-# l.display()
 
-class Node:
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
 
-class LinkedList:
+class linkedList:
     def __init__(self):
-        self.head = None
+        self.head=None
 
-    def print(self):
+    def add_at_begning(self,value):
+        new=node(value)
+        new.next=self.head
+        self.head=new
+
+    def add_element_end(self,value):
+        new_value=node(value)
         if self.head is None:
-            print("Linked list is empty")
-            return
-        itr = self.head
-        llstr = ''
-        while itr:
-            llstr += str(itr.data) + ' --> '
-            itr = itr.next
-        print(llstr)
+            self.head=new_value
+        else:
+            temp=self.head
+            while temp.next!=None:
+                temp=temp.next
+            temp.next=new_value
+
+    def add_at(self,newnode,position):
+        new=node(newnode)
+        if position < 0 or position > self.get_length():
+            print("Enter valid index Position!!!")
+        if position ==0:
+            self.add_at_begning(newnode)
+
+        else:
+            count=0
+            temp=self.head
+            while temp:
+                if count==position-1:
+                    new=node(newnode)
+                    new.next=temp.next
+                    temp.next=new
+                    break
+                temp=temp.next
+                count+=1
+
+    def add_element(self,data_list):
+        for data in data_list:
+            self.add_element_end(data)
+
+    def delete_at_beg(self):
+        self.head=self.head.next
+
+    def delete_at_last(self):
+        temp=self.head
+        while temp:
+            prev = temp
+            temp=temp.next
+        prev.next=None
+
+
 
     def get_length(self):
-        count = 0
-        itr = self.head
-        while itr:
+        count=0
+        temp=self.head
+        while temp:
             count+=1
-            itr = itr.next
-
+            temp=temp.next
         return count
 
-    def insert_at_begining(self, data):
-        node = Node(data, self.head)
-        self.head = node
 
-    def insert_at_end(self, data):
-        if self.head is None:
-            self.head = Node(data, None)
-            return
+    def print_linkedlist(self):
+        temp=self.head
+        while temp:
+            print(temp.data,"-->",end="")
+            temp=temp.next
 
-        itr = self.head
+link=linkedList()
 
-        while itr.next:
-            itr = itr.next
-
-        itr.next = Node(data, None)
-
-    def insert_at(self, index, data):
-        if index<0 or index>self.get_length():
-            raise Exception("Invalid Index")
-
-        if index==0:
-            self.insert_at_begining(data)
-            return
-
-        count = 0
-        itr = self.head
-        while itr:
-            if count == index - 1:
-                node = Node(data, itr.next)
-                itr.next = node
-                break
-
-            itr = itr.next
-            count += 1
-
-    def remove_at(self, index):
-        if index<0 or index>=self.get_length():
-            raise Exception("Invalid Index")
-
-        if index==0:
-            self.head = self.head.next
-            return
-
-        count = 0
-        itr = self.head
-        while itr:
-            if count == index - 1:
-                itr.next = itr.next.next
-                break
-
-            itr = itr.next
-            count+=1
-
-    def insert_values(self, data_list):
-        self.head = None
-        for data in data_list:
-            self.insert_at_end(data)
-
-
-if __name__ == '__main__':
-    ll = LinkedList()
-    ll.insert_values(["banana","mango","grapes","orange"])
-    ll.insert_at(4,"blueberry")
-    #ll.remove_at(1)
-    # ll.print()
-    #
-    # ll.insert_values([45,7,12,567,99])
-    ll.insert_at_end(67)
-    ll.print()
-
-
+link.add_element(["banana","mango","grapes","orange"])
+#link.add_at_begning(1)
+#link.add_at("kk",0)
+#link.delete_at_beg()
+link.delete_at_last()
+link.print_linkedlist()
+print()
+#print(" length of element : ", link.get_length())
 
 
 
