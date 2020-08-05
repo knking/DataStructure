@@ -456,6 +456,8 @@
 ##another mathod
 
 # from collections import Counter
+# s1="car"
+# s2="rac"
 # s=Counter(s1)
 # s3=Counter(s2)
 # if s==s3:
@@ -464,7 +466,7 @@
 #     print("not anagrams")
 
 ##22) Group anagrams
-#method 1
+# #method 1
 # word_list = ["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
 #
 # # initialize a list
@@ -496,13 +498,6 @@
 #     return result
 # l=["percussion", "supersonic", "car", "tree", "boy", "girl", "arc"]
 # print(checkAnagrams(l))
-#
-
-##23) count and say
-
-# def countSay(s):
-#     if len(s)==1:
-#         return "1"
 
 
 ##24) Comapre versions of number
@@ -560,7 +555,8 @@
 #     return 0
 
 ##24) strStr() imlementation
-
+##Input: haystack = "hello", needle = "ll"
+##Output: 2
 # def strstr(haystack,needle):
 #     if not needle:
 #         return 0
@@ -708,6 +704,3 @@
 
 
 ##26) Kmp algorithm
-
-
-

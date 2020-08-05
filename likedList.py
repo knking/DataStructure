@@ -1064,10 +1064,27 @@ class linkedList:
 
     def delete_at_last(self):
         temp=self.head
-        while temp:
+        while temp.next!=None:
             prev = temp
             temp=temp.next
         prev.next=None
+    def delete_specific_ele(self,key):
+        temp=self.head
+        if temp is not None:
+            if temp.data==key:
+                self.head=temp.next
+                temp=None
+                return
+
+        while temp.next!=None:
+            if temp.data==key:
+                break
+                prev=temp
+                temp=temp.next
+
+        prev.next=temp.next
+        temp=None
+
 
 
 
