@@ -51,7 +51,7 @@
 #         # (discard remainder)
 #         decimalToBinary(n//2)
 #     print(n%2, end=' ')
-# decimalToBinary(10.2)
+# decimalToBinary(10)
 
 ## 5) Trailing Zeroes in Factorials
 
@@ -71,7 +71,19 @@
 #         res *=26
 #         res+=ord(s[i])-ord("A")+1
 #     return res
-# print(excelColumNum("ABA"))
+# print(excelColumNum("AAA"))
+
+# def excelColumn(s):
+#     ans=0
+#     power=1
+#     n=len(s)
+#     for i in range(n-1,-1,-1):
+#         ans+=(ord(s[i])-64)* power
+#         power=power*26
+#
+#     return ans
+# print(excelColumn("AAA"))
+
 
 ## 7) Two sums
 # def findTriplets(arr, n):
@@ -170,6 +182,8 @@
 #
 # else:
 #     print("not ")
+
+
 
 
 
