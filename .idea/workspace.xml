@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Math.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="218" column="19" selection-start-line="218" selection-start-column="19" selection-end-line="218" selection-end-column="19" />
+            <state relative-caret-position="617">
+              <caret line="244" column="1" selection-start-line="244" selection-start-column="1" selection-end-line="244" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -58,17 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/likedList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3450">
-              <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+            <state relative-caret-position="692">
+              <caret line="1041" selection-start-line="1041" selection-end-line="1041" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1625">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="2725">
+              <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -94,17 +94,17 @@
         <option value="$USER_HOME$/OneDrive/Desktop/translator.py" />
         <option value="$PROJECT_DIR$/../Python data Structure and algorithm/ProgramingAndDataStructureUsingPython.py" />
         <option value="$PROJECT_DIR$/Sorting.py" />
-        <option value="$PROJECT_DIR$/stack.py" />
         <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
         <option value="$PROJECT_DIR$/Recursion and Backtraking.py" />
         <option value="$PROJECT_DIR$/DataStructure.py" />
-        <option value="$PROJECT_DIR$/likedList.py" />
         <option value="$PROJECT_DIR$/string.py" />
         <option value="$PROJECT_DIR$/Math.py" />
+        <option value="$PROJECT_DIR$/likedList.py" />
+        <option value="$PROJECT_DIR$/stack.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="487" />
     <option name="y" value="168" />
     <option name="width" value="1038" />
@@ -150,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Math">
+  <component name="RunManager" selected="Python.stack">
     <configuration name="DataStructure" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="timePass" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.stack" />
+        <item itemvalue="Python.likedList" />
         <item itemvalue="Python.Math" />
         <item itemvalue="Python.string" />
-        <item itemvalue="Python.likedList" />
         <item itemvalue="Python.DataStructure" />
-        <item itemvalue="Python.stack" />
       </list>
     </recent_temporary>
   </component>
@@ -379,24 +379,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="244" column="1" selection-start-line="244" selection-start-column="1" selection-end-line="244" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/likedList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3450">
-          <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+        <state relative-caret-position="692">
+          <caret line="1041" selection-start-line="1041" selection-end-line="1041" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="218" column="19" selection-start-line="218" selection-start-column="19" selection-end-line="218" selection-end-column="19" />
+        <state relative-caret-position="2725">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
         </state>
       </provider>
     </entry>

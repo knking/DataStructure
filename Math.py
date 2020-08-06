@@ -1,5 +1,7 @@
 ##1) Gcd of number
 # def gcd(m,n):
+#     if m <=1 or n <=1:
+#         return max(m,n)
 #     i=min(m,n)
 #     while i >0:
 #
@@ -7,8 +9,19 @@
 #             return i
 #         else:
 #             i=i-1
-# g=gcd(16,16)
+# g=gcd(8,6)
 # print(g)
+
+# def gcd(A, B):
+#     if B > A:
+#         A, B = B, A
+#     while B != 0:
+#         temp = B
+#         B = A % B
+#         A = temp
+#     return A
+# print(gcd(2,0))
+
 
 # 2) Prime number
 
@@ -108,6 +121,10 @@
 #     return ans
 # print(excelColumn("AAA"))
 
+# def titleToNumber(A):
+# 	T = dict(zip('ABCDEFGHIJKLMNOPQRSTUVWXYZ', range(1,27)))
+# 	return sum(T[ch] * 26**i for i, ch in enumerate(A[::-1]))
+# print(titleToNumber("AAA"))
 
 ## 7) Two sums
 # def findTriplets(arr, n):
@@ -208,15 +225,22 @@
 #     print("not ")
 
 ##9) Reverse integer
-def reverseInteger(num):
-    temp=0
-    isNegative=False
-    if num < 0:
-        isNegative=True
-        num = -1 * num
-    while num!=0:
-        temp=temp*10+num%10
-        num=num//10
-    if (temp >=2**31-1 or -1 * temp < -2**31): return 0
-    return temp if not isNegative else -1 * temp
-print(reverseInteger(-112))
+# def reverseInteger(num):
+#     temp=0
+#     isNegative=False
+#     if num < 0:
+#         isNegative=True
+#         num = -1 * num
+#     while num!=0:
+#         temp=temp*10+num%10
+#         num=num//10
+#     if (temp >=2**31-1 or -1 * temp < -2**31): return 0
+#     return temp if not isNegative else -1 * temp
+# print(reverseInteger(-1234567891))
+
+#Given an even number ( greater than 2 ), return two prime numbers whose sum will be equal to given number.(Prime Sum)
+#Sum of pairwise Hamming Distance
+#Power Of Two Integers
+#Power Of Two Integers
+#City Tour
+

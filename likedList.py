@@ -115,10 +115,10 @@
 # link.append(2)
 # link.append(3)
 # link.append(4)
-# a=link.search(3)
+# a=link.search(10)
 # print(a)
 # print(link.display())
-#
+
 #
 # #3) create a method to delete any element in the linked list
 #
@@ -291,8 +291,8 @@
 # l.append(50)
 # l.append(90)
 # l.append(10)
-#
-# #l.dis()
+# print(l.countSpecific(70))
+#l.dis()
 #
 # print("Specific Number in linked List : ",l.countSpecific(90))
 #
@@ -1013,112 +1013,44 @@
 
 
 class node:
-    def __init__(self,data):
-        self.data=data
+    def __init__(self,value):
+        self.value=value
         self.next=None
 
-class linkedList:
+class linkedlist:
     def __init__(self):
         self.head=None
 
-    def add_at_begning(self,value):
-        new=node(value)
-        new.next=self.head
-        self.head=new
-
-    def add_element_end(self,value):
-        new_value=node(value)
-        if self.head is None:
-            self.head=new_value
-        else:
-            temp=self.head
-            while temp.next!=None:
-                temp=temp.next
-            temp.next=new_value
-
-    def add_at(self,newnode,position):
-        new=node(newnode)
-        if position < 0 or position > self.get_length():
-            print("Enter valid index Position!!!")
-        if position ==0:
-            self.add_at_begning(newnode)
-
-        else:
-            count=0
-            temp=self.head
-            while temp:
-                if count==position-1:
-                    new=node(newnode)
-                    new.next=temp.next
-                    temp.next=new
-                    break
-                temp=temp.next
-                count+=1
-
-    def add_element(self,data_list):
-        for data in data_list:
-            self.add_element_end(data)
-
-    def delete_at_beg(self):
-        self.head=self.head.next
-
-    def delete_at_last(self):
+    def add_elemen(self,data):
+        new=node(data)
         temp=self.head
-        while temp.next!=None:
-            prev = temp
-            temp=temp.next
-        prev.next=None
-    def delete_specific_ele(self,key):
-        temp=self.head
-        if temp is not None:
-            if temp.data==key:
-                self.head=temp.next
-                temp=None
-                return
-
-        while temp.next!=None:
-            if temp.data==key:
-                break
-                prev=temp
+        if self.head ==None:
+            self.head=new
+        else:
+            while temp.next != None:
                 temp=temp.next
+            temp.next=new
 
-        prev.next=temp.next
-        temp=None
-
-
-
-
-    def get_length(self):
+    def countSpecificValue(self,val):
+        temp=self.head
         count=0
-        temp=self.head
-        while temp:
-            count+=1
-            temp=temp.next
+        while temp.next !=None:
+            if temp.value==val:
+                count+=1
+            temp = temp.next
         return count
 
-
-    def print_linkedlist(self):
+    def display(self):
         temp=self.head
-        while temp:
-            print(temp.data,"-->",end="")
+        while temp.next !=None:
+            print(temp.value,"->",end=" ")
             temp=temp.next
 
-link=linkedList()
-
-link.add_element(["banana","mango","grapes","orange"])
-#link.add_at_begning(1)
-#link.add_at("kk",0)
-#link.delete_at_beg()
-link.delete_at_last()
-link.print_linkedlist()
-print()
-#print(" length of element : ", link.get_length())
-
-
-
-
-
-
-
-
+l=linkedlist()
+l.add_elemen(10)
+l.add_elemen(20)
+l.add_elemen(20)
+l.add_elemen(20)
+print(l.countSpecificValue(20))
+l.display()
 

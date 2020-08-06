@@ -48,41 +48,65 @@
 # s.search("Roy")
 
 
-# 2) Reverse a string using stack
+# # 2) Reverse a string using stack
+#
+# def createStack():
+#     stack = []
+#     return stack
+#
+# def size(stack):
+#     return len(stack)
+#
+# def isEmpty(stack):
+#     if size(stack) == 0:
+#         return True
+#
+# def push(stack, item):
+#     stack.append(item)
+#
+# def pop(stack):
+#     if isEmpty(stack):
+#         return
+#     return stack.pop()
+#
+# def reverse(string):
+#     n = len(string)
+#
+#     stack = createStack()
+#
+#     for i in range(0, n, 1):
+#         push(stack, string[i])
+#
+#     string = ""
+#
+#     for i in range(0, n, 1):
+#         string += pop(stack)
+#     return string
+#
+# string = "GeeksQuiz"
+# string = reverse(string)
+# print("Reversed string is " + string)
 
-def createStack():
-    stack = []
-    return stack
 
-def size(stack):
-    return len(stack)
+a=[]
+def pushStack(element):
+    a.append(element)
 
-def isEmpty(stack):
-    if size(stack) == 0:
-        return True
+def popStack():
+    if len(a)<=0:
+        print(" Stak is empty")
+    else:
+        return a.pop()
 
-def push(stack, item):
-    stack.append(item)
+def printStack():
+    for i in range(len(a)-1,-1,-1):
+        print(a[i])
 
-def pop(stack):
-    if isEmpty(stack):
-        return
-    return stack.pop()
 
-def reverse(string):
-    n = len(string)
+pushStack(10)
+pushStack(20)
+pushStack(30)
+pushStack("k")
+#popStack()
+printStack()
 
-    stack = createStack()
-
-    for i in range(0, n, 1):
-        push(stack, string[i])
-
-    string = ""
-
-    for i in range(0, n, 1):
-        string += pop(stack)
-    return string
-
-string = "GeeksQuiz"
-string = reverse(string)
-print("Reversed string is " + string)
