@@ -55,6 +55,30 @@
 
 ## 5) Trailing Zeroes in Factorials
 
+##basic appoach
+# def fact(n):
+#     if n ==0:
+#         return 1
+#     else:
+#         return n * fact(n-1)
+# s=fact(100)
+# count=0
+# while s !=0:
+#     r=s%10
+#     if r==0:
+#         count+=1
+#     else:
+#         break
+#     s=s//10
+# print(count)
+# def trailing_zero(n):
+#     count=0
+#     while n!=0:
+#         count+=n//5
+#         n=n//5
+#     return count
+# print(trailing_zero(100))
+
 # def trailingZeros(number):
 #     p=5
 #     count=0
@@ -183,7 +207,16 @@
 # else:
 #     print("not ")
 
-
-
-
-
+##9) Reverse integer
+def reverseInteger(num):
+    temp=0
+    isNegative=False
+    if num < 0:
+        isNegative=True
+        num = -1 * num
+    while num!=0:
+        temp=temp*10+num%10
+        num=num//10
+    if (temp >=2**31-1 or -1 * temp < -2**31): return 0
+    return temp if not isNegative else -1 * temp
+print(reverseInteger(-112))
