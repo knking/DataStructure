@@ -87,26 +87,43 @@
 # string = reverse(string)
 # print("Reversed string is " + string)
 
-
 a=[]
-def pushStack(element):
-    a.append(element)
+def stackPush(element):
+    return a.append(element)
 
-def popStack():
-    if len(a)<=0:
-        print(" Stak is empty")
-    else:
+def stackPop():
+    if len(a)> 0:
         return a.pop()
+    else:
+        print(" Stack is empty")
 
-def printStack():
+def display():
     for i in range(len(a)-1,-1,-1):
         print(a[i])
 
+def search(value):
+    for i in range(len(a)):
+        if a[i]==value:
+            print("Found at index :",i)
+            break
+    else:
+        print("Not Found")
+def checkEmpty():
+    if len(a)<=0:
+        print("Stack is empty")
+    else:
+        print("Stack is not empty")
 
-pushStack(10)
-pushStack(20)
-pushStack(30)
-pushStack("k")
-#popStack()
-printStack()
+def reverse(string):
+    n=len(string)
 
+
+
+
+stackPush(10)
+stackPush(20)
+stackPush("k")
+#stackPop()
+search("kn")
+checkEmpty()
+display()

@@ -238,23 +238,65 @@
 #     return temp if not isNegative else -1 * temp
 # print(reverseInteger(-1234567891))
 
-#Given an even number ( greater than 2 ), return two prime numbers whose sum will be equal to given number.(Prime Sum)
 #Sum of pairwise Hamming Distance
 #Power Of Two Integers
 #Power Of Two Integers
 #City Tour
 
-def sieveOfErathosthenes(n):
-    primes=[True for i in range(n+1)]
-    primes[0]=False
-    primes[1]=False
-    for p in range(2,n+1):
-        if primes[p]==True:
-            for i in range(p*p,n+1,p):
-                primes[i]=False
+##10)Sieve of Eratosthenes
 
-    for i in range(2,n+1):
-        if primes[i]==True:
-            print(i,end=" ")
+# def sieveOfErathosthenes(n):
+#     primes=[True for i in range(n+1)]
+#     primes[0]=False
+#     primes[1]=False
+#     for p in range(2,n+1):
+#         if primes[p]==True:
+#             for i in range(p*p,n+1,p):
+#                 primes[i]=False
+#
+#     for i in range(2,n+1):
+#         if primes[i]==True:
+#             print(i,end=" ")
+# sieveOfErathosthenes(20)
 
-sieveOfErathosthenes(20)
+##11) Sieve of Sundaram
+
+# def sieveOfSundram(n):
+#     newN=int((n-1)/2)
+#     marked=[0] * (newN+1)
+#
+#     for i in range(1,newN+1):
+#         j=i
+#         while i+j+2*i*j <=newN:
+#             marked[i+j+2*i*j]=1
+#             j+=1
+#
+#     if n>2:
+#         print(2,end=" ")
+#     for i in range(1,newN+1):
+#         if marked[i]==0:
+#             print(2*i+1,end=" ")
+# sieveOfSundram(20)
+
+##13)Given an even number(greater than 2)return two prime numbers whose sum will be equal to given number.(Prime Sum)
+
+# def sum_of_primes(num):
+#     isPrime = 1
+#     for i in range (2,int(num/2),1):
+#         if(num % i == 0):
+#             isPrime = 0
+#             break
+#     return isPrime
+#
+# num = int(input("Enter a number : "))
+# flag = 0
+# i = 2
+# for i in range (2,int(num/2),1):
+#     if(sum_of_primes(i) == 1):
+#         if(sum_of_primes(num-i) == 1):
+#             print(num,"can be expressed as the sum of",i,"and",num-i)
+#             flag = 1
+# if (flag == 0):
+#     print(num,"cannot be expressed as the sum of two prime numbers")
+# sum_of_primes(num)
+
