@@ -244,3 +244,17 @@
 #Power Of Two Integers
 #City Tour
 
+def sieveOfErathosthenes(n):
+    primes=[True for i in range(n+1)]
+    primes[0]=False
+    primes[1]=False
+    for p in range(2,n+1):
+        if primes[p]==True:
+            for i in range(p*p,n+1,p):
+                primes[i]=False
+
+    for i in range(2,n+1):
+        if primes[i]==True:
+            print(i,end=" ")
+
+sieveOfErathosthenes(20)
