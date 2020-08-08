@@ -64,7 +64,7 @@
 #         # (discard remainder)
 #         decimalToBinary(n//2)
 #     print(n%2, end=' ')
-# decimalToBinary(10)
+# decimalToBinary(7)
 
 ## 5) Trailing Zeroes in Factorials
 
@@ -300,3 +300,19 @@
 #     print(num,"cannot be expressed as the sum of two prime numbers")
 # sum_of_primes(num)
 
+##14) Hamming distance
+
+# def decimalToBinary(x,y):
+#     return bin(x^y).count("1")
+# print(decimalToBinary(1,4))
+#
+# def detob(x,y):
+#     ans = 0
+#     while x or y:
+#         ans += (x % 2) ^ (y % 2)
+#         x //= 2
+#         y //= 2
+#     return ans
+# print(detob(4,4))
+
+print(3//2)
