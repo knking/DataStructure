@@ -1011,46 +1011,77 @@
 # print("Node deleted")
 
 
-
 class node:
     def __init__(self,value):
         self.value=value
         self.next=None
-
-class linkedlist:
+class linkedList:
     def __init__(self):
         self.head=None
 
-    def add_elemen(self,data):
+    def insert_at_beg(self,data):
+        firstValue=node(data)
+        firstValue.next=self.head
+        self.head=firstValue
+
+    def insert_at_end(self,data):
         new=node(data)
-        temp=self.head
-        if self.head ==None:
+
+        if self.head==None:
             self.head=new
         else:
-            while temp.next != None:
+            temp = self.head
+            while temp.next!=None:
+                temp=temp.next
+            temp.next=new
+            new.next=None
+    def insert_at(self,key,value):
+        if key < 0:
+            print(" key is not valid!!1")
+        if key==0:
+            self.insert_at_beg(value)
+
+        count=0
+        temp=self.head
+        new=node(value)
+        while temp.next!=None:
+            if count==key-1:
+                new.next=temp.next
+                temp.next=new
+                break
+
+            temp=temp.next
+            count+=1
+
+
+    def add(self,data):
+        new=node(data)
+        if self.head is None:
+            self.head=new
+        else:
+            temp=self.head
+            while temp.next!=None:
                 temp=temp.next
             temp.next=new
 
-    def countSpecificValue(self,val):
+    def dis(self):
         temp=self.head
-        count=0
-        while temp.next !=None:
-            if temp.value==val:
-                count+=1
-            temp = temp.next
-        return count
-
-    def display(self):
-        temp=self.head
-        while temp.next !=None:
+        while temp:
             print(temp.value,"->",end=" ")
             temp=temp.next
 
-l=linkedlist()
-l.add_elemen(10)
-l.add_elemen(20)
-l.add_elemen(20)
-l.add_elemen(20)
-print(l.countSpecificValue(20))
-l.display()
+
+
+l=linkedList()
+l.insert_at_beg(1)
+
+l.add(10)
+l.add(20)
+l.add(30)
+l.add(40)
+l.insert_at_end(50)
+l.insert_at(-1,100)
+#l.insert_at_beg(1)
+l.dis()
+
 
