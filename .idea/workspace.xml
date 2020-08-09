@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Math.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="348" column="27" lean-forward="true" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+            <state relative-caret-position="342">
+              <caret line="346" column="13" lean-forward="true" selection-start-line="346" selection-start-column="13" selection-end-line="346" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -104,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="487" />
     <option name="y" value="168" />
     <option name="width" value="1038" />
@@ -280,7 +280,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06273764" />
@@ -396,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Math.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="348" column="27" lean-forward="true" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+        <state relative-caret-position="342">
+          <caret line="346" column="13" lean-forward="true" selection-start-line="346" selection-start-column="13" selection-end-line="346" selection-end-column="13" />
         </state>
       </provider>
     </entry>
