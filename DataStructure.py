@@ -292,9 +292,6 @@ import array
 #         print("Missing number :",i+1)
 
 
-
-
-
 # def dupicate(lst):
 #     for i in range(len(lst)):
 #         if lst[abs(lst[i])]>= 0:

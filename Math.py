@@ -305,7 +305,7 @@
 # def decimalToBinary(x,y):
 #     return bin(x^y).count("1")
 # print(decimalToBinary(1,4))
-#
+
 # def detob(x,y):
 #     ans = 0
 #     while x or y:
@@ -313,6 +313,42 @@
 #         x //= 2
 #         y //= 2
 #     return ans
-# print(detob(4,4))
+# print(detob(1,4))
 
-print(3//2)
+# def totalHammingDistance(nums):
+#     return sum(b.count('0') * b.count('1') for b in zip(*map('{:032b}'.format, nums)))
+# nums=[4,14,2]
+# print(totalHammingDistance(nums))
+
+# class Solution(object):
+#     def totalHammingDistance(self, nums):
+#         """
+#         :type nums: List[int]
+#         :rtype: int
+#         """
+#         ans = 0
+#         mask = 1
+#         for j in range(0, 32):
+#             ones = zeros = 0
+#             for num in nums:
+#                 if num & mask:
+#                     ones += 1
+#                 else:
+#                     zeros += 1
+#             ans += ones * zeros
+#             mask = mask << 1
+#         return ans
+# s=Solution()
+# print(s.totalHammingDistance(nums=[4,14,2]))
+
+##15)sum of bit differences among all pairs(Hamming distance air sum)
+# def decimalToBinary(x,y):
+#     return bin(x^y).count("1")
+# lst=[1,3,5]
+# sum=0
+# for i in range(len(lst)):
+#     for j in range(len(lst)):
+#         sum+=decimalToBinary(lst[i],lst[j])
+#
+# print(sum)
+
