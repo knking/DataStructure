@@ -1065,6 +1065,20 @@ class linkedList:
             temp=temp.next
             count+=1
 
+    def nThNode(self,key):
+        temp=self.head
+        if key==0:
+            print(temp.value,"->")
+        else:
+            count=0
+            while temp.next!=None:
+                if count==key:
+                    print(temp.value,"->")
+                    break
+                temp=temp.next
+                count+=1
+
+
     def add(self,data):
         new=node(data)
         if self.head is None:
@@ -1097,6 +1111,8 @@ l.add(70)
 #l.insert_at(-1,100)
 #l.insert_at_beg(1)
 #l.delete_at(5)
-l.dis()
+l.nThNode(6)
+#l.dis()
+
 
 
