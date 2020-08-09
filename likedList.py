@@ -1010,7 +1010,7 @@
 # mylnk.display()
 # print("Node deleted")
 
-
+###Revision
 class node:
     def __init__(self,value):
         self.value=value
@@ -1040,7 +1040,6 @@ class linkedList:
             print(" key is not valid!!1")
         if key==0:
             self.insert_at_beg(value)
-
         count=0
         temp=self.head
         new=node(value)
@@ -1049,10 +1048,22 @@ class linkedList:
                 new.next=temp.next
                 temp.next=new
                 break
-
             temp=temp.next
             count+=1
-
+    def delete_at(self,key):
+        if key<0:
+            print("Not valid key!!")
+        if key==0:
+            self.head=self.head.next
+            return
+        count=0
+        temp=self.head
+        while temp.next!=None:
+            if count==key-1:
+                temp.next=temp.next.next
+                break
+            temp=temp.next
+            count+=1
 
     def add(self,data):
         new=node(data)
@@ -1079,9 +1090,13 @@ l.add(10)
 l.add(20)
 l.add(30)
 l.add(40)
-l.insert_at_end(50)
-l.insert_at(-1,100)
+l.add(50)
+l.add(60)
+l.add(70)
+#l.insert_at_end(80)
+#l.insert_at(-1,100)
 #l.insert_at_beg(1)
+#l.delete_at(5)
 l.dis()
 
 
