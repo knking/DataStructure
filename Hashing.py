@@ -28,26 +28,28 @@
 # print(t["aprail 7"])
 
 ##1) Fidn first reapeting character
-# s="abcdee"
-# for i in range(len(s)-1):
-#     if s[i]==s[i+1]:
-#         print(s[i+1])
-#         break
-# else:
-#     print("No first reapeted character")
+s="abcde"
+size=len(s)
+for i in range(size):
+    for j in range(i+1,size):
+        if s[i]==s[j]:
+            print(s[i])
+        break
+if i==size-1:
+    print("No first reapeted character")
 
 ## using hashing
 
-def FirstRepeatedChar(str):
-    count=[0]*256
-    size=len(str)
-    for i in range(size):
-        if count[ord(str[i])]==1:
-            print(str[i])
-            break
-        else:
-            count[ord(str[i])]+=1
-    if i==size:
-        print("No repeated char")
-    return 0
-FirstRepeatedChar(["a","c","b","a","d","e","f","g","h","k"])
+# def FirstRepeatedChar(str):
+#     count=[0]*256
+#     size=len(str)
+#     for i in range(size):
+#         if count[ord(str[i])]==1:
+#             print(str[i])
+#             break
+#         else:
+#             count[ord(str[i])]+=1
+#     if i==size:
+#         print("No repeated char")
+#     return 0
+# FirstRepeatedChar(["a","c","b","a","d","e","f","g","h","k"])
