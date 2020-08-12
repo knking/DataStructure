@@ -1011,108 +1011,236 @@
 # print("Node deleted")
 
 ###Revision
-class node:
-    def __init__(self,value):
-        self.value=value
-        self.next=None
-class linkedList:
-    def __init__(self):
-        self.head=None
+# class node:
+#     def __init__(self,value):
+#         self.value=value
+#         self.next=None
+# class linkedList:
+#     def __init__(self):
+#         self.head=None
+#
+#     def insert_at_beg(self,data):
+#         firstValue=node(data)
+#         firstValue.next=self.head
+#         self.head=firstValue
+#
+#     def insert_at_end(self,data):
+#         new=node(data)
+#
+#         if self.head==None:
+#             self.head=new
+#         else:
+#             temp = self.head
+#             while temp.next!=None:
+#                 temp=temp.next
+#             temp.next=new
+#             new.next=None
+#     def insert_at(self,key,value):
+#         if key < 0:
+#             print(" key is not valid!!1")
+#         if key==0:
+#             self.insert_at_beg(value)
+#         count=0
+#         temp=self.head
+#         new=node(value)
+#         while temp.next!=None:
+#             if count==key-1:
+#                 new.next=temp.next
+#                 temp.next=new
+#                 break
+#             temp=temp.next
+#             count+=1
+#     def delete_at(self,key):
+#         if key<0:
+#             print("Not valid key!!")
+#         if key==0:
+#             self.head=self.head.next
+#             return
+#         count=0
+#         temp=self.head
+#         while temp.next!=None:
+#             if count==key-1:
+#                 temp.next=temp.next.next
+#                 break
+#             temp=temp.next
+#             count+=1
+#
+#     def nThNode(self,key):
+#         temp=self.head
+#         if key==0:
+#             print(key,"Node in linked list is : ",temp.value,"->")
+#         else:
+#             count=0
+#             while temp:
+#                 if count==key:
+#                     print(key,"Node in linked list is : ",temp.value,"->")
+#                     break
+#                 temp=temp.next
+#                 count+=1
+#     def maximum(self):
+#         temp=self.head
+#         max=-100
+#         while temp:
+#             if temp.value>max:
+#                 max=temp.value
+#             temp=temp.next
+#         return max
+#
+#     def minimum(self):
+#         temp=self.head
+#         min=100000000000
+#         while temp:
+#             if temp.value < min:
+#                 min=temp.value
+#             temp=temp.next
+#         return min
+#
+#     # def add(self,data):
+#     #     new=node(data)
+#     #     if self.head is None:
+#     #         self.head=new
+#     #     else:
+#     #         temp=self.head
+#     #         while temp.next!=None:
+#     #             temp=temp.next
+#     #         temp.next=new
+#
+#     def add(self,data):
+#         new=node(data)
+#         if self.head is None:
+#             self.head=new
+#             new.next=self.head
+#         else:
+#             temp=self.head
+#             while temp.next!=self.head:
+#                 temp=temp.next
+#             temp.next=new
+#             new.next=self.head
+#
+#     def dis(self):
+#         temp=self.head
+#         while temp:
+#             print(temp.value,"->",end=" ")
+#             temp=temp.next
+#             if temp==self.head:
+#                 break
+#
+#
+#
+# l=linkedList()
+# #l.insert_at_beg(1)
+#
+# l.add(10)
+# l.add(20)
+# l.add(30)
+# l.add(40)
+# l.add(50)
+# l.add(60)
+# l.add(700)
+# l.add(-90)
+# #l.insert_at_end(80)
+# #l.insert_at(-1,100)
+# #l.insert_at_beg(1)
+# #l.delete_at(5)
+# # l.nThNode(6)
+# # print("Maximum value in linked list : ",l.maximum())
+# # print("Minimum value in linked list : ",l.minimum())
+# l.dis()
 
-    def insert_at_beg(self,data):
-        firstValue=node(data)
-        firstValue.next=self.head
-        self.head=firstValue
 
-    def insert_at_end(self,data):
-        new=node(data)
-
-        if self.head==None:
-            self.head=new
-        else:
-            temp = self.head
-            while temp.next!=None:
-                temp=temp.next
-            temp.next=new
-            new.next=None
-    def insert_at(self,key,value):
-        if key < 0:
-            print(" key is not valid!!1")
-        if key==0:
-            self.insert_at_beg(value)
-        count=0
-        temp=self.head
-        new=node(value)
-        while temp.next!=None:
-            if count==key-1:
-                new.next=temp.next
-                temp.next=new
-                break
-            temp=temp.next
-            count+=1
-    def delete_at(self,key):
-        if key<0:
-            print("Not valid key!!")
-        if key==0:
-            self.head=self.head.next
-            return
-        count=0
-        temp=self.head
-        while temp.next!=None:
-            if count==key-1:
-                temp.next=temp.next.next
-                break
-            temp=temp.next
-            count+=1
-
-    def nThNode(self,key):
-        temp=self.head
-        if key==0:
-            print(temp.value,"->")
-        else:
-            count=0
-            while temp.next!=None:
-                if count==key:
-                    print(temp.value,"->")
-                    break
-                temp=temp.next
-                count+=1
-
-
-    def add(self,data):
-        new=node(data)
-        if self.head is None:
-            self.head=new
-        else:
-            temp=self.head
-            while temp.next!=None:
-                temp=temp.next
-            temp.next=new
-
-    def dis(self):
-        temp=self.head
-        while temp:
-            print(temp.value,"->",end=" ")
-            temp=temp.next
-
-
-
-l=linkedList()
-l.insert_at_beg(1)
-
-l.add(10)
-l.add(20)
-l.add(30)
-l.add(40)
-l.add(50)
-l.add(60)
-l.add(70)
-#l.insert_at_end(80)
-#l.insert_at(-1,100)
-#l.insert_at_beg(1)
-#l.delete_at(5)
-l.nThNode(6)
-#l.dis()
-
-
-
+# class node:
+#     def __init__(self,value):
+#         self.next=None
+#         self.prev=None
+#         self.value=value
+#
+# class doublelinledList:
+#     def __init__(self):
+#         self.head=None
+#
+#
+#     def add_at_beg(self,new):
+#         val=node(new)
+#         val.next=self.head
+#         self.head=val
+#         val.prev=None
+#
+#     def add_at_end(self,val):
+#         new=node(val)
+#         temp=self.head
+#         while temp.next!=None:
+#             temp=temp.next
+#         temp.next=new
+#         new.prev=temp
+#         new.next=None
+#     def add_after(self,prev_node,val):
+#         if prev_node < 0:
+#             print("Enter valid node ")
+#         if prev_node==0:
+#             self.add_at_beg(val)
+#
+#         else:
+#             temp=self.head
+#             count=0
+#             new=node(val)
+#             while temp:
+#                 if prev_node==count+1:
+#                     new.next=temp.next
+#                     temp.next=new
+#                     new.prev=temp
+#                     break
+#                 temp=temp.next
+#                 count+=1
+#
+#
+#     def addElement(self,data):
+#         new=node(data)
+#         if self.head==None:
+#             self.head=new
+#             new.prev=None
+#
+#         else:
+#             temp=self.head
+#             while temp.next!=None:
+#                 temp=temp.next
+#             temp.next=new
+#             new.prev=temp
+#             new.next=None
+#
+#     def makeCricular(self,data):
+#         new=node(data)
+#         if self.head is None:
+#             self.head=new
+#             new.next=self.head
+#             new.prev=None
+#         else:
+#             temp=self.head
+#             while temp.next!=self.head:
+#                 temp=temp.next
+#             temp.next=new
+#             new.next=self.head
+#             new.prev=temp
+#
+#
+#     def display(self):
+#         temp=self.head
+#         while temp:
+#             print(temp.value,end=" ->")
+#             temp=temp.next
+#             if temp==self.head:
+#                 break
+#
+#
+# l=doublelinledList()
+# l.add_at_beg(1)
+# l.addElement(10)
+# l.addElement(20)
+# l.addElement(30)
+# l.addElement(40)
+# l.addElement(50)
+# l.addElement(60)
+# l.add_after(7,5)
+# #l.add_at_beg(0)
+# #l.add_at_end(100)
+# #l.add_at_end(200)
+# l.display()
