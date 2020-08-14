@@ -79,7 +79,7 @@
 # print(table.get("march 7"))
 
 ##)1remove deplicate
-
+#Brute force approach
 # def RemoveDuplicate(a):
 #     m=0
 #     for i in range(len(a)):
@@ -96,7 +96,7 @@
 # RemoveDuplicate(a)
 # print(a)
 
-##) using sorting
+##) using sorting for duplicating
 # def RemoveDuplicate(a):
 #     a.sort()
 #     j=0
@@ -109,7 +109,8 @@
 #a=[31,31,31]
 # RemoveDuplicate(a)
 
-##)using hashing
+##)using hashing for removing duplicate
+
 #a=[1,2,3,'a','b','c',2,3,4,'b','c','d']
 # helperSet=set()
 # print(helperSet)
@@ -153,7 +154,7 @@
 # else:
 #     print("arr2 is not subset of arr1")
 
-##Given two arrays of unordered numbers, check whether both arrays have the same set of numbers
+##4)Given two arrays of unordered numbers, check whether both arrays have the same set of numbers
 
 def checkSameSet(ar1,ar2):
     hashmap={}
