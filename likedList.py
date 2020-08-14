@@ -591,13 +591,10 @@
 #
 #
 # # 11) Check linked list is palindrom or not For integer without using list or stack
-#
-#
 # class Node:
 #     def __init__(self, data):
 #         self.data = data
 #         self.next = None
-#
 #
 # class LinkedList:
 #     def __init__(self):
@@ -618,7 +615,6 @@
 #             current = current.next
 #         return current
 #
-#
 # def is_palindrome(llist):
 #     start = llist.head
 #     end = llist.last_node
@@ -631,16 +627,23 @@
 #
 #
 # a_llist = LinkedList()
+# a_llist.append(10)
+# a_llist.append('b')
+# a_llist.append('c')
+# a_llist.append('b')
+# a_llist.append(10)
+# #a_llist.append('g')
 #
-# data_list = input('Please enter the elements in the linked list: ').split()
-# for data in data_list:
-#     a_llist.append(int(data))
+#
+# # data_list = input('Please enter the elements in the linked list: ').split()
+# # for data in data_list:
+# #     a_llist.append(int(data))
 #
 # if is_palindrome(a_llist):
 #     print('The linked list is palindromic.')
 # else:
 #     print('The linked list is not palindromic.')
-#
+
 #
 #
 # # 11) Check linked list is palindrom or not for Integer using List
@@ -1166,6 +1169,53 @@ class linked:
             while temp.next!=None:
                 temp=temp.next
             temp.next=new
+
+    # def checkPalindrom(self,string):
+    #     return string==string[::-1]
+    #
+    # def ispalndrom(self):
+    #     lst=[]
+    #     temp=self.head
+    #     while temp:
+    #         lst.append(temp.value)
+    #         temp=temp.next
+    #     s=''.join(lst)
+    #     return self.checkPalindrom(s)
+
+    def isPaindrom(self):
+        if self.head is None:
+            return True
+        slow,fast=self.head,self.head
+
+        stk=[]
+        while fast and fast.next:
+            stk.append(slow.value)
+            slow=slow.next
+            fast=fast.next.next
+        if fast:
+            slow=slow.next
+        while slow and len(stk):
+            if stk.pop()!=slow.value:
+                return False
+            slow=slow.next
+        return True
+
+
+
+    # def nthNode(self,key):
+    #     count=0
+    #     temp=self.head
+    #     while temp.next!=None:
+    #         temp=temp.next
+    #         count+=1
+    #     if key>count:
+    #         print("Key is greater than linkedlist!!")
+    #     else:
+    #         temp=self.head
+    #         for i in range(0,count-key):
+    #             temp=temp.next
+    #         print(key,"Node",temp.value)
+
     def dis(self):
         temp = self.head
         while temp:
@@ -1175,4 +1225,20 @@ l=linked()
 l.add(10)
 l.add(20)
 l.add(30)
+l.add(40)
+l.add(50)
+l.add(60)
+l.add(70)
+l.add(80)
+l.add(70)
+l.add(60)
+l.add(50)
+l.add(40)
+l.add(30)
+l.add(20)
+l.add(10)
+l.add(0)
 l.dis()
+print(l.isPaindrom())
+#print("True" if l.ispalndrom() else " False")
+#l.nthNode(2)

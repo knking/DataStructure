@@ -120,18 +120,67 @@
 #
 # print(lst)
 
-def checkElement(a1,a2):
-    a1.sort()
-    a2.sort()
-    for i in range(0,len(a1)-1):
-        if a1[i]!=a2[i]:
+# def checkElement(a1,a2):
+#     a1.sort()
+#     a2.sort()
+#     for i in range(0,len(a1)-1):
+#         if a1[i]!=a2[i]:
+#             return False
+#
+#     return True
+#
+# a1 = [54, 26, 93, 54, 77, 31, 31, 31, 55, 20]
+# a2 = [54, 26, 93, 540, 77, 31, 31, 31, 55, 20]
+# if checkElement(a1,a2):
+#     print("yes ")
+# else:
+#     print("not")
+
+##3)Find whether an array is subset of another array
+
+# def subset(ar1,ar2):
+#     for i in range(len(ar2)):
+#         for j in range(len(ar1)):
+#             if ar2[i]==ar1[j]:
+#                 break
+#         if j==len(ar1)-1:
+#             return 0
+#     return 1
+# ar1 = [11, 1, 13, 21, 3, 7]
+# ar2 = [110, 30, 70, 10]
+# if subset(ar1,ar2):
+#     print("arr2 is subset of arr1")
+# else:
+#     print("arr2 is not subset of arr1")
+
+##Given two arrays of unordered numbers, check whether both arrays have the same set of numbers
+
+def checkSameSet(ar1,ar2):
+    hashmap={}
+    n=len(ar1)
+    m=len(ar2)
+    if n!=m:
+        return False
+##Store arr1[] elements and their counts in hash map
+    for i in range(n):
+        if ar1[i] in hashmap.keys():
+            hashmap[ar1[i]]=hashmap[ar1[i]]+1
+        else:
+            hashmap[ar1[i]]=1
+
+##Scan the all element of B
+    for i in range(n):
+        if ar2[i] not in hashmap.keys():
             return False
+        if hashmap[ar2[i]]==0:
+            return False
+        hashmap[ar2[i]]=hashmap[ar2[i]]-1
 
     return True
-
-a1 = [54, 26, 93, 54, 77, 31, 31, 31, 55, 20]
-a2 = [54, 26, 93, 540, 77, 31, 31, 31, 55, 20]
-if checkElement(a1,a2):
-    print("yes ")
-else:
-    print("not")
+#A = [2, 5, 6, 8, 10, 2, 2]
+#B = [2, 5, 5, 6, 8, 5, 6]
+# A = [2, 5, 6, 8, 2, 10, 2]
+# B = [2, 5, 6, 8, 2, 10, 2]
+A = [2, 5, 8, 6, 10, 2, 2]
+B = [2, 5, 6, 8, 2, 10, 2]
+print(checkSameSet(A,B))
