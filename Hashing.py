@@ -273,23 +273,42 @@
 # print(findFourElements(arr, n, X))
 
 ##8)longest consecutive sequence
-##busing hasing 
+##busing hasing
 
-def logest(ar,n):
-    s=set()
-    ans=0
-    for e in ar:
-        s.add(e)
+# def logest(ar,n):
+#     s=set()
+#     ans=0
+#     for e in ar:
+#         s.add(e)
+#
+#     for i in range(n):
+#         if (ar[i]-1) not in s:
+#             j=ar[i]
+#
+#             while j in s:
+#                 j+=1
+#             ans=max(ans,j-ar[i])
+#     return ans
+#
+# ar=[100,4,200,1,3,2]
+# n=len(ar)
+# print(logest(ar,n))
 
-    for i in range(n):
-        if (ar[i]-1) not in s:
-            j=ar[i]
+##9) longest subarray with zero sum
 
-            while j in s:
-                j+=1
-            ans=max(ans,j-ar[i])
-    return ans
+# def subarray(ar,n):
+#     maximum=0
+#     for i in range(n):
+#         cr_sum=0
+#         for j in range(i,n):
+#             cr_sum+=ar[j]
+#
+#             if cr_sum==0:
+#                 maximum=max(maximum,j-i+1)
+#     return maximum
+# ar=[15,-2,2,-8,1,7,10,13]
+# n=len(ar)
+# print(subarray(ar,n))
 
-ar=[100,4,200,1,3,2]
-n=len(ar)
-print(logest(ar,n))
+
+
