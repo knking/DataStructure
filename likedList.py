@@ -1204,15 +1204,31 @@ class linked:
         prev=None
         cur=self.head
         while cur:
-            next=cur.next
+            nxt=cur.next
             cur.next=prev
             prev=cur
-            cur=next
+            cur=nxt
         self.head=prev
 
+    #reverse linked list using recursion
+    def reverse_recursive(self):
+
+        def reverse_recursive(cur,prev):
+            if not cur:
+                return prev
+
+            next = cur.next
+            cur.next = prev
+            prev = cur
+            cur = next
+            return reverse_recursive(cur,prev)
+        self.head=reverse_recursive(cur=self.head,prev=None)
 
 
-    # def nthNode(self,key):
+
+
+
+        # def nthNode(self,key):
     #     count=0
     #     temp=self.head
     #     while temp.next!=None:
