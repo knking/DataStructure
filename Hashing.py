@@ -273,22 +273,23 @@
 # print(findFourElements(arr, n, X))
 
 ##8)longest consecutive sequence
+##busing hasing 
 
-# def logest(ar,n):
-#     s=set()
-#     ans=0
-#     for e in ar:
-#         s.add(e)
-#
-#     for i in range(n):
-#         if (ar[i]-1) not in s:
-#             j=ar[i]
-#
-#             while j in s:
-#                 j+=1
-#             ans=max(ans,j-ar[i])
-#     return ans
-#
-# ar=[100,4,200,1,3,2]
-# n=len(ar)
-# print(logest(ar,n))
+def logest(ar,n):
+    s=set()
+    ans=0
+    for e in ar:
+        s.add(e)
+
+    for i in range(n):
+        if (ar[i]-1) not in s:
+            j=ar[i]
+
+            while j in s:
+                j+=1
+            ans=max(ans,j-ar[i])
+    return ans
+
+ar=[100,4,200,1,3,2]
+n=len(ar)
+print(logest(ar,n))
