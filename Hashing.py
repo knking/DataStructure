@@ -156,32 +156,139 @@
 
 ##4)Given two arrays of unordered numbers, check whether both arrays have the same set of numbers
 
-def checkSameSet(ar1,ar2):
-    hashmap={}
-    n=len(ar1)
-    m=len(ar2)
-    if n!=m:
-        return False
-##Store arr1[] elements and their counts in hash map
-    for i in range(n):
-        if ar1[i] in hashmap.keys():
-            hashmap[ar1[i]]=hashmap[ar1[i]]+1
-        else:
-            hashmap[ar1[i]]=1
-
-##Scan the all element of B
-    for i in range(n):
-        if ar2[i] not in hashmap.keys():
-            return False
-        if hashmap[ar2[i]]==0:
-            return False
-        hashmap[ar2[i]]=hashmap[ar2[i]]-1
-
-    return True
-#A = [2, 5, 6, 8, 10, 2, 2]
-#B = [2, 5, 5, 6, 8, 5, 6]
-# A = [2, 5, 6, 8, 2, 10, 2]
+# def checkSameSet(ar1,ar2):
+#     hashmap={}
+#     n=len(ar1)
+#     m=len(ar2)
+#     if n!=m:
+#         return False
+# ##Store arr1[] elements and their counts in hash map
+#     for i in range(n):
+#         if ar1[i] in hashmap.keys():
+#             hashmap[ar1[i]]=hashmap[ar1[i]]+1
+#         else:
+#             hashmap[ar1[i]]=1
+#
+# ##Scan the all element of B
+#     for i in range(n):
+#         if ar2[i] not in hashmap.keys():
+#             return False
+#         if hashmap[ar2[i]]==0:
+#             return False
+#         hashmap[ar2[i]]=hashmap[ar2[i]]-1
+#
+#     return True
+# #A = [2, 5, 6, 8, 10, 2, 2]
+# #B = [2, 5, 5, 6, 8, 5, 6]
+# # A = [2, 5, 6, 8, 2, 10, 2]
+# # B = [2, 5, 6, 8, 2, 10, 2]
+# A = [2, 5, 8, 6, 10, 2, 2]
 # B = [2, 5, 6, 8, 2, 10, 2]
-A = [2, 5, 8, 6, 10, 2, 2]
-B = [2, 5, 6, 8, 2, 10, 2]
-print(checkSameSet(A,B))
+# print(checkSameSet(A,B))
+
+##5)given a list of number pairs if pair(i,j) exists and pair(j,i)exits, report all such pairs
+# def demo(lst):
+#
+# #lst={{1,3},{2,6},{7,4},{5,3},{8,7},{3,5}}
+#     dic={}
+#     for i in range (len(lst)):
+#         if lst[i][1] in dic.keys() and dic[lst[i][1]]==lst[i][0]:
+#             print("(", lst[i][1],",",lst[i][0], ")")
+#         else:
+#             dic[lst[i][0]]=lst[i][1]
+#
+# lst=[[1,3],[2,6],[7,4],[5,3],[8,7],[3,5]]
+# print(demo(lst))
+
+##6) 2 sum problem using hashig(i this we have to return indices of element whos sum is equal to the given target)
+##example- nums=[2,7,11,15], target=9
+
+# def twoSum(lst,target):
+#     dic={}
+#     for i in range(len(lst)):
+#         if lst[i] in dic:
+#             return dic[lst[i]],i
+#         else:
+#             dic[target-lst[i]]=i
+# target=10
+# lst=[1,2,3,5,5]
+# print(twoSum(lst,target))
+
+##7) 4 sum problem using hashing
+##brute force apporach
+# def fourSum(target,arr):
+#     n=len(arr)
+#     arr.sort()
+#     for i in range(0,n-3):
+#         for j in range(i+1,n-2):
+#             left=j+1
+#             right=n-1
+#
+#             while(left< right):
+#                 if arr[i]+arr[j]+arr[left]+arr[right]==target:
+#                     print(arr[i],arr[j],arr[left],arr[right])
+#                     left=left+1
+#                     right=right-1
+#                 elif arr[i]+arr[j]+arr[left]+arr[right]< target:
+#                     left=left+1
+#                 else:
+#                     right=right-1
+#
+#
+# a=[10,2,3,4,5,9,7,8]
+# tar=23
+# fourSum(tar,a)
+
+##)using hasing
+# A hashing based Python program to find if there are
+# four elements with given summ.
+# The function finds four elements with given summ X
+# def findFourElements(arr, n, X):
+#     # Store summs of all pairs in a hash table
+#     mp = {}
+#     for i in range(n - 1):
+#         for j in range(i + 1, n):
+#             mp[arr[i] + arr[j]] = [i, j]
+#
+#         # Traverse through all pairs and search
+#         #for X - (current pair summ):
+#     for i in range(n - 1):
+#         for j in range(i + 1, n):
+#             summ = arr[i] + arr[j]
+#             #If X - summ is present in hash table,
+#             if (X - summ) in mp:
+#
+#                 # Making sure that all elements are
+#                 # distinct array elements and an element
+#                 # is not considered more than once.
+#                 p = mp[X - summ]
+#                 if (p[0] != i and p[0] != j and p[1] != i and p[1] != j):
+#                     print(arr[i], ", ", arr[j], ", ", arr[p[0]], ", ", arr[p[1]], sep="")
+#                     return
+#
+# # Driver code
+# arr = [10, 20, 30, 40, 1, 2]
+# n = len(arr)
+# X = 91
+# print(findFourElements(arr, n, X))
+
+##8)longest consecutive sequence
+
+# def logest(ar,n):
+#     s=set()
+#     ans=0
+#     for e in ar:
+#         s.add(e)
+#
+#     for i in range(n):
+#         if (ar[i]-1) not in s:
+#             j=ar[i]
+#
+#             while j in s:
+#                 j+=1
+#             ans=max(ans,j-ar[i])
+#     return ans
+#
+# ar=[100,4,200,1,3,2]
+# n=len(ar)
+# print(logest(ar,n))

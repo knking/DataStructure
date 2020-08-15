@@ -1151,94 +1151,94 @@
 # l.dis()
 
 
-class node:
-    def __init__(self,value):
-        self.value=value
-        self.next=None
-
-class linked:
-    def __init__(self):
-        self.head=None
-
-    def add(self,data):
-        new=node(data)
-        if self.head is None:
-           self.head=new
-        else:
-            temp=self.head
-            while temp.next!=None:
-                temp=temp.next
-            temp.next=new
-
-    # def checkPalindrom(self,string):
-    #     return string==string[::-1]
-    #
-    # def ispalndrom(self):
-    #     lst=[]
-    #     temp=self.head
-    #     while temp:
-    #         lst.append(temp.value)
-    #         temp=temp.next
-    #     s=''.join(lst)
-    #     return self.checkPalindrom(s)
-
-    def isPaindrom(self):
-        if self.head is None:
-            return True
-        slow,fast=self.head,self.head
-
-        stk=[]
-        while fast and fast.next:
-            stk.append(slow.value)
-            slow=slow.next
-            fast=fast.next.next
-        if fast:
-            slow=slow.next
-        while slow and len(stk):
-            if stk.pop()!=slow.value:
-                return False
-            slow=slow.next
-        return True
-
-
-
-    # def nthNode(self,key):
-    #     count=0
-    #     temp=self.head
-    #     while temp.next!=None:
-    #         temp=temp.next
-    #         count+=1
-    #     if key>count:
-    #         print("Key is greater than linkedlist!!")
-    #     else:
-    #         temp=self.head
-    #         for i in range(0,count-key):
-    #             temp=temp.next
-    #         print(key,"Node",temp.value)
-
-    def dis(self):
-        temp = self.head
-        while temp:
-            print(temp.value, "->", end=" ")
-            temp = temp.next
-l=linked()
-l.add(10)
-l.add(20)
-l.add(30)
-l.add(40)
-l.add(50)
-l.add(60)
-l.add(70)
-l.add(80)
-l.add(70)
-l.add(60)
-l.add(50)
-l.add(40)
-l.add(30)
-l.add(20)
-l.add(10)
-l.add(0)
-l.dis()
-print(l.isPaindrom())
-#print("True" if l.ispalndrom() else " False")
-#l.nthNode(2)
+# class node:
+#     def __init__(self,value):
+#         self.value=value
+#         self.next=None
+#
+# class linked:
+#     def __init__(self):
+#         self.head=None
+#
+#     def add(self,data):
+#         new=node(data)
+#         if self.head is None:
+#            self.head=new
+#         else:
+#             temp=self.head
+#             while temp.next!=None:
+#                 temp=temp.next
+#             temp.next=new
+#
+#     # def checkPalindrom(self,string):
+#     #     return string==string[::-1]
+#     #
+#     # def ispalndrom(self):
+#     #     lst=[]
+#     #     temp=self.head
+#     #     while temp:
+#     #         lst.append(temp.value)
+#     #         temp=temp.next
+#     #     s=''.join(lst)
+#     #     return self.checkPalindrom(s)
+#
+#     def isPaindrom(self):
+#         if self.head is None:
+#             return True
+#         slow,fast=self.head,self.head
+#
+#         stk=[]
+#         while fast and fast.next:
+#             stk.append(slow.value)
+#             slow=slow.next
+#             fast=fast.next.next
+#         if fast:
+#             slow=slow.next
+#         while slow and len(stk):
+#             if stk.pop()!=slow.value:
+#                 return False
+#             slow=slow.next
+#         return True
+#
+#
+#
+#     # def nthNode(self,key):
+#     #     count=0
+#     #     temp=self.head
+#     #     while temp.next!=None:
+#     #         temp=temp.next
+#     #         count+=1
+#     #     if key>count:
+#     #         print("Key is greater than linkedlist!!")
+#     #     else:
+#     #         temp=self.head
+#     #         for i in range(0,count-key):
+#     #             temp=temp.next
+#     #         print(key,"Node",temp.value)
+#
+#     def dis(self):
+#         temp = self.head
+#         while temp:
+#             print(temp.value, "->", end=" ")
+#             temp = temp.next
+# l=linked()
+# l.add(10)
+# l.add(20)
+# l.add(30)
+# l.add(40)
+# l.add(50)
+# l.add(60)
+# l.add(70)
+# l.add(80)
+# l.add(70)
+# l.add(60)
+# l.add(50)
+# l.add(40)
+# l.add(30)
+# l.add(20)
+# l.add(10)
+# l.add(0)
+# l.dis()
+# print(l.isPaindrom())
+# #print("True" if l.ispalndrom() else " False")
+# #l.nthNode(2)
