@@ -39,8 +39,7 @@
 
 # def FirstRepeatedChar(str):
 #     count=[0]*256
-#     size=len(str)
-#     for i in range(size):
+#     size=len(str)#     for i in range(size):
 #         if count[ord(str[i])]==1:
 #             print(str[i])
 #             break
@@ -273,7 +272,7 @@
 # print(findFourElements(arr, n, X))
 
 ##8)longest consecutive sequence
-##busing hasing
+##using hasing
 
 # def logest(ar,n):
 #     s=set()
@@ -311,4 +310,24 @@
 # print(subarray(ar,n))
 
 
+def long(ar,n):
+    mp={}
+    cur_sum=0
+    maximum=0
+    for i in range(n):
+        cur_sum+=ar[i]
+        if ar[i] is 0 and maximum is 0:
+            maximum=1
+        if cur_sum is 0:
+            maximum=i+1
 
+        if cur_sum in mp:
+            maximum=max(maximum,i-mp[cur_sum])
+
+        else:
+            mp[cur_sum]=i
+
+    return maximum
+ar=[2,1,3-4,-2]
+n=len(ar)
+print(long(ar,n))
