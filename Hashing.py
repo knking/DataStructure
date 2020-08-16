@@ -294,7 +294,7 @@
 # print(logest(ar,n))
 
 ##9) longest subarray with zero sum
-
+#Brute force approach
 # def subarray(ar,n):
 #     maximum=0
 #     for i in range(n):
@@ -309,25 +309,65 @@
 # n=len(ar)
 # print(subarray(ar,n))
 
+##)Using hashig
+# def longSubAr(ar,n):
+#     maximum=0
+#     hashMap={}
+#     cur_sum=0
+#     for i in range(n):
+#         if ar[i] is 0 and maximum is 0:
+#             maximum=1
+#
+#         if cur_sum is 0:
+#             maximum=i+1
+#         cur_sum+=ar[i]
+#         if cur_sum in hashMap:
+#             maximum=max(maximum,i-hashMap[cur_sum])
+#         else:
+#             hashMap[cur_sum]=i
+#
+#     return maximum
+#
+# ar = [15, -2, 2, -8, 1, 7, 10, 13]
+# n=len(ar)
+# print(longSubAr(ar,n))
 
-def long(ar,n):
-    mp={}
-    cur_sum=0
-    maximum=0
-    for i in range(n):
-        cur_sum+=ar[i]
-        if ar[i] is 0 and maximum is 0:
-            maximum=1
-        if cur_sum is 0:
-            maximum=i+1
+##)Subarray with zero sum
+# def long(ar,n):
+#     s=set()
+#     k=5
+#     sum=0
+#     found=False
+#     for i in range(n):
+#         s.add(sum)
+#         sum+=ar[i]
+#         if (sum-k) in s:
+#             found=True
+#     if found:
+#         print("foud",found)
+#     else:
+#         print("Found",found)
+#
+# ar=[2,1,3,-4,-2]
+# n=len(ar)
+# long(ar,n)
 
-        if cur_sum in mp:
-            maximum=max(maximum,i-mp[cur_sum])
+##)10 Count number of subarray with given XOR
 
+##)11 Longest substring without repeat
+def lswr(s):
+    map={}
+    max_length=start=0
+    if len(s)==0:
+        return 0
+    for i in range(len(s)):
+        if s[i] in map and start <=map[s[i]]:
+            start=map[s[i]]+1
         else:
-            mp[cur_sum]=i
+            max_length=max(max_length,i-start+1)
+        map[s[i]]=i
+    return max_length
+s="geeksforgeek"
+print(lswr(s))
 
-    return maximum
-ar=[2,1,3-4,-2]
-n=len(ar)
-print(long(ar,n))
+
