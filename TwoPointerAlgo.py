@@ -129,3 +129,31 @@
 # n=len(lst)
 # c=zeroSum(lst,n)
 # print(c)
+
+##) 3 sum
+
+class tsum:
+
+    def threeSum(self,arr,n):
+        n=len(arr)
+        for i in range(n-1):
+            if self.twoSum(arr,-arr[i],i+1):
+                return True
+        return False
+
+    def twoSum(self,ar,sum,i):
+        j=len(ar)-1
+        while i < j:
+            total=ar[i]+ar[j]
+            if total < sum:
+                i+=1
+            elif total > sum:
+                j-=1
+            else:
+                return True
+        return False
+l=tsum()
+ar=[4,3,0,1,4,-5]
+print(l.threeSum(ar,len(ar)))
+
+
