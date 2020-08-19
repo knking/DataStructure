@@ -191,23 +191,58 @@
 
 ##5)Trapping rain water problem
 
-def trpping(arr,n):
+# def trpping(arr,n):
+#     res=0
+#     for i in range(1,n-1):
+#         left=arr[i]
+#
+#         for j in range(i):
+#             left=max(left,arr[j])
+#
+#         right=arr[i]
+#         for k in range(i+1,n):
+#             right=max(right,arr[k])
+#
+#         res=res+(min(left,right)-arr[i])
+#     return res
+# arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+# n = len(arr)
+# print(trpping(arr,n))
+
+##) Another mathod
+
+def trapping(arr,n):
+    left_max=0
+    right_max=0
+    left=0
+    right=n-1
     res=0
 
-    for i in range(1,n-1):
-        left=arr[i]
+    while left<=right:
+        if arr[left] < arr[right]:
+            if arr[left] > left_max:
+                left_max=arr[left]
 
-        for j in range(i):
-            left=max(left,arr[j])
+            else:
+                res+=left_max-arr[left]
+            left+=1
 
-        right=arr[i]
-        for k in range(i+1,n):
-            right=max(right,arr[k])
+        else:
+            if arr[right]> right_max:
+                right_max=arr[right]
 
-        res=res+(min(left,right)-arr[i])
+            else:
+                res+=right_max-arr[right]
+
+            right-=1
     return res
+
 arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 n = len(arr)
-print(trpping(arr,n))
+
+print(trapping(arr,n))
+
+
+
 
 
