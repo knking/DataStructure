@@ -61,6 +61,7 @@
 #     return j
 # a1=[1,2,3,4,4,5,5,5,6]
 # c=removeDuplicate(a1)
+#print(c)
 # for i in range(0,c):
 #     print(a1[i],end="")
 #
@@ -130,30 +131,83 @@
 # c=zeroSum(lst,n)
 # print(c)
 
-##) 3 sum
+##4) 3 sum
 
-class tsum:
+# class tsum:
+#
+#     def threeSum(self,arr,n):
+#         n=len(arr)
+#         for i in range(n-1):
+#             if self.twoSum(arr,-arr[i],i+1):
+#                 return True
+#         return False
+#
+#     def twoSum(self,ar,sum,i):
+#         j=len(ar)-1
+#         while i < j:
+#             total=ar[i]+ar[j]
+#             if total < sum:
+#                 i+=1
+#             elif total > sum:
+#                 j-=1
+#             else:
+#                 return True
+#         return False
+# l=tsum()
+# ar=[4,3,0,1,4,-5]
+# print(l.threeSum(ar,len(ar)))
 
-    def threeSum(self,arr,n):
-        n=len(arr)
-        for i in range(n-1):
-            if self.twoSum(arr,-arr[i],i+1):
-                return True
-        return False
+##) find all set of number whose sum is zero(3 sum)
 
-    def twoSum(self,ar,sum,i):
-        j=len(ar)-1
-        while i < j:
-            total=ar[i]+ar[j]
-            if total < sum:
-                i+=1
-            elif total > sum:
-                j-=1
-            else:
-                return True
-        return False
-l=tsum()
-ar=[4,3,0,1,4,-5]
-print(l.threeSum(ar,len(ar)))
+# def threeSum(arr,n):
+#     arr.sort()
+#     res=[]
+#     n=len(arr)
+#     for j in range(n-2):
+#         if j >0 and arr[j] == arr[j-1]:
+#             continue
+#         l=j+1
+#         r=n-1
+#
+#         while l < r:
+#             total=arr[j]+arr[l]+arr[r]
+#             if total <0:
+#                 l+=1
+#             elif total >0:
+#                 r-=1
+#             else:
+#                 res.append([arr[j],arr[l],arr[r]])
+#                 while l<r and arr[l]==arr[l+1]:
+#                     l+=1
+#                 while l<r and arr[r] ==arr[r-1]:
+#                     r-=1
+#                 l+=1
+#                 r-=1
+#     return res
+# arr=[-1, 0, 1, 2, -1, -4]
+# n=len(arr)
+# print(threeSum(arr,n))
+#
+
+##5)Trapping rain water problem
+
+def trpping(arr,n):
+    res=0
+
+    for i in range(1,n-1):
+        left=arr[i]
+
+        for j in range(i):
+            left=max(left,arr[j])
+
+        right=arr[i]
+        for k in range(i+1,n):
+            right=max(right,arr[k])
+
+        res=res+(min(left,right)-arr[i])
+    return res
+arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+n = len(arr)
+print(trpping(arr,n))
 
 
