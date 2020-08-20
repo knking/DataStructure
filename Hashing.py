@@ -66,7 +66,6 @@
 #
 #     def get(self,key):
 #         k = self.getHash(key)
-#
 #         return self.arr[k]
 #
 #
@@ -273,7 +272,6 @@
 
 ##8)longest consecutive sequence
 ##using hasing
-
 # def logest(ar,n):
 #     s=set()
 #     ans=0

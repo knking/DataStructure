@@ -21,8 +21,8 @@
 #             i+=1
 #             j+=1
 #     return A
-# A=[1,2,4,5,6,8]
-# B=[3,7,10]
+# B=[1,2,4,5,6,8]
+# A=[3,7,10]
 # c=merge(A,B)
 # print(c)
 #
@@ -61,7 +61,7 @@
 #     return j
 # a1=[1,2,3,4,4,5,5,5,6]
 # c=removeDuplicate(a1)
-#print(c)
+# print(c)
 # for i in range(0,c):
 #     print(a1[i],end="")
 #
@@ -211,38 +211,44 @@
 
 ##) Another mathod
 
-def trapping(arr,n):
-    left_max=0
-    right_max=0
-    left=0
-    right=n-1
-    res=0
+# def trapping(arr,n):
+#     left_max=0
+#     right_max=0
+#     left=0
+#     right=n-1
+#     res=0
+#     while left<=right:
+#         if arr[left] < arr[right]:
+#             if arr[left] > left_max:
+#                 left_max=arr[left]
+#             else:
+#                 res+=left_max-arr[left]
+#             left+=1
+#         else:
+#             if arr[right]> right_max:
+#                 right_max=arr[right]
+#             else:
+#                 res+=right_max-arr[right]
+#
+#             right-=1
+#     return res
+#
+# arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+# n = len(arr)
+# print(trapping(arr,n))
+#
 
-    while left<=right:
-        if arr[left] < arr[right]:
-            if arr[left] > left_max:
-                left_max=arr[left]
-
-            else:
-                res+=left_max-arr[left]
-            left+=1
-
-        else:
-            if arr[right]> right_max:
-                right_max=arr[right]
-
-            else:
-                res+=right_max-arr[right]
-
-            right-=1
-    return res
-
-arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
-n = len(arr)
-
-print(trapping(arr,n))
-
-
-
-
-
+##6) Maximum consecutive one’s (or zeros) in a binary array
+# def consecutive(arr,n):
+#     count=0
+#     maximum=0
+#     for i in range(len(arr)):
+#         if arr[i]==0:
+#             count=0
+#         else:
+#             count+=1
+#             maximum=max(maximum,count)
+#     return maximum
+# arr = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]#[1, 1, 0, 0, 1, 0, 1,0, 1, 1, 1, 1]
+# n=len(arr)
+# print(consecutive(arr,n))
