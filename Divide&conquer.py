@@ -40,3 +40,94 @@
 #     print('Found')
 # else:
 #     print('Not found')
+
+##2)merge sort
+
+# def mergeSort(arr):
+#     if len(arr)>1:
+#         mid=len(arr)//2
+#         l=arr[:mid]
+#         r=arr[mid:]
+#
+#         mergeSort(l)
+#         mergeSort(r)
+#
+#         i=j=k=0
+#
+#         while i < len(l) and j< len(r):
+#             if l[i]<r[j]:
+#                 arr[k]=l[i]
+#                 i+=1
+#
+#             else:
+#                 arr[k]=r[j]
+#                 j+=1
+#
+#             k+=1
+#         while i < len(l):
+#             arr[k]=l[i]
+#             i+=1
+#             k+=1
+#
+#         while j < len(r):
+#             arr[k]=r[j]
+#             j+=1
+#             k+=1
+#
+# def printarr(arr):
+#     for i in range(len(arr)):
+#         print(arr[i],end=' ')
+#     print()
+#
+# arr=[12,11,13,5,6,7]
+# print('Given array is ', end='\n')
+# printarr(arr)
+# mergeSort(arr)
+# print('sorted array is :',end='\n')
+# printarr(arr)
+
+##3) square root of n
+
+# def squareRoot(n,p):
+#     start=0
+#     end=n
+#     ans=0
+#
+#     while start <= end:
+#         mid = (start + end)//2
+#         if mid**2 == n:
+#             ans=mid
+#             break
+#         if mid**2 < n:
+#             start=mid+1
+#             ans=mid
+#         else:
+#             end=mid-1
+# #fractonal part
+#     incrment=(0.1)
+#     for i in range(p):
+#         while ans**2<=n:
+#             ans+=incrment
+#
+#         ans=ans-incrment
+#         incrment=incrment/10
+#
+#     return ans
+# print(squareRoot(49,1))
+# print(squareRoot(10,3))
+# print(squareRoot(5,2))
+
+##4) matrix median and mean
+
+def mean(matrix,n):
+    summ=0
+    for i in range(n):
+        for j in range(n):
+            summ+=matrix[i][j]
+    return summ /( n*n)
+matrix=[[1,2,3,4],
+        [5,6,7,8],
+        [9,10,11,12],
+        [13,14,15,16]]
+n=len(matrix)
+print(mean(matrix,n))
