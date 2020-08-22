@@ -168,9 +168,38 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 #         print(k)
 
 ##using xor
-ans=ar[0]
-for i in range(1,len(ar)):
-    ans=ans ^ ar[i]
-print(ans)
+# ans=ar[0]
+# for i in range(1,len(ar)):
+#     ans=ans ^ ar[i]
+# print(ans)
 
+##using bineary search
+
+def binarySearch(ar,low,high):
+
+    if low > high:
+        return None
+    if low== high:
+        return ar[low]
+
+    mid=low+(high-low)//2
+
+    if mid % 2==0:
+        if ar[mid]==ar[mid+1]:
+            return binarySearch(ar,mid+2,high)
+        else:
+            return binarySearch(ar,low,mid)
+
+    else:
+        if ar[mid]==ar[mid-1]:
+            return binarySearch(ar,mid+1,high)
+        else:
+            return binarySearch(ar,low,mid-1)
+
+ar=[1,1,2,4,4,5,5,6,6]
+result=binarySearch(ar,0,len(ar)-1)
+if result is not None:
+    print(' the required element is :',result)
+else:
+    print('invilid array')
 
