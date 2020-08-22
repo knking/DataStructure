@@ -85,10 +85,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="169" selection-start-line="169" selection-end-line="169" />
+            <state relative-caret-position="216">
+              <caret line="166" column="14" lean-forward="true" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
               <folding>
-                <marker date="1598062260381" expanded="true" signature="22:468" ph="..." />
+                <marker date="1598062734562" expanded="true" signature="22:468" ph="..." />
               </folding>
             </state>
           </provider>
@@ -303,7 +303,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18060836" />
@@ -438,10 +438,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        <state relative-caret-position="216">
+          <caret line="166" column="14" lean-forward="true" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
           <folding>
-            <marker date="1598062260381" expanded="true" signature="22:468" ph="..." />
+            <marker date="1598062734562" expanded="true" signature="22:468" ph="..." />
           </folding>
         </state>
       </provider>

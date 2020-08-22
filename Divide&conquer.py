@@ -167,6 +167,10 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 #     if v==1:
 #         print(k)
 
-
+##using xor
+ans=ar[0]
+for i in range(1,len(ar)):
+    ans=ans ^ ar[i]
+print(ans)
 
 
