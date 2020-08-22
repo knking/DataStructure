@@ -31,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/string.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6275">
+            <state relative-caret-position="4825">
               <caret line="251" column="18" selection-start-line="251" selection-start-column="15" selection-end-line="251" selection-end-column="18" />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hashing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6825">
+            <state relative-caret-position="2925">
               <caret line="273" column="14" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
             </state>
           </provider>
@@ -85,10 +85,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="132" column="21" lean-forward="true" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+            <state relative-caret-position="291">
+              <caret line="169" selection-start-line="169" selection-end-line="169" />
               <folding>
-                <marker date="1597969410900" expanded="true" signature="22:468" ph="..." />
+                <marker date="1598062260381" expanded="true" signature="22:468" ph="..." />
               </folding>
             </state>
           </provider>
@@ -394,13 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6275">
-          <caret line="251" column="18" selection-start-line="251" selection-start-column="15" selection-end-line="251" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
@@ -429,19 +422,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4825">
+          <caret line="251" column="18" selection-start-line="251" selection-start-column="15" selection-end-line="251" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hashing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6825">
+        <state relative-caret-position="2925">
           <caret line="273" column="14" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="132" column="21" lean-forward="true" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+        <state relative-caret-position="291">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
           <folding>
-            <marker date="1597969410900" expanded="true" signature="22:468" ph="..." />
+            <marker date="1598062260381" expanded="true" signature="22:468" ph="..." />
           </folding>
         </state>
       </provider>

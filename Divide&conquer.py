@@ -100,11 +100,11 @@
 #             break
 #         if mid**2 < n:
 #             start=mid+1
-#             ans=mid
+#             #ans=mid
 #         else:
 #             end=mid-1
-# #fractonal part
-#     incrment=(0.1)
+#fractonal part
+#     incrment=0.1
 #     for i in range(p):
 #         while ans**2<=n:
 #             ans+=incrment
@@ -119,15 +119,54 @@
 
 ##4) matrix median and mean
 
-def mean(matrix,n):
-    summ=0
-    for i in range(n):
-        for j in range(n):
-            summ+=matrix[i][j]
-    return summ /( n*n)
-matrix=[[1,2,3,4],
-        [5,6,7,8],
-        [9,10,11,12],
-        [13,14,15,16]]
-n=len(matrix)
-print(mean(matrix,n))
+# def mean(matrix,n):
+#     summ=0
+#     for i in range(n):
+#         for j in range(n):
+#             summ+=matrix[i][j]
+#     return summ /( n*n)
+#
+# matrix=[[1,2,3,4],
+#         [5,6,7,8],
+#         [9,10,11,12],
+#         [13,14,15,16]]
+# n=len(matrix)
+# print(mean(matrix,n))
+#
+# def meadian(matrix,n):
+#     if n%2 != 0:
+#         return matrix[n//2][n//2]
+#     if n%2==0:
+#         return (matrix[(n-2)//2][n-1]+ matrix[n//2][0])/2
+# print(meadian(matrix,n))
+
+# #by using extend function we can convert a matrix into list using single loop
+# l=[]
+# for i in range(len(matrix)):
+#     l.extend(matrix[i])
+# print(l)
+
+##5) Find the element that appears once in a sorted array and other element appears twice in sorted array
+#brute force solution using inbuilt count method
+
+ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
+# for i in range(len(ar)):
+#     s=ar.count(ar[i])
+#     if s==1:
+#         print(ar[i])
+#         break
+
+##Using hashing
+# d={}
+# for i in range(len(ar)):
+#     if ar[i] in d:
+#         d[ar[i]]+=1
+#     else:
+#         d[ar[i]]=1
+# for k,v in d.items():
+#     if v==1:
+#         print(k)
+
+
+
+
