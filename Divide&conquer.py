@@ -202,24 +202,46 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # else:
 #     print('invilid array')
 
+# def singleNonDup(nums):
+#     left=0
+#     right=len(nums)-1
+#     while left < right:
+#         mid=left + (right-left)//2
+#         check_halves=(right-mid) % 2==0
+#         if nums[mid+1]==nums[mid]:
+#             if check_halves:
+#                 left=mid+2
+#             else:
+#                 right=mid-1
+#         elif nums[mid-1]==nums[mid]:
+#             if check_halves:
+#                 right=mid-2
+#             else:
+#                 left=mid+1
+#         else:
+#             return nums[mid]
+#     return nums[left]
+#
+# nums=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
+# print(singleNonDup(nums))
 
 ##6) search element in sorted and rotatd arrat
 
-def search(ar,start,end,key):
-    if start> end:
-        return -1
-    mid=(start+end)//2
-
-    if ar[mid]==key:
-        return mid
-    if ar[start]<=ar[mid]:
-        if key >= ar[start] and key <= ar[mid]:
-            return search(ar,start,mid-1,key)
-        return search(ar,mid+1,end,key)
-
-    if key >= ar[mid] and key <= ar[end]:
-        return search(ar,mid+1,end,key)
-    return search(ar,start,mid-1,key)
-
-ar=[5, 6, 7, 8, 9, 10, 1, 2, 3]
-print('found at index :',search(ar,0,len(ar)-1,0))
+# def search(ar,start,end,key):
+#     if start> end:
+#         return -1
+#     mid=(start+end)//2
+#
+#     if ar[mid]==key:
+#         return mid
+#     if ar[start]<=ar[mid]:
+#         if key >= ar[start] and key <= ar[mid]:
+#             return search(ar,start,mid-1,key)
+#         return search(ar,mid+1,end,key)
+#
+#     if key >= ar[mid] and key <= ar[end]:
+#         return search(ar,mid+1,end,key)
+#     return search(ar,start,mid-1,key)
+#
+# ar=[5, 6, 7, 8, 9, 10, 1, 2, 3]
+# print('found at index :',search(ar,0,len(ar)-1,0))
