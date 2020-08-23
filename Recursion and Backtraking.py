@@ -208,5 +208,11 @@
 # print(coin_max(lst,0,len(lst)-1))
 #
 #
-#
-#
+##)print element in increasing and decending order
+# def pdi(n):
+#     if n==0:
+#         return
+#     print(n)
+#     pdi(n-1)
+#     print(n)
+# pdi(5)

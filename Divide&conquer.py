@@ -30,7 +30,7 @@
 #     if key==arr[mid]:
 #         return True
 #     if key < arr[mid]:
-#         return bsearch(arr,key,left,mid)
+#         return bsearch(arr,key,left,mid-1)
 #     else:
 #         return bsearch(arr,key,mid+1,right)
 #
@@ -100,7 +100,6 @@
 #             break
 #         if mid**2 < n:
 #             start=mid+1
-#             #ans=mid
 #         else:
 #             end=mid-1
 #fractonal part
@@ -175,31 +174,52 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 
 ##using bineary search
 
-def binarySearch(ar,low,high):
+# def binarySearch(ar,low,high):
+#
+#     if low > high:
+#         return None
+#     if low== high:
+#         return ar[low]
+#
+#     mid=low+(high-low)//2
+#
+#     if mid % 2==0:
+#         if ar[mid]==ar[mid+1]:
+#             return binarySearch(ar,mid+2,high)
+#         else:
+#             return binarySearch(ar,low,mid)
+#
+#     else:
+#         if ar[mid]==ar[mid-1]:
+#             return binarySearch(ar,mid+1,high)
+#         else:
+#             return binarySearch(ar,low,mid-1)
+#
+# ar=[1,1,2,4,4,5,5,6,6]
+# result=binarySearch(ar,0,len(ar)-1)
+# if result is not None:
+#     print(' the required element is :',result)
+# else:
+#     print('invilid array')
 
-    if low > high:
-        return None
-    if low== high:
-        return ar[low]
 
-    mid=low+(high-low)//2
+##6) search element in sorted and rotatd arrat
 
-    if mid % 2==0:
-        if ar[mid]==ar[mid+1]:
-            return binarySearch(ar,mid+2,high)
-        else:
-            return binarySearch(ar,low,mid)
+def search(ar,start,end,key):
+    if start> end:
+        return -1
+    mid=(start+end)//2
 
-    else:
-        if ar[mid]==ar[mid-1]:
-            return binarySearch(ar,mid+1,high)
-        else:
-            return binarySearch(ar,low,mid-1)
+    if ar[mid]==key:
+        return mid
+    if ar[start]<=ar[mid]:
+        if key >= ar[start] and key <= ar[mid]:
+            return search(ar,start,mid-1,key)
+        return search(ar,mid+1,end,key)
 
-ar=[1,1,2,4,4,5,5,6,6]
-result=binarySearch(ar,0,len(ar)-1)
-if result is not None:
-    print(' the required element is :',result)
-else:
-    print('invilid array')
+    if key >= ar[mid] and key <= ar[end]:
+        return search(ar,mid+1,end,key)
+    return search(ar,start,mid-1,key)
 
+ar=[5, 6, 7, 8, 9, 10, 1, 2, 3]
+print('found at index :',search(ar,0,len(ar)-1,0))
