@@ -268,3 +268,25 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # key=7
 # print('First occurance of ',key,'is :',firstOccurence(arr,key))
 
+##)Last occurances
+# def lastOccurence(arr,key):
+#     start=0
+#     end=len(arr)-1
+#     result=-1
+#     while start <= end:
+#         mid =(start+end)//2
+#
+#         if arr[mid]==key:
+#             result=mid
+#             start=mid+1
+#         elif key > arr[mid]:
+#             start=mid+1
+#         else:
+#             end=mid-1
+#
+#     return result
+# arr=[2,3,4,6,7,7,7,7,8,9,20]
+# key=7
+# print('First occurance of ',key,'is :',lastOccurence(arr,key))
+
+##8)Count number of occurence
