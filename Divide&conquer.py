@@ -291,31 +291,67 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 
 ##8)Count number of occurence
 
-def binarySearch(arr,key,search=bool):
-    start=0
-    end=len(arr)-1
-    result=-1
-    while start <= end:
-        mid =(start+end)//2
+# def binarySearch(arr,key,search=bool):
+#     start=0
+#     end=len(arr)-1
+#     result=-1
+#     while start <= end:
+#         mid =(start+end)//2
+#
+#         if arr[mid]==key:
+#             result=mid
+#             if search:
+#                 end=mid-1
+#             else:
+#                 start=mid+1
+#         elif key > arr[mid]:
+#             start=mid+1
+#         else:
+#             end=mid-1
+#
+#     return result
+# arr=[2,3,4,6,7,7,7,7,8,9,20]
+# key=2
+# firstIndex=binarySearch(arr,key,True)
+# if firstIndex==-1:
+#     print('Count of ',key,'is 0')
+#
+# else:
+#     lastIndex=binarySearch(arr,key,False)
+#     print('Count of ',key,'is :', lastIndex-firstIndex+1)
 
-        if arr[mid]==key:
-            result=mid
-            if search:
-                end=mid-1
-            else:
-                start=mid+1
-        elif key > arr[mid]:
-            start=mid+1
-        else:
-            end=mid-1
+##9) K- th element of two sorted array
+#Brute force approach
 
-    return result
-arr=[2,3,4,6,7,7,7,7,8,9,20]
-key=2
-firstIndex=binarySearch(arr,key,True)
-if firstIndex==-1:
-    print('Count of ',key,'is 0')
+# def kth(arr1, arr2, m, n, k):
+#     sorted1 = [0] * (m + n)
+#     i = 0
+#     j = 0
+#     d = 0
+#     while (i < m and j < n):
+#
+#         if (arr1[i] < arr2[j]):
+#             sorted1[d] = arr1[i]
+#             i += 1
+#         else:
+#             sorted1[d] = arr2[j]
+#             j += 1
+#         d += 1
+#
+#     while (i < m):
+#         sorted1[d] = arr1[i]
+#         d += 1
+#         i += 1
+#     while (j < n):
+#         sorted1[d] = arr2[j]
+#         d += 1
+#         j += 1
+#     return sorted1[k - 1]
+# # driver code
+# arr1 = [2, 3, 6, 7, 9]
+# arr2 = [1, 4, 8, 10]
+# k = 7
+# print(kth(arr1, arr2, 5, 4, k))
 
-else:
-    lastIndex=binarySearch(arr,key,False)
-    print('Count of ',key,'is :', lastIndex-firstIndex+1)
+
+

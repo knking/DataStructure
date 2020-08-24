@@ -4,8 +4,6 @@
 #         #peek()
 #         # empty()
 #         # Search()
-#
-#
 # class stack:
 #     def __init__(self):
 #         self.items=[]
@@ -87,43 +85,53 @@
 # string = reverse(string)
 # print("Reversed string is " + string)
 
-a=[]
-def stackPush(element):
-    return a.append(element)
+# a=[]
+# def stackPush(element):
+#     return a.append(element)
+#
+# def stackPop():
+#     if len(a)> 0:
+#         return a.pop()
+#     else:
+#         print(" Stack is empty")
+#
+# def display():
+#     for i in range(len(a)-1,-1,-1):
+#         print(a[i])
+#
+# def search(value):
+#     for i in range(len(a)):
+#         if a[i]==value:
+#             print("Found at index :",i)
+#             break
+#     else:
+#         print("Not Found")
+# def checkEmpty():
+#     if len(a)<=0:
+#         print("Stack is empty")
+#     else:
+#         print("Stack is not empty")
+#
+# def reverse(string):
+#     n=len(string)
+#
+# stackPush(10)
+# stackPush(20)
+# stackPush("k")
+# #stackPop()
+# search("kn")
+# checkEmpty()
+# display()
 
-def stackPop():
-    if len(a)> 0:
-        return a.pop()
-    else:
-        print(" Stack is empty")
 
-def display():
-    for i in range(len(a)-1,-1,-1):
-        print(a[i])
+stack=[]
 
-def search(value):
-    for i in range(len(a)):
-        if a[i]==value:
-            print("Found at index :",i)
-            break
-    else:
-        print("Not Found")
-def checkEmpty():
-    if len(a)<=0:
-        print("Stack is empty")
-    else:
-        print("Stack is not empty")
-
-def reverse(string):
-    n=len(string)
-
-
-
-
-stackPush(10)
-stackPush(20)
-stackPush("k")
-#stackPop()
-search("kn")
-checkEmpty()
-display()
+def reverseString(string):
+    for i in range(len(string)):
+        stack.append(string[i])
+    s=''
+    for i in range(len(string)):
+        s+=stack.pop()
+    return s
+string='good'
+print(reverseString(string))
