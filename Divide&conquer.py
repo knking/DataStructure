@@ -290,3 +290,32 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # print('First occurance of ',key,'is :',lastOccurence(arr,key))
 
 ##8)Count number of occurence
+
+def binarySearch(arr,key,search=bool):
+    start=0
+    end=len(arr)-1
+    result=-1
+    while start <= end:
+        mid =(start+end)//2
+
+        if arr[mid]==key:
+            result=mid
+            if search:
+                end=mid-1
+            else:
+                start=mid+1
+        elif key > arr[mid]:
+            start=mid+1
+        else:
+            end=mid-1
+
+    return result
+arr=[2,3,4,6,7,7,7,7,8,9,20]
+key=2
+firstIndex=binarySearch(arr,key,True)
+if firstIndex==-1:
+    print('Count of ',key,'is 0')
+
+else:
+    lastIndex=binarySearch(arr,key,False)
+    print('Count of ',key,'is :', lastIndex-firstIndex+1)
