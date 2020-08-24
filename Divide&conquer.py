@@ -225,7 +225,7 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # nums=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # print(singleNonDup(nums))
 
-##6) search element in sorted and rotatd arrat
+##6) search element in sorted and rotatd array
 
 # def search(ar,start,end,key):
 #     if start> end:
@@ -245,3 +245,26 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 #
 # ar=[5, 6, 7, 8, 9, 10, 1, 2, 3]
 # print('found at index :',search(ar,0,len(ar)-1,0))
+
+##)7 finding first and last occurances
+##)first
+# def firstOccurence(arr,key):
+#     start=0
+#     end=len(arr)-1
+#     result=-1
+#     while start <= end:
+#         mid =(start+end)//2
+#
+#         if arr[mid]==key:
+#             result=mid
+#             end=mid-1
+#         elif key > arr[mid]:
+#             start=mid+1
+#         else:
+#             end=mid-1
+#
+#     return result
+# arr=[2,3,4,6,7,7,7,8,9,20]
+# key=7
+# print('First occurance of ',key,'is :',firstOccurence(arr,key))
+
