@@ -238,6 +238,28 @@
 # print(trapping(arr,n))
 #
 
+##)Another method
+
+def trapping(height):
+    left,right=0,len(height)-1
+    leftMax=0
+    rightMax=0
+    result=0
+    while left < right:
+        leftMax=max(leftMax,height[left])
+        rightMax=max(rightMax,height[right])
+
+        if leftMax <= rightMax:
+            result+=leftMax-height[left]
+            left+=1
+        else:
+            result+=rightMax-height[right]
+            right-=1
+    return result
+
+h=[0,1,0,2,1,0,1,3,2,1,2,1]
+print(trapping(h))
+
 ##6) Maximum consecutive one’s (or zeros) in a binary array
 # def consecutive(arr,n):
 #     count=0

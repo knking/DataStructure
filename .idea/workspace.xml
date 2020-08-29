@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3175">
-              <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+            <state relative-caret-position="324">
+              <caret line="248" column="41" lean-forward="true" selection-start-line="248" selection-start-column="41" selection-end-line="248" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hashing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2300">
+            <state relative-caret-position="-3325">
               <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
             </state>
           </provider>
@@ -117,7 +117,6 @@
         <option value="$PROJECT_DIR$/../Python data Structure and algorithm/ProgramingAndDataStructureUsingPython.py" />
         <option value="$PROJECT_DIR$/Sorting.py" />
         <option value="$PROJECT_DIR$/likedList.py" />
-        <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
         <option value="$PROJECT_DIR$/Hashing.py" />
         <option value="$PROJECT_DIR$/Recursion and Backtraking.py" />
         <option value="$PROJECT_DIR$/Divide&amp;conquer.py" />
@@ -125,10 +124,11 @@
         <option value="$PROJECT_DIR$/DataStructure.py" />
         <option value="$PROJECT_DIR$/string.py" />
         <option value="$PROJECT_DIR$/Math.py" />
+        <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-9" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
@@ -173,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.stack">
+  <component name="RunManager" selected="Python.TwoPointerAlgo">
     <configuration name="Divide&amp;conquer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="timePass" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -281,10 +281,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TwoPointerAlgo" />
         <item itemvalue="Python.stack" />
         <item itemvalue="Python.Divide&amp;conquer" />
         <item itemvalue="Python.Recursion and Backtraking" />
-        <item itemvalue="Python.TwoPointerAlgo" />
         <item itemvalue="Python.Hashing" />
       </list>
     </recent_temporary>
@@ -433,17 +433,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
+    <entry file="file://$PROJECT_DIR$/Hashing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3175">
-          <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+        <state relative-caret-position="-3325">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hashing.py">
+    <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2300">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+        <state relative-caret-position="324">
+          <caret line="248" column="41" lean-forward="true" selection-start-line="248" selection-start-column="41" selection-end-line="248" selection-end-column="41" />
         </state>
       </provider>
     </entry>
