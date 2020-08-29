@@ -84,6 +84,7 @@
 #         break
 #     s=s//10
 # print(count)
+
 # def trailing_zero(n):
 #     count=0
 #     while n!=0:

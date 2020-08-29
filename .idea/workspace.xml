@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataStructure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5750">
-              <caret line="230" column="22" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="22" />
+            <state relative-caret-position="13750">
+              <caret line="550" column="20" selection-start-line="550" selection-start-column="20" selection-end-line="550" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/string.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8900">
-              <caret line="356" column="1" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
+            <state relative-caret-position="17450">
+              <caret line="698" column="7" selection-start-line="698" selection-start-column="7" selection-end-line="698" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Math.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+            <state relative-caret-position="2750">
+              <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="-3175">
+              <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -64,20 +64,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="130" column="31" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+            <state relative-caret-position="3725">
+              <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hashing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6825">
-              <caret line="273" column="14" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
+            <state relative-caret-position="-2300">
+              <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -85,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
+            <state relative-caret-position="8875">
               <caret line="355" selection-start-line="355" selection-end-line="355" />
               <folding>
                 <marker date="1598233485068" expanded="true" signature="22:468" ph="..." />
@@ -116,19 +116,19 @@
         <option value="$USER_HOME$/OneDrive/Desktop/translator.py" />
         <option value="$PROJECT_DIR$/../Python data Structure and algorithm/ProgramingAndDataStructureUsingPython.py" />
         <option value="$PROJECT_DIR$/Sorting.py" />
-        <option value="$PROJECT_DIR$/string.py" />
-        <option value="$PROJECT_DIR$/DataStructure.py" />
-        <option value="$PROJECT_DIR$/Math.py" />
         <option value="$PROJECT_DIR$/likedList.py" />
         <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
         <option value="$PROJECT_DIR$/Hashing.py" />
         <option value="$PROJECT_DIR$/Recursion and Backtraking.py" />
         <option value="$PROJECT_DIR$/Divide&amp;conquer.py" />
         <option value="$PROJECT_DIR$/stack.py" />
+        <option value="$PROJECT_DIR$/DataStructure.py" />
+        <option value="$PROJECT_DIR$/string.py" />
+        <option value="$PROJECT_DIR$/Math.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
@@ -304,8 +304,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1616" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18060836" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.126109" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -388,29 +389,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataStructure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5750">
-          <caret line="230" column="22" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="22" />
+        <state relative-caret-position="13750">
+          <caret line="550" column="20" selection-start-line="550" selection-start-column="20" selection-end-line="550" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/string.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8900">
-          <caret line="356" column="1" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
+        <state relative-caret-position="17450">
+          <caret line="698" column="7" selection-start-line="698" selection-start-column="7" selection-end-line="698" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Math.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="2750">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -421,16 +415,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hashing.py">
+    <entry file="file://$PROJECT_DIR$/stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6825">
-          <caret line="273" column="14" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
+        <state relative-caret-position="3725">
+          <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Divide&amp;conquer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
+        <state relative-caret-position="8875">
           <caret line="355" selection-start-line="355" selection-end-line="355" />
           <folding>
             <marker date="1598233485068" expanded="true" signature="22:468" ph="..." />
@@ -439,10 +433,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stack.py">
+    <entry file="file://$PROJECT_DIR$/TwoPointerAlgo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="130" column="31" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+        <state relative-caret-position="-3175">
+          <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hashing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2300">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
         </state>
       </provider>
     </entry>

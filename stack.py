@@ -123,15 +123,44 @@
 # checkEmpty()
 # display()
 
+##reverse string
+# stack=[]
+# def reverseString(string):
+#     for i in range(len(string)):
+#         stack.append(string[i])
+#     s=''
+#     for i in range(len(string)):
+#         s+=stack.pop()
+#     return s
+# string='good'
+# print(reverseString(string))
 
-stack=[]
+##4) Valid paranthesis
 
-def reverseString(string):
-    for i in range(len(string)):
-        stack.append(string[i])
-    s=''
-    for i in range(len(string)):
-        s+=stack.pop()
-    return s
-string='good'
-print(reverseString(string))
+def valisParinthesis(expre):
+    stack=[]
+    for char in expre:
+        if char in ["(", "{", "["]:
+            stack.append(char)
+        else:
+            if not stack:
+                return False
+        current_char=stack.pop()
+        if current_char=='(':
+            if char!=')':
+                return False
+        if current_char=='{':
+            if char!='}':
+                return False
+        if current_char=='[':
+            if char!=']':
+                return False
+    if stack:
+        return False
+    return True
+expre="{()}[]"
+if valisParinthesis(expre):
+    print('Paranthesis is balanced :')
+else:
+    print('Not a valid paranthesis')
+
