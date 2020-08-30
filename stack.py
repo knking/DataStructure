@@ -166,6 +166,11 @@
 # else:
 #     print('Not a valid paranthesis')
 
-#another method
+##5) implement two stack in single array
 
+# twoStack=[]
+# def push1():
+#
+# def push2():
+#
 
