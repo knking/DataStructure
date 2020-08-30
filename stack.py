@@ -137,30 +137,35 @@
 
 ##4) Valid paranthesis
 
-def valisParinthesis(expre):
-    stack=[]
-    for char in expre:
-        if char in ["(", "{", "["]:
-            stack.append(char)
-        else:
-            if not stack:
-                return False
-        current_char=stack.pop()
-        if current_char=='(':
-            if char!=')':
-                return False
-        if current_char=='{':
-            if char!='}':
-                return False
-        if current_char=='[':
-            if char!=']':
-                return False
-    if stack:
-        return False
-    return True
-expre="{()}[]"
-if valisParinthesis(expre):
-    print('Paranthesis is balanced :')
-else:
-    print('Not a valid paranthesis')
+#def valisParinthesis(expre):
+#     stack=[]
+#     for char in expre:
+#         if char in ["(", "{", "["]:
+#             stack.append(char)
+#         #else conditon check here for closing element i.e. if stack contain only closing parantehsins the it will give run time error
+#         #so to avoid runtime error we use here check condition for stack
+#         else:
+#             if not stack:
+#                 return False
+#             current_char=stack.pop()
+#             if current_char=='(':
+#                 if char!=')':
+#                     return False
+#             if current_char=='{':
+#                 if char!='}':
+#                     return False
+#             if current_char=='[':
+#                 if char!=']':
+#                     return False
+#     if stack:
+#         return False
+#     return True
+# expre="{()}[]"
+# if valisParinthesis(expre):
+#     print('Paranthesis is balanced :')
+# else:
+#     print('Not a valid paranthesis')
+
+#another method
+
 
