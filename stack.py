@@ -187,7 +187,7 @@ class twoStacks:
 
         else:
             print("Stack Overflow ")
-            exit(1)
+            #exit(1)
 
         # Method to push an element x to stack2
 
@@ -200,7 +200,7 @@ class twoStacks:
 
         else:
             print("Stack Overflow ")
-        exit(1)
+        #exit(1)
 
     # Method to pop an element from first stack
     def pop1(self):
@@ -210,7 +210,7 @@ class twoStacks:
             return x
         else:
             print("Stack Underflow ")
-            exit(1)
+            #exit(1)
 
         # Method to pop an element from second stack
 
@@ -221,7 +221,7 @@ class twoStacks:
             return x
         else:
             print("Stack Underflow ")
-            exit()
+            #exit()
 
         # Driver program to test twoStacks class
 ts = twoStacks(5)
@@ -232,6 +232,6 @@ ts.push1(11)
 ts.push2(7)
 
 print("Popped element from stack1 is " + str(ts.pop1()))
-# ts.push2(40)
-# print("Popped element from stack2 is " + str(ts.pop2()))
+ts.push2(40)
+print("Popped element from stack2 is " + str(ts.pop2()))
 
