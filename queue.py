@@ -95,29 +95,29 @@
 # print('front',q.queueFront())
 # print('rear',q.queueRear())
 
-class queue:
-    def __init__(self):
-        self.arr=[]
-
-    def enQueue(self,item):
-        self.arr.append(item)
-
-    def deQueue(self):
-        self.arr.pop(0)
-
-    def fornt(self):
-        print(self.arr[0])
-
-    def display(self):
-        for i in range(len(self.arr)-1,-1,-1):
-            print(self.arr[i])
-            #print()
-q=queue()
-q.enQueue(10)
-q.enQueue(20)
-q.enQueue(30)
-q.enQueue(40)
-q.display()
-print('After deque')
-q.deQueue()
-q.display()
+# class queue:
+#     def __init__(self):
+#         self.arr=[]
+#
+#     def enQueue(self,item):
+#         self.arr.append(item)
+#
+#     def deQueue(self):
+#         self.arr.pop(0)
+#
+#     def fornt(self):
+#         print(self.arr[0])
+#
+#     def display(self):
+#         for i in range(len(self.arr)-1,-1,-1):
+#             print(self.arr[i])
+#             #print()
+# q=queue()
+# q.enQueue(10)
+# q.enQueue(20)
+# q.enQueue(30)
+# q.enQueue(40)
+# q.display()
+# print('After deque')
+# q.deQueue()
+# q.display()

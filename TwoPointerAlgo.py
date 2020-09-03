@@ -240,25 +240,26 @@
 
 ##)Another method
 
-def trapping(height):
-    left,right=0,len(height)-1
-    leftMax=0
-    rightMax=0
-    result=0
-    while left < right:
-        leftMax=max(leftMax,height[left])
-        rightMax=max(rightMax,height[right])
-
-        if leftMax <= rightMax:
-            result+=leftMax-height[left]
-            left+=1
-        else:
-            result+=rightMax-height[right]
-            right-=1
-    return result
-
-h=[0,1,0,2,1,0,1,3,2,1,2,1]
-print(trapping(h))
+# def trapping(height):
+#     left,right=0,len(height)-1
+#     leftMax=0
+#     rightMax=0
+#     result=0
+#     while left < right:
+#         leftMax=max(leftMax,height[left])
+#
+#         rightMax=max(rightMax,height[right])
+#
+#         if leftMax <= rightMax:
+#             result+=leftMax-height[left]
+#             left+=1
+#         else:
+#             result+=rightMax-height[right]
+#             right-=1
+#     return result
+#
+# h=[0,1,0,2,1,0,1,3,2,1,2,1]
+# print(trapping(h))
 
 ##6) Maximum consecutive one’s (or zeros) in a binary array
 # def consecutive(arr,n):
@@ -274,3 +275,22 @@ print(trapping(h))
 # arr = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]#[1, 1, 0, 0, 1, 0, 1,0, 1, 1, 1, 1]
 # n=len(arr)
 # print(consecutive(arr,n))
+
+
+# def kSum(arr,n):
+#     s=[]
+#     k=100
+#     sum=0
+#     found=False
+#     for i in range(n):
+#        s.append(sum)
+#        sum+=arr[i]
+#        if sum-k in s: #here we can check when only for sum the it is problem of zero sum in sub array
+#            #found=True
+#            print('Found')
+#            break
+#     else:
+#         print('Not found')
+# arr=[2,1,3,4,-2]
+# n=len(arr)-1
+# kSum(arr,n)

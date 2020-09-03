@@ -273,7 +273,7 @@
 #     for i in range(len(s)):
 #         currentSubstring = s[i]
 #         for j in range(i + 1, len(s)):
-#             currentSubstring += s[j]
+#             currentSubstring+= s[j]
 #             if (isPalindrome(currentSubstring) and
 #                     len(currentSubstring) > len(maxSubstring)):
 #                 maxSubstring = currentSubstring
