@@ -148,7 +148,7 @@
 ##5) Find the element that appears once in a sorted array and other element appears twice in sorted array
 #brute force solution using inbuilt count method
 
-ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
+#ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # for i in range(len(ar)):
 #     s=ar.count(ar[i])
 #     if s==1:
@@ -352,6 +352,4 @@ ar=[1,1,2,2,3,3,4,4,5,5,6,7,7,8,8]
 # arr2 = [1, 4, 8, 10]
 # k = 7
 # print(kth(arr1, arr2, 5, 4, k))
-
-
 
