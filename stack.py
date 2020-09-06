@@ -235,3 +235,75 @@
 # ts.push2(40)
 # print("Popped element from stack2 is " + str(ts.pop2()))
 
+##6) Next greater element
+##right to left
+
+# def nextGreater(arr):
+#     stack=[]
+#     nge=[0]*len(arr)
+#     stack.append(arr[len(arr)-1])
+#     nge[len(arr)-1]=-1
+#
+#     for i in range(len(arr)-2,-1,-1):
+#         while len(stack) > 0 and arr[i]>=stack[-1]:
+#             stack.pop()
+#
+#         if len(stack)==0:
+#             nge[i]=-1
+#
+#         nge[i]=stack[-1]
+#
+#         stack.append(arr[i])
+#
+#     return nge
+#
+# ar=[2,4,5,6,7]
+# print(nextGreater(ar))
+
+##left to right
+#
+# def nextGreater(arr):
+#     stack=[]
+#     nge=[0] *len(arr)
+#
+#     stack.append(0)
+#
+#     for i in range(len(arr)):
+#
+#         while len(stack) >0 and arr[i] > arr[stack[-1]]:
+#             pos=stack[-1]
+#             nge[pos]=arr[i]
+#             stack.pop()
+#
+#         stack.append(i)
+#
+#     while len(stack) >0:
+#         pos=stack[-1]
+#         nge[pos]=-1
+#         stack.pop()
+#     return nge
+#
+# ar=[2,4,0,5,7,80,8]
+# print(nextGreater(ar))
+
+def nextGreater(arr):
+    stack=[]
+    nge=[0] *len(arr)
+
+    stack.append(0)
+    for i in range(len(arr)):
+        while len(stack) >0 and arr[i] < arr[stack[-1]]:
+            pos=stack[-1]
+            nge[pos]=arr[i]
+            stack.pop()
+
+        stack.append(i)
+
+    while len(stack) >0:
+        pos=stack[-1]
+        nge[pos]=-1
+        stack.pop()
+    return nge
+ar=[2,4,0,5,7,80,8]
+print(nextGreater(ar))
+
