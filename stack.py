@@ -286,24 +286,49 @@
 # ar=[2,4,0,5,7,80,8]
 # print(nextGreater(ar))
 
-def nextGreater(arr):
+##)7 Next smaller element on right
+# def nextGreater(arr):
+#     stack=[]
+#     nge=[0] *len(arr)
+#
+#     stack.append(0)
+#     for i in range(len(arr)):
+#         while len(stack) >0 and arr[i] < arr[stack[-1]]:
+#             pos=stack[-1]
+#             nge[pos]=arr[i]
+#             stack.pop()
+#
+#         stack.append(i)
+#
+#     while len(stack) >0:
+#         pos=stack[-1]
+#         nge[pos]=-1
+#         stack.pop()
+#     return nge
+# ar=[2,4,0,5,7,80,8]
+# print(nextGreater(ar))
+
+##8) Stock spam
+
+def stockSpam(arr):
+    spam=[0] * len(arr)
     stack=[]
-    nge=[0] *len(arr)
 
     stack.append(0)
-    for i in range(len(arr)):
-        while len(stack) >0 and arr[i] < arr[stack[-1]]:
-            pos=stack[-1]
-            nge[pos]=arr[i]
+    spam[0]=1
+
+    for i in range(1,len(arr)):
+
+        while len(arr) > 0 and arr[i] > arr[stack[-1]]:
             stack.pop()
+        if len(stack)==0:
+            spam[i]=i+1
+
+        else:
+            spam[i]=i-stack[-1]
 
         stack.append(i)
 
-    while len(stack) >0:
-        pos=stack[-1]
-        nge[pos]=-1
-        stack.pop()
-    return nge
-ar=[2,4,0,5,7,80,8]
-print(nextGreater(ar))
-
+    return spam
+arr=[2,3,4,5,6,4]
+print(stockSpam(arr))

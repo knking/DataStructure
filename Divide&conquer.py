@@ -88,33 +88,34 @@
 
 ##3) square root of n
 
-# def squareRoot(n,p):
-#     start=0
-#     end=n
-#     ans=0
-#
-#     while start <= end:
-#         mid = (start + end)//2
-#         if mid**2 == n:
-#             ans=mid
-#             break
-#         if mid**2 < n:
-#             start=mid+1
-#         else:
-#             end=mid-1
-#fractonal part
-#     incrment=0.1
-#     for i in range(p):
-#         while ans**2<=n:
-#             ans+=incrment
-#
-#         ans=ans-incrment
-#         incrment=incrment/10
-#
-#     return ans
-# print(squareRoot(49,1))
-# print(squareRoot(10,3))
-# print(squareRoot(5,2))
+def squareRoot(n,p):
+    start=0
+    end=n
+    ans=0
+
+    while start <= end:
+        mid = (start + end)//2
+        if mid**2 == n:
+            ans=mid
+            break
+        if mid**2 < n:
+            start=mid+1
+            #ans=mid
+        else:
+            end=mid-1
+##fractonal part
+    incrment=0.1
+    for i in range(p):
+        while ans**2<=n:
+            ans+=incrment
+
+        ans=ans-incrment
+        incrment=incrment/10
+
+    return ans
+print(squareRoot(49,1))
+print(squareRoot(10,3))
+print(squareRoot(2,2))
 
 ##4) matrix median and mean
 

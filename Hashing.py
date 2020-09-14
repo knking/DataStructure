@@ -353,19 +353,97 @@
 ##)10 Count number of subarray with given XOR
 
 ##)11 Longest substring without repeat
-def lswr(s):
-    map={}
-    max_length=start=0
-    if len(s)==0:
-        return 0
-    for i in range(len(s)):
-        if s[i] in map and start <=map[s[i]]:
-            start=map[s[i]]+1
+# def lswr(s):
+#     map={}
+#     max_length=start=0
+#     if len(s)==0:
+#         return 0
+#     for i in range(len(s)):
+#         if s[i] in map and start <=map[s[i]]:
+#             start=map[s[i]]+1
+#         else:
+#             max_length=max(max_length,i-start+1)
+#         map[s[i]]=i
+#     return max_length
+# s="geeksforgeek"
+# print(lswr(s))
+
+
+# def lruCache(arr,n):
+#     cache=[0] * n
+#     pageFault=0
+#     for i in range(len(arr)):
+#         if arr[i] in cache:
+#             continue
+#         else:
+#             if len(cache) >=n:
+#                 cache.pop(0)
+#                 for j in range(len(cache)-1,2,-1):
+#                     cache[j]=cache[j-1]
+#                 cache.append(arr[i])
+#                 pageFault+=1
+#             else:
+#                 cache.append(arr[i])
+#                 pageFault+=1
+#     return pageFault,cache
+# arr=[1,2,3,4,1,3]
+# print(lruCache(arr,3))
+
+class dll:
+    def __init__(self,key,value):
+        self.key=key
+        self.value=value
+        self.next=None
+        self.prev=None
+
+class lru:
+    def __init__(self,capacity:int):
+        self.head=dll(-1,-1)
+        self.tail=self.head
+        self.hash={}
+        self.capacity=capacity
+        self.length=0
+
+    def get(self,key:int)-> int:
+        if key not in self.hash:
+            return -1
+        node=self.hash[key]
+        value=node.value
+
+        while node.next:
+            node.prev.next=node.next
+            node.next.prev=node.prev
+            self.tail.next=node
+            node.value=self.tail
+            node.next=None
+            self.tail=node
+        return value
+
+    def put(self,key:int,value:int)->None:
+        if key in self.hash:
+            node=self.hash[key]
+            node.value=value
+
+            while node.next:
+                node.prev.next = node.next
+                node.next.prev = node.prev
+                self.tail.next = node
+                node.value = self.tail
+                node.next = None
+                self.tail = node
+
         else:
-            max_length=max(max_length,i-start+1)
-        map[s[i]]=i
-    return max_length
-s="geeksforgeek"
-print(lswr(s))
+            node=dll(key,value)
+            self.hash[key]=node
+            self.tail.next=node
+            node.prev=self.tail
+            self.tail=node
+            self.length+=1
+            if self.length> self.capacity:
+                remove=self.head.next
+                self.head.next=self.head.next.next
+                self.head.next.prev=self.head
+                del self.hash[remove.key]
+                self.length -=1
 
 
