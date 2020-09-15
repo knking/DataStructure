@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bit manipulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="217">
+              <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataStructure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4215">
-              <caret line="532" column="17" selection-start-line="532" selection-start-column="17" selection-end-line="532" selection-end-column="17" />
+            <state relative-caret-position="7650">
+              <caret line="306" column="54" selection-start-line="306" selection-start-column="54" selection-end-line="306" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -123,7 +123,6 @@
         <option value="$PROJECT_DIR$/Sorting.py" />
         <option value="$PROJECT_DIR$/likedList.py" />
         <option value="$PROJECT_DIR$/Recursion and Backtraking.py" />
-        <option value="$PROJECT_DIR$/DataStructure.py" />
         <option value="$PROJECT_DIR$/Math.py" />
         <option value="$PROJECT_DIR$/string.py" />
         <option value="$PROJECT_DIR$/TwoPointerAlgo.py" />
@@ -132,11 +131,12 @@
         <option value="$PROJECT_DIR$/stack.py" />
         <option value="$PROJECT_DIR$/queue.py" />
         <option value="$PROJECT_DIR$/binary tree.py" />
+        <option value="$PROJECT_DIR$/DataStructure.py" />
         <option value="$PROJECT_DIR$/bit manipulation.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="y" value="9" />
     <option name="width" value="1614" />
@@ -183,6 +183,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.bit manipulation">
+    <configuration name="DataStructure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="timePass" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructure.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Divide&amp;conquer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="timePass" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,27 +267,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queue" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="timePass" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/queue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="stack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="timePass" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -291,10 +291,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.bit manipulation" />
+        <item itemvalue="Python.DataStructure" />
         <item itemvalue="Python.stack" />
         <item itemvalue="Python.Hashing" />
         <item itemvalue="Python.Divide&amp;conquer" />
-        <item itemvalue="Python.queue" />
       </list>
     </recent_temporary>
   </component>
@@ -312,8 +312,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.126109" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -476,15 +475,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataStructure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4215">
-          <caret line="532" column="17" selection-start-line="532" selection-start-column="17" selection-end-line="532" selection-end-column="17" />
+        <state relative-caret-position="4525">
+          <caret line="306" column="54" selection-start-line="306" selection-start-column="54" selection-end-line="306" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bit manipulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="417">
+          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
         </state>
       </provider>
     </entry>

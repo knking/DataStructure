@@ -292,14 +292,26 @@ import array
 #         print("Missing number :",i+1)
 
 
-# def dupicate(lst):
-#     for i in range(len(lst)):
-#         if lst[abs(lst[i])]>= 0:
-#             lst[abs(lst[i])]=-lst[abs(lst[i])]
-#         else:
-#             print(abs(lst[i]))
-# lst=[1,2,3,3,2,4,5]
-# dupicate(lst)
+# Python3 code to Find the repeating
+# and the missing elements
+
+def printTwoElements(arr, size):
+    for i in range(size):
+        if arr[abs(arr[i]) - 1] > 0:
+            arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1]
+        else:
+            print("The repeating element is", abs(arr[i]))
+
+    for i in range(size):
+        if arr[i] > 0:
+            print("and the missing element is", i + 1)
+
+arr = [7, 3, 4, 5, 5, 6, 2]
+n = len(arr)
+printTwoElements(arr, n)
+
+# This code is contributed by "Abhishek Sharma 44"
+
 
 # def misN(lst,n):
 #     sumN =((n+1) * (n + 2))/ 2
