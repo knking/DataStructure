@@ -295,20 +295,20 @@ import array
 # Python3 code to Find the repeating
 # and the missing elements
 
-def printTwoElements(arr, size):
-    for i in range(size):
-        if arr[abs(arr[i]) - 1] > 0:
-            arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1]
-        else:
-            print("The repeating element is", abs(arr[i]))
-
-    for i in range(size):
-        if arr[i] > 0:
-            print("and the missing element is", i + 1)
-
-arr = [7, 3, 4, 5, 5, 6, 2]
-n = len(arr)
-printTwoElements(arr, n)
+# def printTwoElements(arr, size):
+#     for i in range(size):
+#         if arr[abs(arr[i]) - 1] > 0:
+#             arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1]
+#         else:
+#             print("The repeating element is", abs(arr[i]))
+#
+#     for i in range(size):
+#         if arr[i] > 0:
+#             print("and the missing element is", i + 1)
+#
+# arr = [7, 3, 4, 5, 5, 6, 2]
+# n = len(arr)
+# printTwoElements(arr, n)
 
 # This code is contributed by "Abhishek Sharma 44"
 
@@ -598,12 +598,17 @@ printTwoElements(arr, n)
 #      [7,8,9]]
 # print(spiralMatrix(lst1))
 
+##)23 merge two sorted array without extra space
 
+arr=[1,4,-2,4,-1,3,5,-6]
+maxSum=0
+for i in range(len(arr)):
+    curSum = 0
+    for j in range(i,len(arr)):
+        curSum +=arr[j]
+        maxSum=max(maxSum,curSum)
 
-
-
-
-
+print(maxSum)
 
 
 
