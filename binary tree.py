@@ -73,5 +73,6 @@ root.right.right=Node(7)
 # tree.root.right.left=Node(6)
 # tree.root.right.right=Node(7)
 
-
+#print(tree.print_tree('preorder'))
+#print(tree.print_tree('inorder'))
 print(root.print_tree('postorder'))
