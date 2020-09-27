@@ -60,38 +60,38 @@
 
 ##5)find duplicate and missing number
 
-def dupAndMiss(ar):
-    xor=0
-    for i in range(len(ar)):
-        xor ^=ar[i]
-
-    for i in range(1,len(ar)+1):
-        xor ^= i
-
-    rsb=xor & -xor
-    x=0
-    y=0
-    for i in range(len(ar)):
-        if ar[i] & rsb==0:
-            x=x^ar[i]
-        else:
-            y=y^ar[i]
-
-    for i in range(len(ar)+1):
-        if i & rsb == 0:
-            x = x ^ i
-        else:
-            y = y ^ i
-
-    for i in range(len(ar)):
-        if ar[i]==x:
-            print('Missing is :',y)
-            print('repeating is :',x)
-            break
-        elif ar[i]==y:
-            print('Missing is :', x)
-            print('repeating is :', y)
-            break
-
-ar=[1,2,3,4,5,7,7,8,9]
-dupAndMiss(ar)
+# def dupAndMiss(ar):
+#     xor=0
+#     for i in range(len(ar)):
+#         xor ^=ar[i]
+#
+#     for i in range(1,len(ar)+1):
+#         xor ^= i
+#
+#     rsb=xor & -xor
+#     x=0
+#     y=0
+#     for i in range(len(ar)):
+#         if ar[i] & rsb==0:
+#             x=x^ar[i]
+#         else:
+#             y=y^ar[i]
+#
+#     for i in range(len(ar)+1):
+#         if i & rsb == 0:
+#             x = x ^ i
+#         else:
+#             y = y ^ i
+#
+#     for i in range(len(ar)):
+#         if ar[i]==x:
+#             print('Missing is :',y)
+#             print('repeating is :',x)
+#             break
+#         elif ar[i]==y:
+#             print('Missing is :', x)
+#             print('repeating is :', y)
+#             break
+#
+# ar=[1,2,3,4,5,7,7,8,9]
+# dupAndMiss(ar)

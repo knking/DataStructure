@@ -264,8 +264,7 @@ import array
 #         else:
 #             temp[i-1]=1
 #     return -1
-# A=[1,2,3,1,2,3,4,5,6,6,6]
-# print(dupicates(A))
+ # print(dupicates(A))
 
 
 # def repeatedNumber(A):
@@ -309,9 +308,6 @@ import array
 # arr = [7, 3, 4, 5, 5, 6, 2]
 # n = len(arr)
 # printTwoElements(arr, n)
-
-# This code is contributed by "Abhishek Sharma 44"
-
 
 # def misN(lst,n):
 #     sumN =((n+1) * (n + 2))/ 2
@@ -385,52 +381,6 @@ import array
 #
 #         return A
 
-#
-# class Solution:
-#     # @param A : list of list of integers
-#     # @return the same list modified
-#     def setZeroes(self, A):
-#         rowz = 0
-#         colz = [0] * len(A[0])
-#         # for i in range(len(A[0])):
-#         #     colz += "0"
-#         # print(len(A),len(A[0]))
-#         for i in range(len(A)):
-#             p = 0
-#             rowz = 0
-#             for j in range(len(A[0])):
-#                 # print(i,j,colz)
-#                 # print(i,j)
-#                 if A[i][j] == 0:
-#                     if p == 0:
-#                         rowz = 1
-#                         p = 1
-#                     if colz[j] != 1:
-#                         colz[j] = 1
-#                         if i != 0:
-#                             k = i - 1
-#                             while k >= 0:
-#                                 A[k][j] = 0
-#                                 k -= 1
-#
-#                 if colz[j] == 1:
-#                     A[i][j] = 0
-#
-#                 # print(A)
-#
-#             if rowz == 1:
-#                 A[i] = [0] * len(A[0])
-#
-#                 # if colz[j]==1 or rowz == 1:
-#                 #     A[i][j] = 0
-#                 #     if colz[j]==1 and A[i-1][j] !=0:
-#                 #         k = i-1
-#                 #         while k>=0:
-#                 #             A[k][j] = 0
-#                 #             k-=1
-#             # print(A[i][j])
-#
-#         return A
 
 ##set matrix zeros (Naive approcha)
 # def setZeros(lst):
@@ -488,17 +438,17 @@ import array
 #             lst[j][0] =0
 #     return lst
 #
-# lst2=[[1,1,1],
+# lst2=[[0,1,1],
 #       [1,0,1],
-#       [1,1,1]]
+#       [0,1,0]]
 #
-# print(set_matrix(lst1))
+# print(set_matrix(lst2))
 
 #18) pascal triangle
 #
 # n=int(input("Enter number : "))
 # lst1=[]
-# for i in range(n):
+# for i in range(n+1):
 #     temp_list=[]
 #     for j in range(i+1):
 #         if j==0 or j==i:
@@ -507,6 +457,8 @@ import array
 #             temp_list.append(lst1[i-1][j-1]+lst1[i-1][j])
 #     lst1.append(temp_list)
 #
+# print(lst1[10][8])
+
 # for i in range(n):
 #     for j in range(n-i-1):
 #         print(format(" ","<2") ,end="")
@@ -600,15 +552,71 @@ import array
 
 ##)23 merge two sorted array without extra space
 
-arr=[1,4,-2,4,-1,3,5,-6]
-maxSum=0
-for i in range(len(arr)):
-    curSum = 0
-    for j in range(i,len(arr)):
-        curSum +=arr[j]
-        maxSum=max(maxSum,curSum)
+# arr=[1,4,-2,4,-1,3,5,-6]
+# maxSum=0
+# for i in range(len(arr)):
+#     curSum = 0
+#     for j in range(i,len(arr)):
+#         curSum +=arr[j]
+#         maxSum=max(maxSum,curSum)
+#
+# print(maxSum)
 
-print(maxSum)
+##)24 marge intervals
+
+# def margeIntervals(intervals):
+#     intervals.sort(key=lambda x:x[0])
+#     i=1
+#     while i< len(intervals):
+#         if intervals[i][0] <=intervals[i-1][1]:
+#
+#             intervals[i-1][0]=min(intervals[i-1][0],intervals[i][0])
+#             intervals[i-1][1]=max(intervals[i-1][1],intervals[i][1])
+#
+#             intervals.pop(i)
+#         else:
+#             i+=1
+#     return intervals
+# inter=[[1,4],[2,5],[6,10],[7,9]]
+# print(margeIntervals(inter))
+
+# n=10
+# pascals=[]
+# for row in range(n+1):
+#     temp=[]
+#
+#     for col in range(row+1):
+#         if col==0 or col==row:
+#             val=1
+#         else:
+#             val=pascals[row-1][col-1] + pascals[row-1][col]
+#         temp.append(val)
+#     pascals.append(temp)
+#
+# # for i in pascals:
+# #     print(i)
+# print(pascals[10][8])
 
 
+# def printPascal(n):
+#     for line in range(1,n+1):
+#         c=1
+#         for i in range(1,line+1):
+#             print(c,end=' ')
+#             c=int(c * (line-i)/i)
+#         print('')
+# n=5
+# printPascal(n)
 
+##)Find nth row in pasacl trangle
+
+def nThRow(n):
+    prev=1
+    print(prev,end='')
+    for i in range(1,n+1):
+        curr=(prev * (n-i+1))//i
+        print(',',curr,end='')
+        prev=curr
+
+n=5
+nThRow(n)
