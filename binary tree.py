@@ -214,6 +214,7 @@ class Stack:
 #             if node.left:
 #                 queue.enqueue(node.left)
 ###(here pop from stack and store it into answer)
+
 #         while len(stack) >0:
 #             node=stack.pop()
 #             traversal+=str(node.value)+'-'
