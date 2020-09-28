@@ -610,13 +610,13 @@ import array
 
 ##)Find nth row in pasacl trangle
 
-def nThRow(n):
-    prev=1
-    print(prev,end='')
-    for i in range(1,n+1):
-        curr=(prev * (n-i+1))//i
-        print(',',curr,end='')
-        prev=curr
-
-n=5
-nThRow(n)
+# def nThRow(n):
+#     prev=1
+#     print(prev,end='')
+#     for i in range(1,n+1):
+#         curr=(prev * (n-i+1))//i
+#         print(',',curr,end='')
+#         prev=curr
+#
+# n=5
+# nThRow(n)
