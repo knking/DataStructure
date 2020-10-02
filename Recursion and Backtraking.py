@@ -254,3 +254,18 @@
 # maximum=maxOfArray(arr,0)
 # print(maximum)
 
+##19) First index of array
+
+def indexOf(arr,idx,val):
+    if idx==len(arr):
+        return -1
+
+    if arr[idx]==val:
+        return idx
+    else:
+        fiisa=indexOf(arr,idx+1,val)
+        return fiisa
+
+arr=[1,2,3,4,5,6,1,2,3,4,5,6]
+ans=indexOf(arr,0,4)
+print(ans)
