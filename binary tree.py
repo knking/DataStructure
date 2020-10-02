@@ -11,7 +11,7 @@
 # # root.left=node(3)
 # # root.right.right=node(4)
 #
-# ##2)Binary tree(inorder,preorder,postorder)
+# ##2)Binary tree(inorder,preorder,postorder recursive)
 #
 # class Node(object):
 #     def __init__(self,value):
@@ -115,7 +115,6 @@
 #             return
 #         queue=Queue()
 #         queue.enqueue(start)
-#
 #         traversal=''
 #         while len(queue)>0:#(first print then dqueue)
 #             traversal+=str(queue.peek())+'-'
@@ -140,29 +139,29 @@
 
 ##4) reverse level order
 
-class Stack:
-    def __init__(self):
-        self.items=[]
-
-    def push(self,item):
-        self.items.append(item)
-
-    def pop(self):
-        if not self.isEmpty():
-            return self.items.pop()
-
-    def isEmpty(self):
-        return len(self.items)==0
-
-    def peek(self):
-        if not self.isEmpty():
-            return self.items[-1]
-
-    def size(self):
-        return len(self.items)
-
-    def __len__(self):
-        return self.size()
+# class Stack:
+#     def __init__(self):
+#         self.items=[]
+#
+#     def push(self,item):
+#         self.items.append(item)
+#
+#     def pop(self):
+#         if not self.isEmpty():
+#             return self.items.pop()
+#
+#     def isEmpty(self):
+#         return len(self.items)==0
+#
+#     def peek(self):
+#         if not self.isEmpty():
+#             return self.items[-1]
+#
+#     def size(self):
+#         return len(self.items)
+#
+#     def __len__(self):
+#         return self.size()
 
 # class Queue:
 #     def __init__(self):
@@ -193,8 +192,7 @@ class Stack:
 #         self.value=value
 #         self.left=None
 #         self.right=None
-#
-#
+
 #     def reverse_levelOrder(self,start):
 #         if Stack is None:
 #             return
@@ -233,49 +231,49 @@ class Stack:
 
 ##)5 Height of binary tree
 
-class Node:
-
-    def __init__(self,value):
-        self.value=value
-        self.left=None
-        self.right=None
-
-# class BinaryTree:
-#     def __init__(self,root):
-#         self.root=Node(root)
-
-    def height(self,node):
-        if node is None:
-            return -1
-        left_height=self.height(node.left)
-        right_height=self.height(node.right)
-
-        return 1+ max(left_height,right_height)
-
-    def size_of_tree(self,root):
-        if root is None:
-            return 0
-
-        stack=Stack()
-        stack.push(root)
-        size=1
-
-        while stack:
-            node=stack.pop()
-            if node.left:
-                size+=1
-                stack.push(node.left)
-
-            if node.right:
-                size+=1
-                stack.push(node.right)
-
-        return size
-
-    def size_of_tree_recursive(self,node):
-        if node is None:
-            return 0
-        return 1 + self.size_of_tree_recursive(node.left) + self.size_of_tree_recursive(node.right)
+# class Node:
+#
+#     def __init__(self,value):
+#         self.value=value
+#         self.left=None
+#         self.right=None
+#
+# # class BinaryTree:
+# #     def __init__(self,root):
+# #         self.root=Node(root)
+#
+#     def height(self,node):
+#         if node is None:
+#             return -1
+#         left_height=self.height(node.left)
+#         right_height=self.height(node.right)
+#
+#         return 1+ max(left_height,right_height)
+#
+#     def size_of_tree(self,root):
+#         if root is None:
+#             return 0
+#
+#         stack=Stack()
+#         stack.push(root)
+#         size=1
+#
+#         while stack:
+#             node=stack.pop()
+#             if node.left:
+#                 size+=1
+#                 stack.push(node.left)
+#
+#             if node.right:
+#                 size+=1
+#                 stack.push(node.right)
+#
+#         return size
+#
+#     def size_of_tree_recursive(self,node):
+#         if node is None:
+#             return 0
+#         return 1 + self.size_of_tree_recursive(node.left) + self.size_of_tree_recursive(node.right)
 
 
 # tree=BinaryTree(1)
@@ -286,15 +284,77 @@ class Node:
 # tree.root.right.left=Node(6)
 # tree.root.right.right=Node(7)
 
-root=Node(1)
-root.left=Node(2)
-root.right=Node(3)
-root.left.left=Node(4)
-root.left.right=Node(5)
-root.right.left=Node(6)
-root.right.right=Node(7)
-root.right.right.left=Node(8)
-root.right.right.left.left=Node(9)
+# root=Node(1)
+# root.left=Node(2)
+# root.right=Node(3)
+# root.left.left=Node(4)
+# root.left.right=Node(5)
+# root.right.left=Node(6)
+# root.right.right=Node(7)
+# root.right.right.left=Node(8)
+# root.right.right.left.left=Node(9)
+#
+# print(root.size_of_tree(root))
+# print(root.size_of_tree_recursive(root))
 
-print(root.size_of_tree(root))
-print(root.size_of_tree_recursive(root))
+##)6 inorder,preorder and postorder traversal itetrtative
+
+class Node:
+    def __init__(self,value):
+        self.left=None
+        self.right=None
+        self.value=value
+
+class binaryTree:
+    def __init__(self,root):
+        self.root=Node(root)
+
+    def preorder_iterative(self,start,result):
+        if not start:
+            return
+        stack=[]
+        stack.append(start)
+        while stack:
+            node=stack.pop()
+            result.append(node.value)
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
+        return result
+
+    def inorder_iterative(self,start,result):
+        if not start:
+            return
+        stack=[]
+        node=start
+        while stack or node:
+            if node:
+                stack.append(node)
+                node=node.left
+            else:
+                node=stack.pop()
+                result.append(node.value)
+                node=node.right
+
+        return result
+
+    def postorder_traversal(self,start,result):
+        if not start:
+            return
+        stack=[]
+        stack.append(start)
+
+        while stack:
+
+
+s=[]
+tree=binaryTree(1)
+tree.root.left=Node(2)
+tree.root.right=Node(3)
+tree.root.left.left=Node(4)
+tree.root.left.right=Node(5)
+tree.root.right.left=Node(6)
+tree.root.right.right=Node(7)
+#print(tree.preorder_iterative(tree.root,s))
+print(tree.inorder_iterative(tree.root,s))

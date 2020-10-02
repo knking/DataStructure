@@ -216,3 +216,41 @@
 #     pdi(n-1)
 #     print(n)
 # pdi(5)
+
+##16) tower of hanoi
+
+# def toh(n,A,B,C):
+#     if n==0:
+#         return
+#     toh(n-1,A,C,B)
+#     print(n ,'[', A , ' -> ', B , ']')
+#     toh(n-1,C,B,A)
+# toh(3,10,11,12)
+
+##17) print array elelemt
+
+# def displayArr(arr,index):
+#     if index==len(arr):
+#         return
+#     print(arr[index])
+#     displayArr(arr,index+1)
+#
+# arr=[1,2,3,4,5,6]
+# index=0
+# displayArr(arr,index)
+
+##18) Maximum of array using recursion
+# def maxOfArray(arr,idx):
+#     if idx==len(arr)-1:
+#         return arr[idx]
+#
+#     misa=maxOfArray(arr,idx+1)
+#     if misa> arr[idx]:
+#         return misa
+#     else:
+#         return arr[idx]
+#
+# arr=[3,5,7,33,9,11,15]
+# maximum=maxOfArray(arr,0)
+# print(maximum)
+
