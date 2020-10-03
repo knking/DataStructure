@@ -299,62 +299,130 @@
 
 ##)6 inorder,preorder and postorder traversal itetrtative
 
+# class Node:
+#     def __init__(self,value):
+#         self.left=None
+#         self.right=None
+#         self.value=value
+#
+# class binaryTree:
+#     def __init__(self,root):
+#         self.root=Node(root)
+#
+#     def preorder_iterative(self,start,result):
+#         if not start:
+#             return
+#         stack=[]
+#         stack.append(start)
+#         while stack:
+#             node=stack.pop()
+#             result.append(node.value)
+#             if node.right:
+#                 stack.append(node.right)
+#             if node.left:
+#                 stack.append(node.left)
+#         return result
+#
+#     def inorder_iterative(self,start,result):
+#         if not start:
+#             return
+#         stack=[]
+#         node=start
+#         while stack or node:
+#             if node:
+#                 stack.append(node)
+#                 node=node.left
+#             else:
+#                 node=stack.pop()
+#                 result.append(node.value)
+#                 node=node.right
+#
+#         return result
+#
+#     # def postorder_traversal(self,start,result):
+#     #     if not start:
+#     #         return
+#     #     stack=[]
+#     #     stack.append(start)
+#     #
+#     #     while stack:
+#
+#
+# s=[]
+# tree=binaryTree(1)
+# tree.root.left=Node(2)
+# tree.root.right=Node(3)
+# tree.root.left.left=Node(4)
+# tree.root.left.right=Node(5)
+# tree.root.right.left=Node(6)
+# tree.root.right.right=Node(7)
+# #print(tree.preorder_iterative(tree.root,s))
+# print(tree.inorder_iterative(tree.root,s))
+
+##7) Left view of a binary tree
+class Queue:
+    def __init__(self):
+        self.items=[]
+
+    def enqueue(self,data):
+        self.items.insert(0,data)
+
+    def dequeue(self):
+        if not self.isEmpty():
+            return self.items.pop()
+    def peek(self):
+        if not self.isEmpty():
+            return self.items[-1].value
+
+    def isEmpty(self):
+        return len(self.items)==0
+
+    def __len__(self):
+        return self.size()
+
+    def size(self):
+        return len(self.items)
+
 class Node:
     def __init__(self,value):
-        self.left=None
+        self.left =None
         self.right=None
         self.value=value
 
-class binaryTree:
-    def __init__(self,root):
-        self.root=Node(root)
-
-    def preorder_iterative(self,start,result):
-        if not start:
-            return
-        stack=[]
-        stack.append(start)
-        while stack:
-            node=stack.pop()
-            result.append(node.value)
-            if node.right:
-                stack.append(node.right)
+    def leftView(self,start):
+        if  start is None:
+         return
+        queue=Queue()
+        queue.enqueue(start)
+        answer=''
+        #answer += str(queue.peek()) + '-'
+        while len(queue) > 0:
+            node=queue.dequeue()
             if node.left:
-                stack.append(node.left)
-        return result
 
-    def inorder_iterative(self,start,result):
-        if not start:
-            return
-        stack=[]
-        node=start
-        while stack or node:
-            if node:
-                stack.append(node)
-                node=node.left
-            else:
-                node=stack.pop()
-                result.append(node.value)
-                node=node.right
+                queue.enqueue(node.left)
+                answer += str(node.value) + '-'
+            if node.right:
+                queue.enqueue(node.right)
+        return answer
 
-        return result
+    def leftview_recursive(self,start,traversal):
+        if start:
+            traversal += str(start.value) + '-'
+            traversal=self.leftview_recursive(start.left,traversal)
 
-    def postorder_traversal(self,start,result):
-        if not start:
-            return
-        stack=[]
-        stack.append(start)
+        return traversal
 
-        while stack:
+root=Node(10)
+root.left=Node(12)
+root.right=Node(13)
+root.left.right=Node(4)
+root.right.left=Node(5)
+root.right.left.right=Node(6)
+root.right.left.right.left=Node(18)
+root.right.left.right.right=Node(7)
+# root.left.left.left=Node(6)
+# root.left.left.left.left=Node(7)
 
-
-s=[]
-tree=binaryTree(1)
-tree.root.left=Node(2)
-tree.root.right=Node(3)
-tree.root.left.left=Node(4)
-tree.root.left.right=Node(5)
-tree.root.right.left=Node(6)
-tree.root.right.right=Node(7)
-#print(tree.preorder_iterative(tree.root,s))
-print(tree.inorder_iterative(tree.root,s))
+print(root.leftView(root))
+print(root.leftview_recursive(root,''))
