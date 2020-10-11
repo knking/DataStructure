@@ -100,7 +100,7 @@
 #         count+=number/p
 #         p=p*5
 #     return int(count)
-# print(trailingZeros(1980))
+# print(trailingZeros(1980)
 
 ## 6) Find excel column number
 # def excelColumNum(s):

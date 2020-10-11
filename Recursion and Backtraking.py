@@ -256,16 +256,70 @@
 
 ##19) First index of array
 
-def indexOf(arr,idx,val):
-    if idx==len(arr):
-        return -1
+# def indexOf(arr,idx,val):
+#     if idx==len(arr):
+#         return -1
+#
+#     if arr[idx]==val:
+#         return idx
+#     else:
+#         fiisa=indexOf(arr,idx+1,val)
+#         return fiisa
+#
+# arr=[1,2,3,4,5,6,1,2,3,4,5,6]
+# ans=indexOf(arr,0,4)
+# print(ans)
 
-    if arr[idx]==val:
-        return idx
-    else:
-        fiisa=indexOf(arr,idx+1,val)
-        return fiisa
+##20)Last index of array
 
-arr=[1,2,3,4,5,6,1,2,3,4,5,6]
-ans=indexOf(arr,0,4)
-print(ans)
+# def lastIndx(arr,idx,val):
+#
+#     if idx ==len(arr):
+#         return -1
+#     lisa=lastIndx(arr,idx+1,val)
+#     if lisa ==-1:
+#         if arr[idx]==val:
+#             return idx
+#         else:
+#             return -1
+#     else:
+#         return lisa
+# arr=[1,2,3,4,5,6,5,4,3,2]
+# print(lastIndx(arr,0,1))
+
+##21)All index of array element
+
+# def allIndex(arr,idx,val,fsf):
+#     if idx==len(arr):
+#         return -1
+#     if arr[idx]==val:
+#         fsf.append(idx)
+#
+#     allIndex(arr,idx+1,val,fsf)
+#     return fsf
+# fsf=[]
+# #arr=[1,2,3,4,5,3,3,4,5,3]
+# arr=[2,3,6,9,8,3,2,3,6,4]
+# print(allIndex(arr,0,3,fsf))
+
+##22) get keypad combination
+codes=['.;','abc','def','ghi','jkl','mno','pqrs','tu','vwx','yz']
+def getKeyPad(string):
+
+    if len(string)==0:
+        bres=[]
+        bres.append(' ')
+        return bres
+    ch=string[0]
+    ros=string[1:]
+    ress=getKeyPad(ros)
+    myresult=[]
+    codeforch=codes[ord(ch)-48]
+    for i in range(len(codeforch)):
+        chcode=codeforch[i]
+        for rstr in range(len(ress)):
+            myresult.append(chcode+ress[rstr])
+    return myresult
+n=678
+string=str(n)
+print(getKeyPad(string))

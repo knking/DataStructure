@@ -39,7 +39,8 @@
 
 # def FirstRepeatedChar(str):
 #     count=[0]*256
-#     size=len(str)#     for i in range(size):
+#     size=len(str)#
+#     for i in range(size):
 #         if count[ord(str[i])]==1:
 #             print(str[i])
 #             break
@@ -205,6 +206,7 @@
 #     dic={}
 #     for i in range(len(lst)):
 #         if lst[i] in dic:
+
 #             return dic[lst[i]],i
 #         else:
 #             dic[target-lst[i]]=i
@@ -333,7 +335,7 @@
 ##)Subarray with zero sum
 # def long(ar,n):
 #     s=set()
-#     k=5
+#     k=-3
 #     sum=0
 #     found=False
 #     for i in range(n):
@@ -389,61 +391,79 @@
 # arr=[1,2,3,4,1,3]
 # print(lruCache(arr,3))
 
-class dll:
-    def __init__(self,key,value):
-        self.key=key
-        self.value=value
-        self.next=None
-        self.prev=None
+# class dll:
+#     def __init__(self,key,value):
+#         self.key=key
+#         self.value=value
+#         self.next=None
+#         self.prev=None*/
+#
+# class lru:
+#     def __init__(self,capacity:int):
+#         self.head=dll(-1,-1)
+#         self.tail=self.head
+#         self.hash={}
+#         self.capacity=capacity
+#         self.length=0
+#
+#     def get(self,key:int)-> int:
+#         if key not in self.hash:
+#             return -1
+#         node=self.hash[key]
+#         value=node.value
+#
+#         while node.next:
+#             node.prev.next=node.next
+#             node.next.prev=node.prev
+#             self.tail.next=node
+#             node.value=self.tail
+#             node.next=None
+#             self.tail=node
+#         return value
+#
+#     def put(self,key:int,value:int)->None:
+#         if key in self.hash:
+#             node=self.hash[key]
+#             node.value=value
+#
+#             while node.next:
+#                 node.prev.next = node.next
+#                 node.next.prev = node.prev
+#                 self.tail.next = node
+#                 node.value = self.tail
+#                 node.next = None
+#                 self.tail = node
+#
+#         else:
+#             node=dll(key,value)
+#             self.hash[key]=node
+#             self.tail.next=node
+#             node.prev=self.tail
+#             self.tail=node
+#             self.length+=1
+#             if self.length> self.capacity:
+#                 remove=self.head.next
+#                 self.head.next=self.head.next.next
+#                 self.head.next.prev=self.head
+#                 del self.hash[remove.key]
+#                 self.length -=1
 
-class lru:
-    def __init__(self,capacity:int):
-        self.head=dll(-1,-1)
-        self.tail=self.head
-        self.hash={}
-        self.capacity=capacity
-        self.length=0
 
-    def get(self,key:int)-> int:
-        if key not in self.hash:
-            return -1
-        node=self.hash[key]
-        value=node.value
-
-        while node.next:
-            node.prev.next=node.next
-            node.next.prev=node.prev
-            self.tail.next=node
-            node.value=self.tail
-            node.next=None
-            self.tail=node
-        return value
-
-    def put(self,key:int,value:int)->None:
-        if key in self.hash:
-            node=self.hash[key]
-            node.value=value
-
-            while node.next:
-                node.prev.next = node.next
-                node.next.prev = node.prev
-                self.tail.next = node
-                node.value = self.tail
-                node.next = None
-                self.tail = node
-
-        else:
-            node=dll(key,value)
-            self.hash[key]=node
-            self.tail.next=node
-            node.prev=self.tail
-            self.tail=node
-            self.length+=1
-            if self.length> self.capacity:
-                remove=self.head.next
-                self.head.next=self.head.next.next
-                self.head.next.prev=self.head
-                del self.hash[remove.key]
-                self.length -=1
-
+# def longest(arr,size):
+#     count=0
+#     ans=0
+#     arr.sort()
+#
+#     for i in range(size):
+#         if i > 0 and arr[i] == arr[i-1]+1:
+#             count+=1
+#         else:
+#             count=1
+#
+#         ans=max(ans,count)
+#
+#     return ans
+# arr=[1,9,3,10,4,20,2]
+# size=len(arr)
+# print(longest(arr,size))
 

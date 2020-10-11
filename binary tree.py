@@ -205,7 +205,7 @@
 #         while len(queue) > 0:
 #             node=queue.dequeue()
 #             stack.push(node)
-#
+
 #             if node.right:
 #                 queue.enqueue(node.right)
 #
@@ -217,8 +217,7 @@
 #             node=stack.pop()
 #             traversal+=str(node.value)+'-'
 #         return traversal
-#
-#
+
 # root=Node(1)
 # root.left=Node(2)
 # root.right=Node(3)
@@ -369,7 +368,7 @@ class Queue:
 
     def dequeue(self):
         if not self.isEmpty():
-            return self.items.pop()
+            return self.items.pop(0)
     def peek(self):
         if not self.isEmpty():
             return self.items[-1].value
@@ -389,40 +388,141 @@ class Node:
         self.right=None
         self.value=value
 
-    def leftView(self,start):
-        if  start is None:
-         return
-        queue=Queue()
-        queue.enqueue(start)
-        answer=''
-        #answer += str(queue.peek()) + '-'
-        while len(queue) > 0:
-            node=queue.dequeue()
-            if node.left:
+    # def leftview_recursive(self,root,level,max_level):
+    #     if root!=None:
+    #         if max_level[0] < level:
+    #             print(root.value)
+    #             max_level[0]=level
+    #
+    #         self.leftview_recursive(root.left,level+1,max_level)
+    #         self.leftview_recursive(root.right,level+1,max_level)
 
-                queue.enqueue(node.left)
-                answer += str(node.value) + '-'
-            if node.right:
-                queue.enqueue(node.right)
-        return answer
+    # def rightview_recurisive(self,root,level,max_level):
+    #     if root!=None:
+    #         if max_level[0] < level:
+    #             print(root.value)
+    #             max_level[0]=level
+    #
+    #         self.rightview_recurisive(root.right,level+1,max_level)
+    #         self.rightview_recurisive(root.left,level+1,max_level)
 
-    def leftview_recursive(self,start,traversal):
-        if start:
-            traversal += str(start.value) + '-'
-            traversal=self.leftview_recursive(start.left,traversal)
+    def rightView_iter(self,start):
+        if not start:
+            return
+        q=[]
+        q.append(start)
 
-        return traversal
+        while len(q):
+            n=len(q)
 
-root=Node(10)
-root.left=Node(12)
-root.right=Node(13)
-root.left.right=Node(4)
-root.right.left=Node(5)
-root.right.left.right=Node(6)
-root.right.left.right.left=Node(18)
-root.right.left.right.right=Node(7)
-# root.left.left.left=Node(6)
-# root.left.left.left.left=Node(7)
+            for i in range(1,n+1):
+                temp=q[0]
+                q.pop(0)
 
-print(root.leftView(root))
-print(root.leftview_recursive(root,''))
+                if i==n:
+                    print(temp.value,end=' ')
+
+                if temp.left !=None:
+                    q.append(temp.left)
+
+                if temp.right !=None:
+                    q.append(temp.right)
+
+root=Node(1)
+root.left=Node(2)
+root.right=Node(3)
+root.left.left=Node(4)
+root.left.right=Node(5)
+root.right.left=Node(6)
+root.right.right=Node(7)
+root.right.left.right=Node(8)
+
+#max_level=[0]
+# root.leftview_recursive(root,1,max_level)
+#root.rightview_recurisive(root,1,max_level)
+# root.rightView_iter(root)
+#print(root.leftViewIter(root))
+##8) Sum of binary tree
+# class Node:
+#     def __init__(self,value):
+#         self.left=None
+#         self.right=None
+#         self.value=value
+#
+#     def sum_of_node(self,node):
+#         if node is None:
+#             return 0
+#         left_sum=self.sum_of_node(node.left)
+#         right_sum=self.sum_of_node(node.right)
+#         total_sum=left_sum + right_sum + node.value
+#
+#         return total_sum
+#
+#     def max_in_node(self,node):
+#         if node is None:
+#             return -1
+#         left_max=self.max_in_node(node.left)
+#         right_max=self.max_in_node(node.right)
+#         maximum=max(node.value,left_max,right_max)
+#
+#         return maximum
+#
+#
+#
+# root=Node(1)
+# root.left=Node(2)
+# root.right=Node(3)
+# root.left.right=Node(4)
+# root.right.left=Node(5)
+# root.right.left.right=Node(6)
+# root.right.left.right.left=Node(8)
+# root.right.left.right.right=Node(7)
+# #print(root.sum_of_node(root))
+# print(root.max_in_node(root))
+
+##9)Vertical order traversal
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+
+
+def vertical_order(root):
+    if root is not None:
+        dict={}
+        node_dict={}
+        que=list()
+        que.append(root)
+        node_dict[root.data]=0
+        while len(que) >0:
+            temp=[]
+            cur=que.pop(0)
+            if cur is not None:
+                level=node_dict[cur.data]
+                if level in dict:
+                    temp=dict.get(level)
+                    temp.append(cur.data)
+                else:
+                    temp.append(cur.data)
+                    dict[level]=temp
+
+                if cur.left is not None:
+                    left_node=cur.left
+                    que.append(left_node)
+                    node_dict[left_node.data]=node_dict[cur.data]-1
+
+                if cur.right is not None:
+                    right_node=cur.right
+                    que.append(right_node)
+                    node_dict[right_node.data]=node_dict[cur.data]+1
+        print(dict)
+
+root=Node('a')
+root.left=Node('b')
+root.right=Node('c')
+root.left.left=Node('d')
+root.left.right=Node('e')
+
+vertical_order(root)
