@@ -303,23 +303,58 @@
 # print(allIndex(arr,0,3,fsf))
 
 ##22) get keypad combination
-codes=['.;','abc','def','ghi','jkl','mno','pqrs','tu','vwx','yz']
-def getKeyPad(string):
+# codes=['.;','abc','def','ghi','jkl','mno','pqrs','tu','vwx','yz']
+# def getKeyPad(string):
+#
+#     if len(string)==0:
+#         bres=[]
+#         bres.append(' ')
+#         return bres
+#     ch=string[0]
+#     ros=string[1:]
+#     ress=getKeyPad(ros)
+#     myresult=[]
+#     codeforch=codes[ord(ch)-48]
+#     for i in range(len(codeforch)):
+#         chcode=codeforch[i]
+#         for rstr in range(len(ress)):
+#             myresult.append(chcode+ress[rstr])
+#     return myresult
+# n=678
+# string=str(n)
+# print(getKeyPad(string))
 
-    if len(string)==0:
+##23) get staris path
+paths1=[]
+paths2=[]
+paths3=[]
+
+def getStairs(n):
+    if n==0:
         bres=[]
-        bres.append(' ')
+        bres.append('')
         return bres
-    ch=string[0]
-    ros=string[1:]
-    ress=getKeyPad(ros)
-    myresult=[]
-    codeforch=codes[ord(ch)-48]
-    for i in range(len(codeforch)):
-        chcode=codeforch[i]
-        for rstr in range(len(ress)):
-            myresult.append(chcode+ress[rstr])
-    return myresult
-n=678
-string=str(n)
-print(getKeyPad(string))
+    elif n <0:
+        bres=[]
+        return
+
+    paths1=getStairs(n-1)
+    paths2=getStairs(n-1)
+    paths3=getStairs(n-1)
+
+    paths=[]
+
+    for i in range(len(paths1)):
+        paths.append(1+paths1[i])
+
+    for i in range(len(paths2)):
+        paths.append(1+paths2[i])
+
+    for i in range(len(paths3)):
+        paths.append(1 + paths3[i])
+
+    return paths
+print(getStairs(4))
+
+
+

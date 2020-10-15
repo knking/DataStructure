@@ -133,23 +133,23 @@
 #     def deleteFirst(self):
 #         self.head=self.head.next
 #
-#     def deleteAtPostion(self,key):
-#         temp=self.head
-#         if temp is not None:
-#             if temp.data==key:
-#                 self.head=temp.next
-#                 #temp=None
-#                 return
-#         while temp is not None:
-#             if temp.data==key:
-#                 break
-#
-#             prev=temp
-#             temp=temp.next
-#         if temp==None:
-#              return
-#         prev.next=temp.next
-#         temp=None
+    # def deleteAtPostion(self,key):
+    #     temp=self.head
+    #     if temp is not None:
+    #         if temp.data==key:
+    #             self.head=temp.next
+    #             #temp=None
+    #             return
+    #     while temp is not None:
+    #         if temp.data==key:
+    #             break
+    #
+    #         prev=temp
+    #         temp=temp.next
+    #     if temp==None:
+    #          return
+    #     prev.next=temp.next
+    #     temp=None
 
 #     # def deleteInEnd(self):
 #     #     last=self.head
@@ -1151,24 +1151,24 @@
 # l.dis()
 
 
-class node:
-    def __init__(self,value):
-        self.value=value
-        self.next=None
-
-class linked:
-    def __init__(self):
-        self.head=None
-
-    def add(self,data):
-        new=node(data)
-        if self.head is None:
-           self.head=new
-        else:
-            temp=self.head
-            while temp.next!=None:
-                temp=temp.next
-            temp.next=new
+# class node:
+#     def __init__(self,value):
+#         self.value=value
+#         self.next=None
+#
+# class linked:
+#     def __init__(self):
+#         self.head=None
+#
+#     def add(self,data):
+#         new=node(data)
+#         if self.head is None:
+#            self.head=new
+#         else:
+#             temp=self.head
+#             while temp.next!=None:
+#                 temp=temp.next
+#             temp.next=new
 
     # def checkPalindrom(self,string):
     #     return string==string[::-1]
@@ -1182,47 +1182,47 @@ class linked:
     #     s=''.join(lst)
     #     return self.checkPalindrom(s)
 
-    def isPaindrom(self):
-        if self.head is None:
-            return True
-        slow,fast=self.head,self.head
+    # def isPaindrom(self):
+    #     if self.head is None:
+    #         return True
+    #     slow,fast=self.head,self.head
+    #
+    #     stk=[]
+    #     while fast and fast.next:
+    #         stk.append(slow.value)
+    #         slow=slow.next
+    #         fast=fast.next.next
+    #     if fast:
+    #         slow=slow.next
+    #     while slow and len(stk):
+    #         if stk.pop()!=slow.value:
+    #             return False
+    #         slow=slow.next
+    #     return True
+    #
+    # def reversse(self):
+    #     prev=None
+    #     cur=self.head
+    #     while cur:
+    #         nxt=cur.next
+    #         cur.next=prev
+    #         prev=cur
+    #         cur=nxt
+    #     self.head=prev
+    #
+    # #reverse linked list using recursion
+    # def reverse_recursive(self):
 
-        stk=[]
-        while fast and fast.next:
-            stk.append(slow.value)
-            slow=slow.next
-            fast=fast.next.next
-        if fast:
-            slow=slow.next
-        while slow and len(stk):
-            if stk.pop()!=slow.value:
-                return False
-            slow=slow.next
-        return True
-
-    def reversse(self):
-        prev=None
-        cur=self.head
-        while cur:
-            nxt=cur.next
-            cur.next=prev
-            prev=cur
-            cur=nxt
-        self.head=prev
-
-    #reverse linked list using recursion
-    def reverse_recursive(self):
-
-        def reverse_recursive(cur,prev):
-            if not cur:
-                return prev
-
-            next = cur.next
-            cur.next = prev
-            prev = cur
-            cur = next
-            return reverse_recursive(cur,prev)
-        self.head=reverse_recursive(cur=self.head,prev=None)
+        # def reverse_recursive(cur,prev):
+        #     if not cur:
+        #         return prev
+        #
+        #     next = cur.next
+        #     cur.next = prev
+        #     prev = cur
+        #     cur = next
+        #     return reverse_recursive(cur,prev)
+        # self.head=reverse_recursive(cur=self.head,prev=None)
 
 
 
@@ -1242,20 +1242,20 @@ class linked:
     #             temp=temp.next
     #         print(key,"Node",temp.value)
 
-    def dis(self):
-        temp = self.head
-        while temp:
-            print(temp.value, "->", end=" ")
-            temp = temp.next
-l=linked()
-l.add(10)
-l.add(20)
-l.add(30)
-l.add(40)
-l.add(50)
-l.add(60)
-l.add(70)
-l.add(80)
+#     def dis(self):
+#         temp = self.head
+#         while temp:
+#             print(temp.value, "->", end=" ")
+#             temp = temp.next
+# l=linked()
+# l.add(10)
+# l.add(20)
+# l.add(30)
+# l.add(40)
+# l.add(50)
+# l.add(60)
+# l.add(70)
+# l.add(80)
 #l.add(70)
 # l.add(60)
 # l.add(50)
@@ -1264,12 +1264,70 @@ l.add(80)
 # l.add(20)
 # l.add(10)
 # l.add(0)
-print("Before reversed :")
-l.dis()
-print()
-print("After reversed :")
-l.reversse()
-l.dis()
+# print("Before reversed :")
+# l.dis()
+# print()
+# print("After reversed :")
+# l.reversse()
+# l.dis()
 #print(l.isPaindrom())
 #print("True" if l.ispalndrom() else " False")
 #l.nthNode(2)
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class linkedlist:
+    def __init__(self):
+        self.head=None
+
+    def append(self,data):
+        newNode=Node(data)
+        if self.head ==None:
+            self.head=newNode
+        else:
+            temp = self.head
+            while temp.next !=None:
+                temp=temp.next
+            temp.next=newNode
+
+    # def deleteAtPostion(self,key):
+    #     temp=self.head
+    #     if temp is not None:
+    #         if temp.data==key:
+    #             self.head=temp.next
+    #
+    #             temp=None
+    #             return
+    #     while temp is not None:
+    #         if temp.data==key:
+    #             break
+    #
+    #         prev=temp
+    #         temp=temp.next
+    #     if temp==None:
+    #          return
+    #     prev.next=temp.next
+    #     temp=None
+
+    def display(self):
+        temp=self.head
+        while temp:
+            print(temp.data,end='->')
+            temp=temp.next
+
+link=linkedlist()
+link.append(10)
+link.append(20)
+link.append(30)
+link.append(40)
+link.append(50)
+link.append(60)
+link.append(70)
+link.deleteAt(50)
+#link.deleteAtPostion(50)
+#link.deleteFirst()
+#link.deleteEnd()
+link.display()
